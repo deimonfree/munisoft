@@ -1,0 +1,1340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E29AB256-1A3C-47E6-8DFB-1E5604E67A8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Muni.My.MyApplication</StartupObject>
+    <RootNamespace>Muni</RootNamespace>
+    <AssemblyName>Muni</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>I:\proyecto munisoft\instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Muni.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Muni.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DD5573151A856EBBB05E2E46F72813D3FBB46A28</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Muni_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_muni_wi8_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="IrisSkin2">
+      <HintPath>C:\Users\deimonfree\Desktop\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conexiones\registro_civil\mod_conexion_registroCivil.vb" />
+    <Compile Include="Controllers\Data\class_data_user.vb" />
+    <Compile Include="Controllers\Logic\class_contoller_module.vb" />
+    <Compile Include="Controllers\Logic\class_controller_usuario.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\almacen\class_controller_proveedor.vb" />
+    <Compile Include="Logica\mod_modoAdquisicion.vb" />
+    <Compile Include="Logica\registro_civil\class_controller_ciudadano.vb" />
+    <Compile Include="Logica\registro_civil\class_controller_codigoUbigeo.vb" />
+    <Compile Include="Logica\registro_civil\class_controller_registrador.vb" />
+    <Compile Include="Logica\registro_civil\class_controller_zona.vb" />
+    <Compile Include="Logica\registro_civil\mod_ciudadano.vb" />
+    <Compile Include="Logica\registro_civil\mod_registrador.vb" />
+    <Compile Include="Logica\registro_civil\mod_ubigeo.vb" />
+    <Compile Include="Logica\rentas\class_controller_annio.vb" />
+    <Compile Include="Logica\rentas\class_controller_autovaluo.vb" />
+    <Compile Include="Logica\rentas\class_controller_cerrar_periodo.vb" />
+    <Compile Include="Logica\rentas\class_controller_docBaseLegal.vb" />
+    <Compile Include="Logica\rentas\class_controller_construcciones.vb" />
+    <Compile Include="Logica\rentas\class_controller_contribuyente.vb" />
+    <Compile Include="Logica\rentas\class_controller_depreciacion.vb" />
+    <Compile Include="Logica\rentas\class_controller_direccion.vb" />
+    <Compile Include="Logica\rentas\class_controller_ficha.vb" />
+    <Compile Include="Logica\rentas\class_controller_fraccionamiento.vb" />
+    <Compile Include="Logica\rentas\class_controller_grupo_catastral.vb" />
+    <Compile Include="Logica\rentas\class_controller_log_autovaluo.vb" />
+    <Compile Include="Logica\rentas\class_controller_log_recibo.vb" />
+    <Compile Include="Logica\rentas\class_controller_predio.vb" />
+    <Compile Include="Logica\rentas\class_controller_recibo.vb" />
+    <Compile Include="Logica\rentas\class_controller_representanteLegal.vb" />
+    <Compile Include="Logica\rentas\class_controller_sector.vb" />
+    <Compile Include="Logica\rentas\class_controller_serviciosBasicos.vb" />
+    <Compile Include="Logica\rentas\class_controller_sociedadConyugal.vb" />
+    <Compile Include="Logica\rentas\class_controller_uit.vb" />
+    <Compile Include="Logica\rentas\class_controller_valorArancelario.vb" />
+    <Compile Include="Logica\rentas\class_controller_valor_minimo.vb" />
+    <Compile Include="Logica\rentas\class_controller_via.vb" />
+    <Compile Include="Logica\rentas\llenado_combox.vb" />
+    <Compile Include="Logica\rentas\mod_anno.vb" />
+    <Compile Include="Logica\rentas\mod_autovaluo.vb" />
+    <Compile Include="Logica\rentas\mod_baseLegal.vb" />
+    <Compile Include="Logica\rentas\mod_cerrar_periodo.vb" />
+    <Compile Include="Logica\rentas\mod_condicionTitularidad.vb" />
+    <Compile Include="Logica\rentas\mod_contribuyente.vb" />
+    <Compile Include="Logica\rentas\mod_contrucciones.vb" />
+    <Compile Include="Logica\rentas\mod_declaracionJurada.vb" />
+    <Compile Include="Logica\rentas\mod_departamento.vb" />
+    <Compile Include="Logica\rentas\mod_depreciacion.vb" />
+    <Compile Include="Logica\rentas\mod_depreciasion.vb" />
+    <Compile Include="Logica\rentas\mod_direccionContribuyente.vb" />
+    <Compile Include="Logica\rentas\mod_distrito.vb" />
+    <Compile Include="Logica\rentas\mod_estadoPredio.vb" />
+    <Compile Include="Logica\rentas\mod_ficha.vb" />
+    <Compile Include="Logica\rentas\mod_fraccionamiento.vb" />
+    <Compile Include="Logica\rentas\mod_GrupoCatastral.vb" />
+    <Compile Include="Logica\rentas\Mod_material.vb" />
+    <Compile Include="Logica\rentas\mod_predio.vb" />
+    <Compile Include="Logica\rentas\mod_provincia.vb" />
+    <Compile Include="Logica\rentas\mod_recibo.vb" />
+    <Compile Include="Logica\rentas\mod_regimen.vb" />
+    <Compile Include="Logica\rentas\mod_repreLegalContribuyente.vb" />
+    <Compile Include="Logica\rentas\mod_sector.vb" />
+    <Compile Include="Logica\rentas\mod_serviciosBasicos.vb" />
+    <Compile Include="Logica\rentas\mod_sociedadConyuge.vb" />
+    <Compile Include="Logica\rentas\mod_tipoFicha.vb" />
+    <Compile Include="Logica\rentas\mod_tipoDocumento.vb" />
+    <Compile Include="Logica\rentas\mod_TipoPredio.vb" />
+    <Compile Include="Logica\rentas\mod_tipoRelacion.vb" />
+    <Compile Include="Logica\rentas\mod_tipoUrbanizacion.vb" />
+    <Compile Include="Logica\rentas\mod_tipoVia.vb" />
+    <Compile Include="Logica\rentas\mod_usoPredio.vb" />
+    <Compile Include="Logica\rentas\mod_valorArancelario.vb" />
+    <Compile Include="Logica\rentas\mod_valores.vb" />
+    <Compile Include="Logica\rentas\mod_valor_minimo.vb" />
+    <Compile Include="Logica\rentas\mod_via.vb" />
+    <Compile Include="Logica\rentas\mod_viasRelacionadas.vb" />
+    <Compile Include="Logica\rentas\mod_zona.vb" />
+    <Compile Include="Models\almacen\class_datos_almacen.vb" />
+    <Compile Include="Models\almacen\class_datos_area.vb" />
+    <Compile Include="Models\almacen\class_datos_bien.vb" />
+    <Compile Include="Models\almacen\class_datos_bien_solicitado.vb" />
+    <Compile Include="Models\almacen\class_datos_detalle_entrada.vb" />
+    <Compile Include="Models\almacen\class_datos_detalle_salida.vb" />
+    <Compile Include="Models\almacen\class_datos_entrada.vb" />
+    <Compile Include="Models\almacen\class_datos_funcionario.vb" />
+    <Compile Include="Models\almacen\class_datos_proveedor.vb" />
+    <Compile Include="Models\almacen\class_datos_requerimiento.vb" />
+    <Compile Include="Models\almacen\class_datos_salida.vb" />
+    <Compile Include="Models\almacen\class_datos_transaccion_entrada.vb" />
+    <Compile Include="Models\almacen\class_datos_transaccion_salida.vb" />
+    <Compile Include="Models\registro_civil\class-datos_ubigeoProvincia.vb" />
+    <Compile Include="Models\registro_civil\class_datos_ciudadano.vb" />
+    <Compile Include="Models\registro_civil\class_datos_registrador.vb" />
+    <Compile Include="Models\registro_civil\class_datos_ubigeoDepartamento.vb" />
+    <Compile Include="Models\registro_civil\class_datos_ubigeoDistrito.vb" />
+    <Compile Include="Models\registro_civil\class_datos_zona.vb" />
+    <Compile Include="Models\rentas\anno.vb" />
+    <Compile Include="Models\rentas\class_datos_autovaluo.vb" />
+    <Compile Include="Models\rentas\class_datos_cerrar_periodo.vb" />
+    <Compile Include="Models\rentas\class_datos_clasificacion.vb" />
+    <Compile Include="Models\rentas\class_datos_ClasificacionVivienda.vb" />
+    <Compile Include="Models\rentas\class_datos_conservacion.vb" />
+    <Compile Include="Models\rentas\class_datos_depreciacion.vb" />
+    <Compile Include="Models\rentas\class_datos_construcciones.vb" />
+    <Compile Include="Models\rentas\class_datos_contribuyente.vb" />
+    <Compile Include="Models\rentas\class_datos_departamento.vb" />
+    <Compile Include="Models\rentas\class_datos_direccion.vb" />
+    <Compile Include="Models\rentas\class_datos_distrito.vb" />
+    <Compile Include="Models\rentas\class_datos_docBaseLegal.vb" />
+    <Compile Include="Models\rentas\class_datos_estadoPredio.vb" />
+    <Compile Include="Models\rentas\class_datos_ficha.vb" />
+    <Compile Include="Models\rentas\class_datos_fraccionamiento.vb" />
+    <Compile Include="Models\rentas\class_datos_grupo_catastral.vb" />
+    <Compile Include="Models\rentas\class_datos_log_autovaluo.vb" />
+    <Compile Include="Models\rentas\class_datos_log_recibo.vb" />
+    <Compile Include="Models\rentas\class_datos_material.vb" />
+    <Compile Include="Models\rentas\class_datos_predio.vb" />
+    <Compile Include="Models\rentas\class_datos_provincia.vb" />
+    <Compile Include="Models\rentas\class_datos_recibo.vb" />
+    <Compile Include="Models\rentas\class_datos_regimen.vb" />
+    <Compile Include="Models\rentas\class_datos_relacion.vb" />
+    <Compile Include="Models\rentas\class_datos_representanteLegal.vb" />
+    <Compile Include="Models\rentas\class_datos_sector.vb" />
+    <Compile Include="Models\rentas\class_datos_serviciosBasicos.vb" />
+    <Compile Include="Models\rentas\class_datos_sociedadConyugal.vb" />
+    <Compile Include="Models\rentas\class_datos_tipoPredio.vb" />
+    <Compile Include="Models\rentas\class_datos_tipoUrbanizacion.vb" />
+    <Compile Include="Models\rentas\class_datos_tipo_doc.vb" />
+    <Compile Include="Models\rentas\class_datos_tipo_via.vb" />
+    <Compile Include="Models\rentas\class_datos_uit.vb" />
+    <Compile Include="Models\rentas\class_datos_usoPredio.vb" />
+    <Compile Include="Models\rentas\class_datos_valorArancelario.vb" />
+    <Compile Include="Models\rentas\class_datos_valor_minimo.vb" />
+    <Compile Include="Models\rentas\class_datos_via.vb" />
+    <Compile Include="Models\rentas\class_datos_vias_relacionadas.vb" />
+    <Compile Include="Models\rentas\class_datos_zona.vb" />
+    <Compile Include="Models\rentas\class_dats_antiguedad.vb" />
+    <Compile Include="Reportes\imprimir_cliente.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>imprimir_cliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_hoja_resumen.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_hoja_resumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_rentas_declaracion_pu.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_rentas_declaracion_pu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_rentas_ficha_liquidacion.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_rentas_ficha_liquidacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_rentas_recibo_fraccionado.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_rentas_recibo_fraccionado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_rentas_resumen_hr.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_rentas_resumen_hr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_rentas_ticket.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_rentas_ticket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\almacen\ab_rentas_zona_nuevo.Designer.vb">
+      <DependentUpon>ab_rentas_zona_nuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ab_rentas_zona_new.Designer.vb">
+      <DependentUpon>ab_rentas_zona_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ab_rentas_zona_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\ab_rentas_arancel_llenado_listado.Designer.vb">
+      <DependentUpon>ab_rentas_arancel_llenado_listado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\ab_rentas_arancel_llenado_listado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\uc_rentas_arancel.Designer.vb">
+      <DependentUpon>uc_rentas_arancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\uc_rentas_arancel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\uc_rentas_arancel_listar.Designer.vb">
+      <DependentUpon>uc_rentas_arancel_listar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\uc_rentas_arancel_listar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\uc_rentas_arancel_rellenado.Designer.vb">
+      <DependentUpon>uc_rentas_arancel_rellenado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\arancel\uc_rentas_arancel_rellenado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo.Designer.vb">
+      <DependentUpon>uc_rentas_autovaluo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_generar.Designer.vb">
+      <DependentUpon>uc_rentas_autovaluo_generar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_generar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo.Designer.vb">
+      <DependentUpon>uc_rentas_autovaluo_recibo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_buqueda_autovaluo.Designer.vb">
+      <DependentUpon>uc_rentas_buqueda_autovaluo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_buqueda_autovaluo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_recibo.Designer.vb">
+      <DependentUpon>uc_rentas_recibo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_recibo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\d_rentas_busqueda_sector.Designer.vb">
+      <DependentUpon>d_rentas_busqueda_sector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\d_rentas_busqueda_sector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\d_rentas_busqueda_via.Designer.vb">
+      <DependentUpon>d_rentas_busqueda_via.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\d_rentas_busqueda_via.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\d_rentas_busqueda_zona.Designer.vb">
+      <DependentUpon>d_rentas_busqueda_zona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\d_rentas_busqueda_zona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_catalogo.Designer.vb">
+      <DependentUpon>uc_rentas_catalogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_catalogo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_catalogo_depreciacion.Designer.vb">
+      <DependentUpon>uc_rentas_catalogo_depreciacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_catalogo_depreciacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_sectores.Designer.vb">
+      <DependentUpon>uc_rentas_sectores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_sectores.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_uit.Designer.vb">
+      <DependentUpon>uc_rentas_uit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_uit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_valorDepreciacion.Designer.vb">
+      <DependentUpon>uc_rentas_valorDepreciacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_valorDepreciacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_valor_minimo.Designer.vb">
+      <DependentUpon>uc_rentas_valor_minimo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_valor_minimo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_valor_UIT.Designer.vb">
+      <DependentUpon>uc_rentas_valor_UIT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_valor_UIT.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_vias2.Designer.vb">
+      <DependentUpon>uc_rentas_vias2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_vias2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_baseImponible_Minimo.Designer.vb">
+      <DependentUpon>uc_rentas_baseImponible_Minimo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_baseImponible_Minimo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\d_rentas_contribuyente_update.Designer.vb">
+      <DependentUpon>d_rentas_contribuyente_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\d_rentas_contribuyente_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\uc_rentas_contribuyente.Designer.vb">
+      <DependentUpon>uc_rentas_contribuyente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\uc_rentas_contribuyente.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\uc_rentas_contribuyente_mostrar.Designer.vb">
+      <DependentUpon>uc_rentas_contribuyente_mostrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\uc_rentas_contribuyente_mostrar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\uc_rentas_contribuyente_new.Designer.vb">
+      <DependentUpon>uc_rentas_contribuyente_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\contribuyente\uc_rentas_contribuyente_new.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\Dep_edit.Designer.vb">
+      <DependentUpon>Dep_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\Dep_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\distrito\ab_rentas_distrito_busqueda.Designer.vb">
+      <DependentUpon>ab_rentas_distrito_busqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\distrito\ab_rentas_distrito_busqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\distrito\d_rentas_distrito_busqueda.Designer.vb">
+      <DependentUpon>d_rentas_distrito_busqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\distrito\d_rentas_distrito_busqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\d_rentas_busqueda_ficha.Designer.vb">
+      <DependentUpon>d_rentas_busqueda_ficha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\d_rentas_busqueda_ficha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\d_rentas_categoria.Designer.vb">
+      <DependentUpon>d_rentas_categoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\d_rentas_categoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\uc_rentas_ficha.Designer.vb">
+      <DependentUpon>uc_rentas_ficha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\uc_rentas_ficha.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\uc_rentas_ficha_mant.Designer.vb">
+      <DependentUpon>uc_rentas_ficha_mant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\uc_rentas_ficha_mant.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\uc_rentas_ficha_new.Designer.vb">
+      <DependentUpon>uc_rentas_ficha_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\ficha\uc_rentas_ficha_new.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\predio\d_rentas_busqueda.Designer.vb">
+      <DependentUpon>d_rentas_busqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\predio\d_rentas_busqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\predio\d_rentas_busquedapredio.Designer.vb">
+      <DependentUpon>d_rentas_busquedapredio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\predio\d_rentas_busquedapredio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\predio\uc_rentas predio.Designer.vb">
+      <DependentUpon>uc_rentas predio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\predio\uc_rentas predio.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\predio\uc_rentas_predio_new.Designer.vb">
+      <DependentUpon>uc_rentas_predio_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\predio\uc_rentas_predio_new.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reportes.Designer.vb">
+      <DependentUpon>uc_rentas_reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reportes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reportes_pu.Designer.vb">
+      <DependentUpon>uc_rentas_reportes_pu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reportes_pu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reporte_hr.Designer.vb">
+      <DependentUpon>uc_rentas_reporte_hr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reporte_hr.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reporte_liquidacion.Designer.vb">
+      <DependentUpon>uc_rentas_reporte_liquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\reportes\uc_rentas_reporte_liquidacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\sector\ab_rentas_sector_new.Designer.vb">
+      <DependentUpon>ab_rentas_sector_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\sector\ab_rentas_sector_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\sector\uc_rentas_sector.Designer.vb">
+      <DependentUpon>uc_rentas_sector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\sector\uc_rentas_sector.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\sector\uc_rentas_sector_actualizar.Designer.vb">
+      <DependentUpon>uc_rentas_sector_actualizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\sector\uc_rentas_sector_actualizar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\uc_rentas_zona_eliminar.Designer.vb">
+      <DependentUpon>uc_rentas_zona_eliminar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\uc_rentas_zona_eliminar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\via\ab_rentas_via_new.Designer.vb">
+      <DependentUpon>ab_rentas_via_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\via\ab_rentas_via_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\via\uc_rentas_via.Designer.vb">
+      <DependentUpon>uc_rentas_via.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\via\uc_rentas_via.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\via\uc_rentas_via_update.Designer.vb">
+      <DependentUpon>uc_rentas_via_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\via\uc_rentas_via_update.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\vistacentral.Designer.vb">
+      <DependentUpon>vistacentral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\vistacentral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Fakes Include="Views\almacen\ab_rentas_zona_nuevo.vb">
+      <SubType>Form</SubType>
+    </Fakes>
+    <Compile Include="Views\almacen\uc_alamacen_transaccion.Designer.vb">
+      <DependentUpon>uc_alamacen_transaccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\almacen\uc_alamacen_transaccion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\almacen\uc_almacen.Designer.vb">
+      <DependentUpon>uc_almacen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\almacen\uc_almacen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\almacen\uc_almacen_mantenimiento.Designer.vb">
+      <DependentUpon>uc_almacen_mantenimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\almacen\uc_almacen_mantenimiento.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\almacen\uc_rentas_zona.Designer.vb">
+      <DependentUpon>uc_rentas_zona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\almacen\uc_rentas_zona.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\almacen\uc_rentas_zonas_actualizar.Designer.vb">
+      <DependentUpon>uc_rentas_zonas_actualizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\almacen\uc_rentas_zonas_actualizar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\almacen\uc_rentas_zonas_buscar.Designer.vb">
+      <DependentUpon>uc_rentas_zonas_buscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\almacen\uc_rentas_zonas_buscar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\cu_base.Designer.vb">
+      <DependentUpon>cu_base.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cu_base.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\cu_modulos.Designer.vb">
+      <DependentUpon>cu_modulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cu_modulos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MDI_registro_civil.Designer.vb">
+      <DependentUpon>MDI_registro_civil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MDI_registro_civil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\principal.Designer.vb">
+      <DependentUpon>principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\SampleIIdentity.vb" />
+    <Compile Include="Logica\SampleIPrincipal.vb" />
+    <Compile Include="mod_con_global.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_ciudadano_nuevo.Designer.vb">
+      <DependentUpon>ab_ciudadano_nuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_ciudadano_nuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_codigoUbigeo.Designer.vb">
+      <DependentUpon>ab_codigoUbigeo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_codigoUbigeo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_dni_share.Designer.vb">
+      <DependentUpon>ab_dni_share.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_dni_share.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_visor_pdf.Designer.vb">
+      <DependentUpon>ab_visor_pdf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\ab_visor_pdf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\registro_civil\nuevo_registrador.Designer.vb">
+      <DependentUpon>nuevo_registrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\nuevo_registrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\registro_civil\uc_acta_matrimonio.Designer.vb">
+      <DependentUpon>uc_acta_matrimonio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\uc_acta_matrimonio.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\registro_civil\uc_ciudadano.Designer.vb">
+      <DependentUpon>uc_ciudadano.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\registro_civil\uc_ciudadano.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\imprimir_cliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>imprimir_cliente.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_hoja_resumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_hoja_resumen.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_rentas_declaracion_pu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_rentas_declaracion_pu.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_rentas_ficha_liquidacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_rentas_ficha_liquidacion.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_rentas_recibo_fraccionado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_rentas_recibo_fraccionado.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_rentas_resumen_hr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_rentas_resumen_hr.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_rentas_ticket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_rentas_ticket.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\ab_rentas_zona_nuevo.resx">
+      <DependentUpon>ab_rentas_zona_nuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\uc_alamacen_transaccion.resx">
+      <DependentUpon>uc_alamacen_transaccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\uc_almacen.resx">
+      <DependentUpon>uc_almacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\uc_almacen_mantenimiento.resx">
+      <DependentUpon>uc_almacen_mantenimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\uc_rentas_zona.resx">
+      <DependentUpon>uc_rentas_zona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\uc_rentas_zonas_actualizar.resx">
+      <DependentUpon>uc_rentas_zonas_actualizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\almacen\uc_rentas_zonas_buscar.resx">
+      <DependentUpon>uc_rentas_zonas_buscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\cu_base.resx">
+      <DependentUpon>cu_base.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\cu_modulos.resx">
+      <DependentUpon>cu_modulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MDI_registro_civil.resx">
+      <DependentUpon>MDI_registro_civil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\principal.resx">
+      <DependentUpon>principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\ab_ciudadano_nuevo.resx">
+      <DependentUpon>ab_ciudadano_nuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\ab_codigoUbigeo.resx">
+      <DependentUpon>ab_codigoUbigeo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\ab_dni_share.resx">
+      <DependentUpon>ab_dni_share.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\ab_visor_pdf.resx">
+      <DependentUpon>ab_visor_pdf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\nuevo_registrador.resx">
+      <DependentUpon>nuevo_registrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\uc_acta_matrimonio.resx">
+      <DependentUpon>uc_acta_matrimonio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\registro_civil\uc_ciudadano.resx">
+      <DependentUpon>uc_ciudadano.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\ab_rentas_zona_new.resx">
+      <DependentUpon>ab_rentas_zona_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\arancel\ab_rentas_arancel_llenado_listado.resx">
+      <DependentUpon>ab_rentas_arancel_llenado_listado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\arancel\uc_rentas_arancel.resx">
+      <DependentUpon>uc_rentas_arancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\arancel\uc_rentas_arancel_listar.resx">
+      <DependentUpon>uc_rentas_arancel_listar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\arancel\uc_rentas_arancel_rellenado.resx">
+      <DependentUpon>uc_rentas_arancel_rellenado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_autovaluo.resx">
+      <DependentUpon>uc_rentas_autovaluo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_autovaluo_generar.resx">
+      <DependentUpon>uc_rentas_autovaluo_generar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo.resx">
+      <DependentUpon>uc_rentas_autovaluo_recibo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_buqueda_autovaluo.resx">
+      <DependentUpon>uc_rentas_buqueda_autovaluo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_recibo.resx">
+      <DependentUpon>uc_rentas_recibo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\d_rentas_busqueda_sector.resx">
+      <DependentUpon>d_rentas_busqueda_sector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\d_rentas_busqueda_via.resx">
+      <DependentUpon>d_rentas_busqueda_via.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\d_rentas_busqueda_zona.resx">
+      <DependentUpon>d_rentas_busqueda_zona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_catalogo.resx">
+      <DependentUpon>uc_rentas_catalogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_catalogo_depreciacion.resx">
+      <DependentUpon>uc_rentas_catalogo_depreciacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_sectores.resx">
+      <DependentUpon>uc_rentas_sectores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_uit.resx">
+      <DependentUpon>uc_rentas_uit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_valorDepreciacion.resx">
+      <DependentUpon>uc_rentas_valorDepreciacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_valor_minimo.resx">
+      <DependentUpon>uc_rentas_valor_minimo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_valor_UIT.resx">
+      <DependentUpon>uc_rentas_valor_UIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_vias2.resx">
+      <DependentUpon>uc_rentas_vias2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_baseImponible_Minimo.resx">
+      <DependentUpon>uc_rentas_baseImponible_Minimo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\contribuyente\d_rentas_contribuyente_update.resx">
+      <DependentUpon>d_rentas_contribuyente_update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\contribuyente\uc_rentas_contribuyente.resx">
+      <DependentUpon>uc_rentas_contribuyente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\contribuyente\uc_rentas_contribuyente_mostrar.resx">
+      <DependentUpon>uc_rentas_contribuyente_mostrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\contribuyente\uc_rentas_contribuyente_new.resx">
+      <DependentUpon>uc_rentas_contribuyente_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\Dep_edit.resx">
+      <DependentUpon>Dep_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\distrito\ab_rentas_distrito_busqueda.resx">
+      <DependentUpon>ab_rentas_distrito_busqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\distrito\d_rentas_distrito_busqueda.resx">
+      <DependentUpon>d_rentas_distrito_busqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\ficha\d_rentas_busqueda_ficha.resx">
+      <DependentUpon>d_rentas_busqueda_ficha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\ficha\d_rentas_categoria.resx">
+      <DependentUpon>d_rentas_categoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\ficha\uc_rentas_ficha.resx">
+      <DependentUpon>uc_rentas_ficha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\ficha\uc_rentas_ficha_mant.resx">
+      <DependentUpon>uc_rentas_ficha_mant.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\ficha\uc_rentas_ficha_new.resx">
+      <DependentUpon>uc_rentas_ficha_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\predio\d_rentas_busqueda.resx">
+      <DependentUpon>d_rentas_busqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\predio\d_rentas_busquedapredio.resx">
+      <DependentUpon>d_rentas_busquedapredio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\predio\uc_rentas predio.resx">
+      <DependentUpon>uc_rentas predio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\predio\uc_rentas_predio_new.resx">
+      <DependentUpon>uc_rentas_predio_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\reportes\uc_rentas_reportes.resx">
+      <DependentUpon>uc_rentas_reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\reportes\uc_rentas_reportes_pu.resx">
+      <DependentUpon>uc_rentas_reportes_pu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\reportes\uc_rentas_reporte_hr.resx">
+      <DependentUpon>uc_rentas_reporte_hr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\reportes\uc_rentas_reporte_liquidacion.resx">
+      <DependentUpon>uc_rentas_reporte_liquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\sector\ab_rentas_sector_new.resx">
+      <DependentUpon>ab_rentas_sector_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\sector\uc_rentas_sector.resx">
+      <DependentUpon>uc_rentas_sector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\sector\uc_rentas_sector_actualizar.resx">
+      <DependentUpon>uc_rentas_sector_actualizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\uc_rentas_zona_eliminar.resx">
+      <DependentUpon>uc_rentas_zona_eliminar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\via\ab_rentas_via_new.resx">
+      <DependentUpon>ab_rentas_via_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\via\uc_rentas_via.resx">
+      <DependentUpon>uc_rentas_via.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\via\uc_rentas_via_update.resx">
+      <DependentUpon>uc_rentas_via_update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\vistacentral.resx">
+      <DependentUpon>vistacentral.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Muni_ClaveTemporal.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\acta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleX64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numero1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numero2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numero3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numero4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletex16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savex16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelx16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchx16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almacen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-box-on-a-hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raindrops.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-new-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-sign-inside-a-black-rounded-square-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\men.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searching.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-bin-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-to-app-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bars.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\city.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipsis.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cube.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-with-adding-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cityscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dondo-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dondo-21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\growth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tracking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\server 1.png" />
+    <None Include="Resources\server2.png" />
+    <None Include="Resources\server3.png" />
+    <None Include="Resources\user_all.png" />
+    <None Include="Resources\file_delete.png" />
+    <None Include="Resources\luope_user.png" />
+    <None Include="Resources\closed_naranja.png" />
+    <None Include="Resources\attention.png" />
+    <None Include="Resources\roof.png" />
+    <None Include="Resources\economy.png" />
+    <None Include="Resources\profit.png" />
+    <None Include="Resources\profits.png" />
+    <None Include="Resources\depreciacion.png" />
+    <None Include="Resources\dinero.png" />
+    <None Include="Resources\engranaje.png" />
+    <None Include="Resources\blockeado.png" />
+    <None Include="Resources\cerrar_white.png" />
+    <None Include="Resources\dinero_white.png" />
+    <None Include="Resources\money_estadistica.png" />
+    <Content Include="logo_muni_wi8_icon.ico" />
+    <None Include="Resources\logo_MUNI.png" />
+    <Content Include="Resources\save.png" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\save-file-button.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\businessman.png" />
+    <None Include="Resources\engranaje_white.png" />
+    <None Include="Resources\info_white.png" />
+    <None Include="Resources\update-white.png" />
+    <None Include="Resources\printer-tool.png" />
+    <None Include="Resources\placeholderman.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\loupe2.png" />
+    <None Include="Resources\inbox.png" />
+    <None Include="Resources\rubbish.png" />
+    <None Include="Resources\binary-data-search-symbol.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\ticked-generado.png" />
+    <None Include="Resources\ticket.png" />
+    <None Include="Resources\invoice2.png" />
+    <None Include="Resources\invoice.png" />
+    <None Include="Resources\get-money.png" />
+    <None Include="Resources\placeholder1.png" />
+    <None Include="Resources\google-news-greeb.png" />
+    <None Include="Resources\google-news.png" />
+    <None Include="Resources\file -fail.png" />
+    <None Include="Resources\file-chak.png" />
+    <None Include="Resources\file2.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\Double Ring-1s-200px.gif" />
+    <None Include="Resources\magnifying-glass-with-two-way-arrows.png" />
+    <None Include="Resources\analytics.png" />
+    <None Include="Resources\check-mark1.png" />
+    <None Include="Resources\sort-arrows-couple-pointing-up-and-down %281%29.png" />
+    <None Include="Resources\house1.png" />
+    <None Include="Resources\mortgage 2.png" />
+    <None Include="Resources\mortgage.png" />
+    <None Include="Resources\pointer_city.png" />
+    <None Include="Resources\cross-close-or-delete-circular-interface-button-symbol.png" />
+    <None Include="Resources\check-mark.png" />
+    <None Include="Resources\real-estate-business-house-on-a-hand.png" />
+    <None Include="Resources\cancel-house.png" />
+    <None Include="Resources\add-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

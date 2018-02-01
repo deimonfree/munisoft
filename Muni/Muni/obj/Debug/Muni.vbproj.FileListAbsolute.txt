@@ -1,0 +1,261 @@
+D:\Muni\Muni\Muni\bin\Debug\Muni.exe.config
+D:\Muni\Muni\Muni\bin\Debug\Muni.exe
+D:\Muni\Muni\Muni\bin\Debug\Muni.pdb
+D:\Muni\Muni\Muni\bin\Debug\Muni.xml
+D:\Muni\Muni\Muni\bin\Debug\MySql.Data.dll
+D:\Muni\Muni\Muni\obj\Debug\Muni.vbprojResolveAssemblyReference.cache
+D:\Muni\Muni\Muni\obj\Debug\Muni.Form1.resources
+D:\Muni\Muni\Muni\obj\Debug\Muni.login.resources
+D:\Muni\Muni\Muni\obj\Debug\Muni.Resources.resources
+D:\Muni\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
+D:\Muni\Muni\Muni\obj\Debug\Muni.exe
+D:\Muni\Muni\Muni\obj\Debug\Muni.xml
+D:\Muni\Muni\Muni\obj\Debug\Muni.pdb
+D:\Muni\Muni\Muni\obj\Debug\Muni.principal.resources
+D:\Muni\Muni\Muni\obj\Debug\Muni.cu_modulos.resources
+G:\proyectos de programación\Muni\Muni\bin\Debug\Muni.exe.config
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.exe
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.xml
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.pdb
+G:\proyectos de programación\Muni\Muni\bin\Debug\Muni.exe
+G:\proyectos de programación\Muni\Muni\bin\Debug\Muni.pdb
+G:\proyectos de programación\Muni\Muni\bin\Debug\Muni.xml
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbprojResolveAssemblyReference.cache
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.Form1.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.cu_modulos.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.login.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.principal.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.Resources.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_ciudadano.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.MDI_registro_civil.resources
+G:\proyectos de programación\Muni\Muni\obj\Debug\Muni.registrador_nuevo.resources
+G:\proyectos de programación\Muni\Muni\bin\Debug\MySql.Data.dll
+D:\proyectos de programación\Muni\Muni\bin\Debug\Muni.exe.config
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.exe
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.xml
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.pdb
+D:\proyectos de programación\Muni\Muni\bin\Debug\Muni.exe
+D:\proyectos de programación\Muni\Muni\bin\Debug\Muni.pdb
+D:\proyectos de programación\Muni\Muni\bin\Debug\Muni.xml
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbprojResolveAssemblyReference.cache
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.Form1.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.login.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.MDI_registro_civil.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.principal.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.Resources.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_visor_pdf.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_acta_matrimonio.resources
+D:\proyectos de programación\Muni\Muni\bin\Debug\Interop.AcroPDFLib.dll
+D:\proyectos de programación\Muni\Muni\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\proyectos de programación\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
+D:\proyectos de programación\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_ciudadano.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.nuevo_registrador.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_codigoUbigeo.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_ciudadano_nuevo.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_dni_share.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.cu_base.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.cu_almacen.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_almacen.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_proveedor.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_almacen.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_alamacen_transaccion.resources
+D:\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_almacen_mantenimiento.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\bin\Debug\Muni.exe.config
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.exe
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.xml
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.pdb
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbprojResolveAssemblyReference.cache
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_almacen.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_proveedor.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_alamacen_transaccion.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_almacen.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_almacen_mantenimiento.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.cu_base.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.cu_almacen.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.login.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.MDI_registro_civil.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.principal.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_ciudadano_nuevo.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_codigoUbigeo.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_dni_share.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_visor_pdf.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.nuevo_registrador.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_acta_matrimonio.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_ciudadano.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\bin\Debug\Muni.exe
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\bin\Debug\Muni.pdb
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\bin\Debug\Muni.xml
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\bin\Debug\Interop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\bin\Debug\AxInterop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.Resources.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_rentas_zona.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_buscar.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_actualizar.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_rentas_zona_new.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.vbprojFakesResolveAssemblyReference.cache
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_rentas_zona_eliminar.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_rentas_sector.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.ab_rentas_sector_new.resources
+F:\MUNICIPALIDAD\proyectos de programación\Muni\Muni\obj\Debug\Muni.uc_rentas_sector_actualizar.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\bin\Debug\Muni.exe.config
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\bin\Debug\Muni.exe
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\bin\Debug\Muni.pdb
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\bin\Debug\Muni.xml
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_almacen.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_proveedor.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_alamacen_transaccion.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_almacen.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_almacen_mantenimiento.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_rentas_zona.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_actualizar.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_buscar.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.cu_base.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.cu_almacen.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.login.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.MDI_registro_civil.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.principal.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.Resources.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_ciudadano_nuevo.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_codigoUbigeo.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_dni_share.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_visor_pdf.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.nuevo_registrador.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_acta_matrimonio.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_ciudadano.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_rentas_zona_new.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.Dep_edit.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.ab_rentas_sector_new.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_rentas_sector.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_rentas_sector_actualizar.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.uc_rentas_zona_eliminar.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.vistacentral.resources
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.exe
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.xml
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.pdb
+C:\Users\Robert Mamani\Documents\Mis Proyectos\Muni\Muni\obj\Debug\Muni.vbprojFakesResolveAssemblyReference.cache
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Muni.exe.config
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.exe
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.xml
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.pdb
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Muni.exe
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Muni.pdb
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Muni.xml
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Interop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\AxInterop.AcroPDFLib.dll
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.vbprojFakesResolveAssemblyReference.cache
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_proveedor.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_alamacen_transaccion.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_almacen.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_almacen_mantenimiento.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_zona.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_actualizar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_buscar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.cu_base.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.cu_almacen.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.login.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.MDI_registro_civil.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.principal.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.Resources.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_ciudadano_nuevo.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_codigoUbigeo.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_dni_share.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_visor_pdf.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.nuevo_registrador.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_acta_matrimonio.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_ciudadano.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_rentas_zona_new.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.Dep_edit.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_rentas_sector_new.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_sector.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_sector_actualizar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_zona_eliminar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.vistacentral.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_via.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_via_update.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_rentas_via_new.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_arancel.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_arancel_listar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_rentas_arancel_llenado_listado.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_arancel_rellenado.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_contribuyente.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_contribuyente_mostrar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_contribuyente_new.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.ab_rentas_distrito_busqueda.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_distrito_busqueda.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_contribuyente_update.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_predio.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_predio_new.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_busquedapredio.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_ficha_new.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_ficha.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_busqueda.resources
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CircularProgressBar.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\WinFormAnimation.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CircularProgressBar.xml
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\WinFormAnimation.xml
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_catalogo.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_busqueda_zona.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_categoria.resources
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Muni.exe.manifest
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\Muni.application
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.exe.manifest
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.application
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_sectores.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_busqueda_sector.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_vias2.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_busqueda_via.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_ficha_mant.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_autovaluo.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_autovaluo_generar.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_buqueda_autovaluo.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.d_rentas_busqueda_ficha.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_recibo.resources
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.Shared.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\FlashControlV71.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\ShockwaveFlashObjects.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\stdole.dll
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_reportes.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_reportes_pu.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_reporte_hr.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_reporte_liquidacion.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_autovaluo_recibo.resources
+F:\MUNICIPALIDAD\Muni\Muni\bin\Debug\IrisSkin2.dll
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_catalogo_depreciacion.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_valorDepreciacion.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_uit.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_valor_UIT.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_baseImponible_Minimo.resources
+F:\MUNICIPALIDAD\Muni\Muni\obj\Debug\Muni.uc_rentas_valor_minimo.resources
