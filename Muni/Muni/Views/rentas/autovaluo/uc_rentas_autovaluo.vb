@@ -11,7 +11,7 @@
         panel_body.Controls.Clear()
         panel_body.Controls.Add(Myfrm)
     End Sub
-
+    'lnlnlknlnllnl'
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim desktopSize As Size
         desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
