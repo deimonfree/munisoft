@@ -12,6 +12,7 @@
             _idrevestimiento = value
         End Set
     End Property
+    'comit'
     Public Property cod_categoria As String
         Get
             Return _cod_categorias
