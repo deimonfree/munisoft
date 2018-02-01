@@ -264,6 +264,13 @@
     <Compile Include="Models\rentas\class_datos_valor_minimo.vb" />
     <Compile Include="Models\rentas\class_datos_via.vb" />
     <Compile Include="Models\rentas\class_datos_vias_relacionadas.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_banios.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_electricidad.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_muros_columnas.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_pisos.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_puertasventanas.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_revestrimiento.vb" />
+    <Compile Include="Models\rentas\class_datos_vu_techos.vb" />
     <Compile Include="Models\rentas\class_datos_zona.vb" />
     <Compile Include="Models\rentas\class_dats_antiguedad.vb" />
     <Compile Include="Reportes\imprimir_cliente.vb">
