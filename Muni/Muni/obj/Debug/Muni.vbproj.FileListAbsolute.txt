@@ -266,3 +266,10 @@ C:\Users\Robert Mamani\Documents\GitHub\muni\munisoft\Muni\Muni\obj\Debug\Muni.v
 C:\Users\Robert Mamani\Documents\GitHub\muni\munisoft\Muni\Muni\obj\Debug\Muni.exe
 C:\Users\Robert Mamani\Documents\GitHub\muni\munisoft\Muni\Muni\obj\Debug\Muni.xml
 C:\Users\Robert Mamani\Documents\GitHub\muni\munisoft\Muni\Muni\obj\Debug\Muni.pdb
+I:\hig\munisoft\Muni\Muni\bin\Debug\Muni.exe.config
+I:\hig\munisoft\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
+I:\hig\munisoft\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
+I:\hig\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
+I:\hig\munisoft\Muni\Muni\obj\Debug\Muni.exe
+I:\hig\munisoft\Muni\Muni\obj\Debug\Muni.xml
+I:\hig\munisoft\Muni\Muni\obj\Debug\Muni.pdb

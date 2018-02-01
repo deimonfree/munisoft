@@ -151,7 +151,7 @@ Partial Class login
         Me.btnUpdate.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.btnUpdate.Image = Global.Muni.My.Resources.Resources.refresh
-        Me.btnUpdate.Location = New System.Drawing.Point(528, 127)
+        Me.btnUpdate.Location = New System.Drawing.Point(528, 438)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(36, 24)
@@ -167,7 +167,7 @@ Partial Class login
         Me.btnDelete.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.btnDelete.Image = Global.Muni.My.Resources.Resources.server1
-        Me.btnDelete.Location = New System.Drawing.Point(365, 170)
+        Me.btnDelete.Location = New System.Drawing.Point(365, 475)
         Me.btnDelete.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(36, 32)
@@ -181,7 +181,7 @@ Partial Class login
         Me.lblpasos.Font = New System.Drawing.Font("Ubuntu", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblpasos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.lblpasos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblpasos.Location = New System.Drawing.Point(402, 118)
+        Me.lblpasos.Location = New System.Drawing.Point(402, 429)
         Me.lblpasos.Name = "lblpasos"
         Me.lblpasos.Size = New System.Drawing.Size(112, 19)
         Me.lblpasos.TabIndex = 359
@@ -192,7 +192,7 @@ Partial Class login
         Me.lblInfo.AutoSize = True
         Me.lblInfo.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.lblInfo.Location = New System.Drawing.Point(403, 137)
+        Me.lblInfo.Location = New System.Drawing.Point(403, 448)
         Me.lblInfo.Name = "lblInfo"
         Me.lblInfo.Size = New System.Drawing.Size(122, 17)
         Me.lblInfo.TabIndex = 336
@@ -344,7 +344,7 @@ Partial Class login
         'pbLoad
         '
         Me.pbLoad.Image = Global.Muni.My.Resources.Resources.server
-        Me.pbLoad.Location = New System.Drawing.Point(365, 122)
+        Me.pbLoad.Location = New System.Drawing.Point(365, 433)
         Me.pbLoad.Name = "pbLoad"
         Me.pbLoad.Size = New System.Drawing.Size(32, 32)
         Me.pbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
