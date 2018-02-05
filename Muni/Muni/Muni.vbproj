@@ -167,6 +167,12 @@
     <Compile Include="Logica\rentas\class_controller_valor_minimo.vb" />
     <Compile Include="Logica\rentas\class_controller_via.vb" />
     <Compile Include="Logica\rentas\class_controller_vu_banios.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_electricidad.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_muroscolumnas.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_pisos.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_puertaventanas.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_revestimiento.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_techos.vb" />
     <Compile Include="Logica\rentas\llenado_combox.vb" />
     <Compile Include="Logica\rentas\mod_anno.vb" />
     <Compile Include="Logica\rentas\mod_autovaluo.vb" />
@@ -194,6 +200,7 @@
     <Compile Include="Logica\rentas\mod_sector.vb" />
     <Compile Include="Logica\rentas\mod_serviciosBasicos.vb" />
     <Compile Include="Logica\rentas\mod_sociedadConyuge.vb" />
+    <Compile Include="Logica\rentas\mod_tasas.vb" />
     <Compile Include="Logica\rentas\mod_tipoFicha.vb" />
     <Compile Include="Logica\rentas\mod_tipoDocumento.vb" />
     <Compile Include="Logica\rentas\mod_TipoPredio.vb" />
@@ -401,6 +408,12 @@
       <DependentUpon>uc_rentas_catalogo.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\rentas\catalago\uc_rentas_catalogo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_catalogos_instalaciones.Designer.vb">
+      <DependentUpon>uc_rentas_catalogos_instalaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\catalago\uc_rentas_catalogos_instalaciones.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\rentas\catalago\uc_rentas_catalogo_depreciacion.Designer.vb">
@@ -882,6 +895,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_catalogo.resx">
       <DependentUpon>uc_rentas_catalogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_catalogos_instalaciones.resx">
+      <DependentUpon>uc_rentas_catalogos_instalaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\catalago\uc_rentas_catalogo_depreciacion.resx">
       <DependentUpon>uc_rentas_catalogo_depreciacion.vb</DependentUpon>

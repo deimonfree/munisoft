@@ -30,6 +30,7 @@ Partial Class uc_rentas_valorDepreciacion
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.pbload = New System.Windows.Forms.PictureBox()
         Me.panel_body = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.panel_title.SuspendLayout()
         CType(Me.pbload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,6 +38,7 @@ Partial Class uc_rentas_valorDepreciacion
         'panel_title
         '
         Me.panel_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.panel_title.Controls.Add(Me.Button2)
         Me.panel_title.Controls.Add(Me.sidel_panel)
         Me.panel_title.Controls.Add(Me.Button1)
         Me.panel_title.Controls.Add(Me.lblname)
@@ -138,6 +140,23 @@ Partial Class uc_rentas_valorDepreciacion
         Me.panel_body.Size = New System.Drawing.Size(900, 392)
         Me.panel_body.TabIndex = 16
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(185, 66)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(182, 30)
+        Me.Button2.TabIndex = 57
+        Me.Button2.Text = "&Valor de Depreciación"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'uc_rentas_valorDepreciacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -162,4 +181,5 @@ Partial Class uc_rentas_valorDepreciacion
     Friend WithEvents btn_delete As Button
     Friend WithEvents pbload As PictureBox
     Friend WithEvents panel_body As Panel
+    Friend WithEvents Button2 As Button
 End Class
