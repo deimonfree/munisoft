@@ -4,6 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class class_controller_annio
     Public _adaptador As New MySqlDataAdapter
     Private _DataSetAnnio As New DataSet
+    'n00000000000
     Public Function insertarDatosAnnio(ByVal datos_annio As anno) As Boolean
         Dim estado As Boolean = True
         Try
