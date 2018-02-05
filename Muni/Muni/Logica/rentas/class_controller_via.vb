@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class class_controller_via
     Private _conectorMysql As New MySqlDataAdapter
     Private _DataSetVia As New DataSet
-    'insercion de datos via
+    'insercion de datos viaas
     Public Function insertarDatosVia(ByVal datos_via As class_datos_via) As Boolean
         Dim estado As Boolean = True
         Try

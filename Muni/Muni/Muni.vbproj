@@ -166,6 +166,7 @@
     <Compile Include="Logica\rentas\class_controller_valorArancelario.vb" />
     <Compile Include="Logica\rentas\class_controller_valor_minimo.vb" />
     <Compile Include="Logica\rentas\class_controller_via.vb" />
+    <Compile Include="Logica\rentas\class_controller_vu_banios.vb" />
     <Compile Include="Logica\rentas\llenado_combox.vb" />
     <Compile Include="Logica\rentas\mod_anno.vb" />
     <Compile Include="Logica\rentas\mod_autovaluo.vb" />
