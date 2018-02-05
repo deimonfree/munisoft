@@ -36,16 +36,11 @@ Partial Class uc_rentas_catalogos_instalaciones
         Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Panel36 = New System.Windows.Forms.Panel()
-        Me.lblsubInfo = New System.Windows.Forms.Label()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.lblInfo = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblinfo_tabla = New System.Windows.Forms.Label()
+        Me.cbxAnio = New System.Windows.Forms.ComboBox()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.cbxAnio = New System.Windows.Forms.ComboBox()
         Me.barProgres = New System.Windows.Forms.ProgressBar()
         Me.pbanno = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -64,8 +59,12 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.dgr6 = New System.Windows.Forms.DataGridView()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.dgr7 = New System.Windows.Forms.DataGridView()
-        Me.Panel36.SuspendLayout()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblinfo_tabla = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.pbanno, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dg123.SuspendLayout()
@@ -83,76 +82,34 @@ Partial Class uc_rentas_catalogos_instalaciones
         CType(Me.dgr6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage7.SuspendLayout()
         CType(Me.dgr7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel36
-        '
-        Me.Panel36.Controls.Add(Me.lblsubInfo)
-        Me.Panel36.Controls.Add(Me.PictureBox23)
-        Me.Panel36.Controls.Add(Me.lblInfo)
-        Me.Panel36.Location = New System.Drawing.Point(15, 17)
-        Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(827, 118)
-        Me.Panel36.TabIndex = 101
-        '
-        'lblsubInfo
-        '
-        Me.lblsubInfo.AutoSize = True
-        Me.lblsubInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsubInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.lblsubInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblsubInfo.Location = New System.Drawing.Point(9, 42)
-        Me.lblsubInfo.Name = "lblsubInfo"
-        Me.lblsubInfo.Size = New System.Drawing.Size(362, 16)
-        Me.lblsubInfo.TabIndex = 571
-        Me.lblsubInfo.Text = "Genere o modifique los valores de la tabla de depreciación"
-        '
-        'PictureBox23
-        '
-        Me.PictureBox23.Image = Global.Muni.My.Resources.Resources.Bars
-        Me.PictureBox23.Location = New System.Drawing.Point(18, 77)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(77, 30)
-        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox23.TabIndex = 570
-        Me.PictureBox23.TabStop = False
-        '
-        'lblInfo
-        '
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.lblInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblInfo.Location = New System.Drawing.Point(7, 12)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(228, 25)
-        Me.lblInfo.TabIndex = 565
-        Me.lblInfo.Text = "Tabla de Depreciación"
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Panel1.Controls.Add(Me.lblinfo_tabla)
+        Me.Panel1.Controls.Add(Me.cbxAnio)
         Me.Panel1.Controls.Add(Me.btnCerrar)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.btnNuevo)
-        Me.Panel1.Controls.Add(Me.cbxAnio)
         Me.Panel1.Controls.Add(Me.barProgres)
         Me.Panel1.Controls.Add(Me.pbanno)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(15, 151)
+        Me.Panel1.Location = New System.Drawing.Point(15, 116)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(823, 119)
+        Me.Panel1.Size = New System.Drawing.Size(800, 100)
         Me.Panel1.TabIndex = 111
         '
-        'lblinfo_tabla
+        'cbxAnio
         '
-        Me.lblinfo_tabla.AutoSize = True
-        Me.lblinfo_tabla.Location = New System.Drawing.Point(151, 37)
-        Me.lblinfo_tabla.Name = "lblinfo_tabla"
-        Me.lblinfo_tabla.Size = New System.Drawing.Size(24, 13)
-        Me.lblinfo_tabla.TabIndex = 577
-        Me.lblinfo_tabla.Text = "info"
+        Me.cbxAnio.Font = New System.Drawing.Font("Ubuntu", 12.0!)
+        Me.cbxAnio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.cbxAnio.FormattingEnabled = True
+        Me.cbxAnio.Location = New System.Drawing.Point(12, 31)
+        Me.cbxAnio.Name = "cbxAnio"
+        Me.cbxAnio.Size = New System.Drawing.Size(88, 28)
+        Me.cbxAnio.TabIndex = 579
         '
         'btnCerrar
         '
@@ -160,11 +117,11 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCerrar.FlatAppearance.BorderSize = 0
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnCerrar.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
         Me.btnCerrar.Image = Global.Muni.My.Resources.Resources.blockeado
         Me.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnCerrar.Location = New System.Drawing.Point(628, 14)
+        Me.btnCerrar.Location = New System.Drawing.Point(607, 14)
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(177, 54)
@@ -177,7 +134,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(8, 83)
+        Me.Label8.Location = New System.Drawing.Point(8, 69)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(167, 20)
         Me.Label8.TabIndex = 577
@@ -189,34 +146,24 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNuevo.FlatAppearance.BorderSize = 0
         Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnNuevo.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.Color.White
         Me.btnNuevo.Image = Global.Muni.My.Resources.Resources.engranaje
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnNuevo.Location = New System.Drawing.Point(450, 14)
+        Me.btnNuevo.Location = New System.Drawing.Point(429, 14)
         Me.btnNuevo.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(165, 54)
         Me.btnNuevo.TabIndex = 578
-        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.Text = "Generar Datos"
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
-        'cbxAnio
-        '
-        Me.cbxAnio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbxAnio.FormattingEnabled = True
-        Me.cbxAnio.Items.AddRange(New Object() {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
-        Me.cbxAnio.Location = New System.Drawing.Point(12, 34)
-        Me.cbxAnio.Name = "cbxAnio"
-        Me.cbxAnio.Size = New System.Drawing.Size(106, 21)
-        Me.cbxAnio.TabIndex = 64
-        '
         'barProgres
         '
-        Me.barProgres.Location = New System.Drawing.Point(181, 85)
+        Me.barProgres.Location = New System.Drawing.Point(181, 74)
         Me.barProgres.Name = "barProgres"
-        Me.barProgres.Size = New System.Drawing.Size(624, 18)
+        Me.barProgres.Size = New System.Drawing.Size(604, 18)
         Me.barProgres.TabIndex = 576
         Me.barProgres.Tag = ""
         Me.barProgres.Visible = False
@@ -225,7 +172,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         '
         Me.pbanno.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.pbanno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbanno.Location = New System.Drawing.Point(102, 11)
+        Me.pbanno.Location = New System.Drawing.Point(85, 9)
         Me.pbanno.Name = "pbanno"
         Me.pbanno.Size = New System.Drawing.Size(16, 16)
         Me.pbanno.TabIndex = 110
@@ -251,10 +198,10 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.dg123.Controls.Add(Me.TabPage5)
         Me.dg123.Controls.Add(Me.TabPage6)
         Me.dg123.Controls.Add(Me.TabPage7)
-        Me.dg123.Location = New System.Drawing.Point(15, 276)
+        Me.dg123.Location = New System.Drawing.Point(15, 254)
         Me.dg123.Name = "dg123"
         Me.dg123.SelectedIndex = 0
-        Me.dg123.Size = New System.Drawing.Size(733, 218)
+        Me.dg123.Size = New System.Drawing.Size(800, 218)
         Me.dg123.TabIndex = 112
         '
         'TabPage1
@@ -263,7 +210,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage1.Size = New System.Drawing.Size(792, 192)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Muros y Columnas"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -291,13 +238,14 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr1.DefaultCellStyle = DataGridViewCellStyle16
-        Me.dgr1.Location = New System.Drawing.Point(3, 0)
+        Me.dgr1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr1.Location = New System.Drawing.Point(3, 3)
         Me.dgr1.MultiSelect = False
         Me.dgr1.Name = "dgr1"
         Me.dgr1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr1.RowHeadersVisible = False
         Me.dgr1.RowTemplate.Height = 18
-        Me.dgr1.Size = New System.Drawing.Size(726, 198)
+        Me.dgr1.Size = New System.Drawing.Size(786, 186)
         Me.dgr1.TabIndex = 101
         '
         'TabPage2
@@ -306,7 +254,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage2.Size = New System.Drawing.Size(792, 192)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Techos"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -334,13 +282,14 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr2.DefaultCellStyle = DataGridViewCellStyle18
-        Me.dgr2.Location = New System.Drawing.Point(5, 3)
+        Me.dgr2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr2.Location = New System.Drawing.Point(3, 3)
         Me.dgr2.MultiSelect = False
         Me.dgr2.Name = "dgr2"
         Me.dgr2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr2.RowHeadersVisible = False
         Me.dgr2.RowTemplate.Height = 18
-        Me.dgr2.Size = New System.Drawing.Size(720, 198)
+        Me.dgr2.Size = New System.Drawing.Size(786, 186)
         Me.dgr2.TabIndex = 102
         '
         'TabPage3
@@ -349,7 +298,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage3.Size = New System.Drawing.Size(792, 192)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Pisos"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -377,13 +326,14 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr3.DefaultCellStyle = DataGridViewCellStyle20
-        Me.dgr3.Location = New System.Drawing.Point(5, 3)
+        Me.dgr3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr3.Location = New System.Drawing.Point(3, 3)
         Me.dgr3.MultiSelect = False
         Me.dgr3.Name = "dgr3"
         Me.dgr3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr3.RowHeadersVisible = False
         Me.dgr3.RowTemplate.Height = 18
-        Me.dgr3.Size = New System.Drawing.Size(720, 198)
+        Me.dgr3.Size = New System.Drawing.Size(786, 186)
         Me.dgr3.TabIndex = 102
         '
         'TabPage4
@@ -392,7 +342,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage4.Size = New System.Drawing.Size(792, 192)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Puertas y Ventanas"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -420,13 +370,14 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr4.DefaultCellStyle = DataGridViewCellStyle22
-        Me.dgr4.Location = New System.Drawing.Point(5, 3)
+        Me.dgr4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr4.Location = New System.Drawing.Point(3, 3)
         Me.dgr4.MultiSelect = False
         Me.dgr4.Name = "dgr4"
         Me.dgr4.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr4.RowHeadersVisible = False
         Me.dgr4.RowTemplate.Height = 18
-        Me.dgr4.Size = New System.Drawing.Size(717, 198)
+        Me.dgr4.Size = New System.Drawing.Size(786, 186)
         Me.dgr4.TabIndex = 102
         '
         'TabPage5
@@ -435,7 +386,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage5.Size = New System.Drawing.Size(792, 192)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Revestimientos"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -463,13 +414,14 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr5.DefaultCellStyle = DataGridViewCellStyle24
-        Me.dgr5.Location = New System.Drawing.Point(5, 3)
+        Me.dgr5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr5.Location = New System.Drawing.Point(3, 3)
         Me.dgr5.MultiSelect = False
         Me.dgr5.Name = "dgr5"
         Me.dgr5.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr5.RowHeadersVisible = False
         Me.dgr5.RowTemplate.Height = 18
-        Me.dgr5.Size = New System.Drawing.Size(714, 198)
+        Me.dgr5.Size = New System.Drawing.Size(786, 186)
         Me.dgr5.TabIndex = 102
         '
         'TabPage6
@@ -478,7 +430,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage6.Size = New System.Drawing.Size(792, 192)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Baños"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -506,13 +458,14 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr6.DefaultCellStyle = DataGridViewCellStyle26
-        Me.dgr6.Location = New System.Drawing.Point(5, 3)
+        Me.dgr6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr6.Location = New System.Drawing.Point(3, 3)
         Me.dgr6.MultiSelect = False
         Me.dgr6.Name = "dgr6"
         Me.dgr6.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr6.RowHeadersVisible = False
         Me.dgr6.RowTemplate.Height = 18
-        Me.dgr6.Size = New System.Drawing.Size(717, 198)
+        Me.dgr6.Size = New System.Drawing.Size(786, 186)
         Me.dgr6.TabIndex = 102
         '
         'TabPage7
@@ -521,7 +474,7 @@ Partial Class uc_rentas_catalogos_instalaciones
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(725, 192)
+        Me.TabPage7.Size = New System.Drawing.Size(792, 192)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Instalaciones Electricas"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -549,27 +502,93 @@ Partial Class uc_rentas_catalogos_instalaciones
         DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgr7.DefaultCellStyle = DataGridViewCellStyle28
-        Me.dgr7.Location = New System.Drawing.Point(5, 3)
+        Me.dgr7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgr7.Location = New System.Drawing.Point(3, 3)
         Me.dgr7.MultiSelect = False
         Me.dgr7.Name = "dgr7"
         Me.dgr7.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgr7.RowHeadersVisible = False
         Me.dgr7.RowTemplate.Height = 18
-        Me.dgr7.Size = New System.Drawing.Size(717, 186)
+        Me.dgr7.Size = New System.Drawing.Size(786, 186)
         Me.dgr7.TabIndex = 102
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.Muni.My.Resources.Resources.Bars
+        Me.PictureBox23.Location = New System.Drawing.Point(736, 31)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(77, 30)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox23.TabIndex = 394
+        Me.PictureBox23.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label6.Location = New System.Drawing.Point(11, 57)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(293, 19)
+        Me.Label6.TabIndex = 393
+        Me.Label6.Text = "Modulo para rellenar Valores de Depreciacion ::"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Location = New System.Drawing.Point(10, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(241, 26)
+        Me.Label1.TabIndex = 392
+        Me.Label1.Text = "Tabla de Depreciación ::"
+        '
+        'lblinfo_tabla
+        '
+        Me.lblinfo_tabla.AutoSize = True
+        Me.lblinfo_tabla.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.lblinfo_tabla.Location = New System.Drawing.Point(14, 94)
+        Me.lblinfo_tabla.Name = "lblinfo_tabla"
+        Me.lblinfo_tabla.Size = New System.Drawing.Size(102, 17)
+        Me.lblinfo_tabla.TabIndex = 391
+        Me.lblinfo_tabla.Text = "Nombre de Via"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.Label49)
+        Me.Panel7.Location = New System.Drawing.Point(15, 226)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(800, 22)
+        Me.Panel7.TabIndex = 640
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Ubuntu", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.ForeColor = System.Drawing.Color.White
+        Me.Label49.Location = New System.Drawing.Point(287, 0)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(191, 20)
+        Me.Label49.TabIndex = 278
+        Me.Label49.Text = "TABLA DE VALORIZACIÓN"
         '
         'uc_rentas_catalogos_instalaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.PictureBox23)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblinfo_tabla)
         Me.Controls.Add(Me.dg123)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel36)
         Me.Name = "uc_rentas_catalogos_instalaciones"
-        Me.Size = New System.Drawing.Size(853, 513)
-        Me.Panel36.ResumeLayout(False)
-        Me.Panel36.PerformLayout()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Size = New System.Drawing.Size(900, 513)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.pbanno, System.ComponentModel.ISupportInitialize).EndInit()
@@ -588,20 +607,17 @@ Partial Class uc_rentas_catalogos_instalaciones
         CType(Me.dgr6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage7.ResumeLayout(False)
         CType(Me.dgr7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel36 As Panel
-    Friend WithEvents lblsubInfo As Label
-    Friend WithEvents PictureBox23 As PictureBox
-    Friend WithEvents lblInfo As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblinfo_tabla As Label
     Friend WithEvents btnCerrar As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents cbxAnio As ComboBox
     Friend WithEvents barProgres As ProgressBar
     Friend WithEvents pbanno As PictureBox
     Friend WithEvents Label4 As Label
@@ -620,4 +636,11 @@ Partial Class uc_rentas_catalogos_instalaciones
     Friend WithEvents dgr6 As DataGridView
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents dgr7 As DataGridView
+    Friend WithEvents PictureBox23 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblinfo_tabla As Label
+    Friend WithEvents cbxAnio As ComboBox
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label49 As Label
 End Class

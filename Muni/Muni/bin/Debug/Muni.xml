@@ -82,6 +82,11 @@ Muni
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Muni.My.Resources.Resources.calendario">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Muni.My.Resources.Resources.cancel">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -103,6 +108,11 @@ Muni
 </summary>
 </member>
 <member name="P:Muni.My.Resources.Resources.cancelx16">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Muni.My.Resources.Resources.casa">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -227,6 +237,11 @@ Muni
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Muni.My.Resources.Resources.edificio">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Muni.My.Resources.Resources.Ellipsis">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -308,6 +323,11 @@ Muni
 </summary>
 </member>
 <member name="P:Muni.My.Resources.Resources.growth">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Muni.My.Resources.Resources.hospital">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -408,6 +428,11 @@ Muni
 </summary>
 </member>
 <member name="P:Muni.My.Resources.Resources.mortgage_2">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Muni.My.Resources.Resources.muro">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -633,6 +658,11 @@ Muni
 </summary>
 </member>
 <member name="P:Muni.My.Resources.Resources.settings">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Muni.My.Resources.Resources.shop">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

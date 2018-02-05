@@ -18,7 +18,7 @@
             _DatasetCerrar.Reset()
             consulta_datos_cerrar_periodo_by(modulo, anio)
             If _DatasetCerrar.Tables(0).Rows.Count = 0 Then
-                lblinfo_tabla.Text = ""
+                lblinfo_tabla.Text = "tabla de Valorización no Generada"
                 'btnCerrar.Visible = False
                 btnNuevo.Enabled = True
                 btnCerrar.Text = "Bloqueado"
@@ -38,14 +38,14 @@
                 For Each row In _DatasetCerrar.Tables(0).Rows
                     If row("estado") = "abierto" Then
                         btnCerrar.Visible = True
-                        btnCerrar.Text = "Cerrar Depreciación"
+                        btnCerrar.Text = "Cerrar Valorización"
                         btnCerrar.Image = My.Resources.cerrar_white
                         btnCerrar.BackColor = Color.FromArgb(150, 193, 31)
                         btnCerrar.Enabled = True
                         lblinfo_tabla.Text = ""
                     Else
-                        lblinfo_tabla.Text = "Tabla de depreciación cerrada"
-                        btnCerrar.Text = "Cerrar Depreciación"
+                        lblinfo_tabla.Text = "Tabla de Valorización cerrada"
+                        btnCerrar.Text = "Cerrar Valorización"
                         btnCerrar.Image = My.Resources.padlock
                         btnCerrar.BackColor = Color.FromArgb(255, 140, 1)
                         btnCerrar.Enabled = False
@@ -139,7 +139,7 @@
                 barProgres.Visible = True
                 barProgres.Maximum = 65
                 barProgres.Value = 0
-                lblinfo_tabla.Text = ""
+                lblinfo_tabla.Text = "Tabla de Valorización no Generada"
                 btnNuevo.Enabled = True
                 btnCerrar.Visible = False
                 For i As Integer = 0 To 8
@@ -241,7 +241,7 @@
             _DatasetCerrar.Reset()
             consulta_datos_cerrar_periodo_by(modulo, anio)
             If _DatasetCerrar.Tables(0).Rows.Count = 0 Then
-                lblinfo_tabla.Text = ""
+                lblinfo_tabla.Text = "tabla de Valorización no Generada"
                 btnCerrar.Visible = False
             Else
                 For Each row In _DatasetCerrar.Tables(0).Rows
@@ -249,14 +249,14 @@
                         btnCerrar.Visible = True
                         lblinfo_tabla.Text = ""
                         lblinfo_tabla.Text = ""
-                        btnCerrar.Text = "Cerrar Depreciación"
+                        btnCerrar.Text = "Cerrar Valorización"
                         btnCerrar.Image = My.Resources.cerrar_white
                         btnCerrar.BackColor = Color.FromArgb(150, 193, 31)
                     Else
                         btnCerrar.Text = "5"
                         btnCerrar.Image = My.Resources.update_white
                         btnCerrar.BackColor = Color.FromArgb(128, 131, 140)
-                        lblinfo_tabla.Text = "Tabla de depreciación cerrada"
+                        lblinfo_tabla.Text = "Tabla de Valorización cerrada"
                     End If
                 Next
                 btnNuevo.Enabled = False
@@ -552,4 +552,6 @@
         Else
         End If
     End Sub
+
+
 End Class

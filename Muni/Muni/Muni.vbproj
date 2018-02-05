@@ -1286,6 +1286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\shop.png" />
     <None Include="Resources\server 1.png" />
     <None Include="Resources\server2.png" />
     <None Include="Resources\server3.png" />
@@ -1307,6 +1308,11 @@
     <None Include="Resources\money_estadistica.png" />
     <Content Include="logo_muni_wi8_icon.ico" />
     <None Include="Resources\logo_MUNI.png" />
+    <None Include="Resources\hospital.png" />
+    <None Include="Resources\edificio.png" />
+    <None Include="Resources\casa.png" />
+    <None Include="Resources\muro.png" />
+    <None Include="Resources\calendario.png" />
     <Content Include="Resources\save.png" />
     <None Include="Resources\save1.png" />
     <None Include="Resources\save-file-button.png" />

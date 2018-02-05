@@ -124,10 +124,16 @@ Partial Class uc_rentas_catalogo_depreciacion
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.pbanno = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.Panel28.SuspendLayout()
@@ -173,8 +179,14 @@ Partial Class uc_rentas_catalogo_depreciacion
         CType(Me.dgvr14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvr13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbanno, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label6
@@ -247,7 +259,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         Me.lblinfo_tabla.AutoSize = True
         Me.lblinfo_tabla.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.lblinfo_tabla.Location = New System.Drawing.Point(382, 14)
+        Me.lblinfo_tabla.Location = New System.Drawing.Point(37, 76)
         Me.lblinfo_tabla.Name = "lblinfo_tabla"
         Me.lblinfo_tabla.Size = New System.Drawing.Size(102, 17)
         Me.lblinfo_tabla.TabIndex = 107
@@ -930,6 +942,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         'gb_Años
         '
+        Me.gb_Años.Controls.Add(Me.PictureBox1)
         Me.gb_Años.Controls.Add(Me.Panel28)
         Me.gb_Años.Controls.Add(Me.Panel14)
         Me.gb_Años.Controls.Add(Me.Panel16)
@@ -951,6 +964,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         'gb_CasaHabitacion
         '
+        Me.gb_CasaHabitacion.Controls.Add(Me.PictureBox3)
         Me.gb_CasaHabitacion.Controls.Add(Me.Label10)
         Me.gb_CasaHabitacion.Controls.Add(Me.Label9)
         Me.gb_CasaHabitacion.Controls.Add(Me.Label5)
@@ -1014,6 +1028,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PictureBox4)
         Me.GroupBox1.Controls.Add(Me.dgvr8)
         Me.GroupBox1.Controls.Add(Me.dgvr7)
         Me.GroupBox1.Controls.Add(Me.dgvr6)
@@ -1137,6 +1152,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.PictureBox5)
         Me.GroupBox2.Controls.Add(Me.dgvr12)
         Me.GroupBox2.Controls.Add(Me.dgvr11)
         Me.GroupBox2.Controls.Add(Me.dgvr10)
@@ -1259,6 +1275,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.PictureBox6)
         Me.GroupBox3.Controls.Add(Me.dgvr16)
         Me.GroupBox3.Controls.Add(Me.dgvr15)
         Me.GroupBox3.Controls.Add(Me.dgvr14)
@@ -1382,6 +1399,7 @@ Partial Class uc_rentas_catalogo_depreciacion
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.PictureBox2)
         Me.GroupBox4.Controls.Add(Me.dgvMaterial11)
         Me.GroupBox4.Controls.Add(Me.dgvMaterial10)
         Me.GroupBox4.Controls.Add(Me.dgvMaterial9)
@@ -1401,10 +1419,47 @@ Partial Class uc_rentas_catalogo_depreciacion
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "MATERIAL ESTRUCTURAL PREDOMINANTE"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Muni.My.Resources.Resources.muro
+        Me.PictureBox2.Location = New System.Drawing.Point(27, 55)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox2.TabIndex = 97
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Muni.My.Resources.Resources.hospital
+        Me.PictureBox6.Location = New System.Drawing.Point(71, 55)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox6.TabIndex = 399
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Muni.My.Resources.Resources.shop
+        Me.PictureBox4.Location = New System.Drawing.Point(65, 55)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox4.TabIndex = 399
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Muni.My.Resources.Resources.calendario
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 55)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 96
+        Me.PictureBox1.TabStop = False
+        '
         'PictureBox23
         '
         Me.PictureBox23.Image = Global.Muni.My.Resources.Resources.Bars
-        Me.PictureBox23.Location = New System.Drawing.Point(27, 63)
+        Me.PictureBox23.Location = New System.Drawing.Point(759, 14)
         Me.PictureBox23.Name = "PictureBox23"
         Me.PictureBox23.Size = New System.Drawing.Size(77, 30)
         Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1460,6 +1515,24 @@ Partial Class uc_rentas_catalogo_depreciacion
         Me.pbanno.TabIndex = 108
         Me.pbanno.TabStop = False
         Me.pbanno.Visible = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Muni.My.Resources.Resources.casa
+        Me.PictureBox3.Location = New System.Drawing.Point(66, 55)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox3.TabIndex = 399
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Muni.My.Resources.Resources.edificio
+        Me.PictureBox5.Location = New System.Drawing.Point(65, 55)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox5.TabIndex = 399
+        Me.PictureBox5.TabStop = False
         '
         'uc_rentas_catalogo_depreciacion
         '
@@ -1539,8 +1612,14 @@ Partial Class uc_rentas_catalogo_depreciacion
         CType(Me.dgvr14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvr13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbanno, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1640,4 +1719,10 @@ Partial Class uc_rentas_catalogo_depreciacion
     Friend WithEvents Label41 As Label
     Friend WithEvents Label42 As Label
     Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

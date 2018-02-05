@@ -23,14 +23,14 @@ Partial Class uc_rentas_valorDepreciacion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panel_title = New System.Windows.Forms.Panel()
-        Me.sidel_panel = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.sidePanel = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblname = New System.Windows.Forms.Label()
         Me.lblcargo = New System.Windows.Forms.Label()
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.pbload = New System.Windows.Forms.PictureBox()
         Me.panel_body = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.panel_title.SuspendLayout()
         CType(Me.pbload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -38,27 +38,44 @@ Partial Class uc_rentas_valorDepreciacion
         'panel_title
         '
         Me.panel_title.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.panel_title.Controls.Add(Me.Button2)
-        Me.panel_title.Controls.Add(Me.sidel_panel)
+        Me.panel_title.Controls.Add(Me.sidePanel)
         Me.panel_title.Controls.Add(Me.Button1)
         Me.panel_title.Controls.Add(Me.lblname)
         Me.panel_title.Controls.Add(Me.lblcargo)
         Me.panel_title.Controls.Add(Me.btn_delete)
         Me.panel_title.Controls.Add(Me.pbload)
+        Me.panel_title.Controls.Add(Me.Button2)
         Me.panel_title.Dock = System.Windows.Forms.DockStyle.Top
         Me.panel_title.Location = New System.Drawing.Point(0, 0)
         Me.panel_title.Name = "panel_title"
         Me.panel_title.Size = New System.Drawing.Size(900, 100)
         Me.panel_title.TabIndex = 15
         '
-        'sidel_panel
+        'Button2
         '
-        Me.sidel_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.sidel_panel.Location = New System.Drawing.Point(0, 66)
-        Me.sidel_panel.Name = "sidel_panel"
-        Me.sidel_panel.Size = New System.Drawing.Size(182, 5)
-        Me.sidel_panel.TabIndex = 56
-        Me.sidel_panel.Visible = False
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(185, 70)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(182, 30)
+        Me.Button2.TabIndex = 57
+        Me.Button2.Text = "V&alor de Valorización"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'sidePanel
+        '
+        Me.sidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.sidePanel.Location = New System.Drawing.Point(0, 66)
+        Me.sidePanel.Name = "sidePanel"
+        Me.sidePanel.Size = New System.Drawing.Size(182, 5)
+        Me.sidePanel.TabIndex = 56
+        Me.sidePanel.Visible = False
         '
         'Button1
         '
@@ -140,23 +157,6 @@ Partial Class uc_rentas_valorDepreciacion
         Me.panel_body.Size = New System.Drawing.Size(900, 392)
         Me.panel_body.TabIndex = 16
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(185, 66)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 30)
-        Me.Button2.TabIndex = 57
-        Me.Button2.Text = "&Valor de Depreciación"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'uc_rentas_valorDepreciacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -174,7 +174,7 @@ Partial Class uc_rentas_valorDepreciacion
     End Sub
 
     Friend WithEvents panel_title As Panel
-    Friend WithEvents sidel_panel As Panel
+    Friend WithEvents sidePanel As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents lblname As Label
     Friend WithEvents lblcargo As Label
