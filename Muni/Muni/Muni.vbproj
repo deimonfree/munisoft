@@ -374,6 +374,12 @@
     <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo_pagado.Designer.vb">
+      <DependentUpon>uc_rentas_autovaluo_recibo_pagado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo_pagado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Views\rentas\autovaluo\uc_rentas_buqueda_autovaluo.Designer.vb">
       <DependentUpon>uc_rentas_buqueda_autovaluo.vb</DependentUpon>
     </Compile>
@@ -877,6 +883,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo.resx">
       <DependentUpon>uc_rentas_autovaluo_recibo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_autovaluo_recibo_pagado.resx">
+      <DependentUpon>uc_rentas_autovaluo_recibo_pagado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_buqueda_autovaluo.resx">
       <DependentUpon>uc_rentas_buqueda_autovaluo.vb</DependentUpon>

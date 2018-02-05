@@ -57,4 +57,19 @@ Module mod_anno
         End Try
 
     End Sub
+    Sub consulta_datos_annio_all_limit()
+        Try
+            conex_Global()
+            _adaptador.SelectCommand = New MySqlCommand("select * from  anno order by idanno desc limit 1", _conexion)
+            _adaptador.Fill(_DatasetAnnio)
+            _dtwAnnio.Table = _DatasetAnnio.Tables(0)
+            _conexion.Open()
+            _adaptador.SelectCommand.Connection = _conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            cerrar()
+        End Try
+    End Sub
 End Module

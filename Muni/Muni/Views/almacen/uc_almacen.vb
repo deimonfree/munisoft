@@ -138,4 +138,29 @@
         slidePanel.Top = Button4.Top
         'slidePanel.Location = Button2.Location
     End Sub
+
+    Private Sub uc_almacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Verificar si existe el annio'
+        Dim annio As String
+        Dim idannio As New Integer
+        annio = Date.Now.Year.ToString
+        _DatasetAnnio.Reset()
+        consulta_datos_annio_all_limit()
+        For Each row In _DatasetAnnio.Tables(0).Rows
+            idannio = row("idanno")
+            If row("anno") = annio Then
+                'MessageBox.Show("Año actual ya existe " + annio)
+            Else
+
+                Dim datos As New anno
+                Dim control As New class_controller_annio
+                datos.Id_anno = (idannio + 1)
+                datos.Anno_anno = annio
+                If control.insertarDatosAnnio(datos) Then
+                    MessageBox.Show("El presente año " + annio + " ha sido agregado---!!!")
+                Else
+                End If
+            End If
+        Next
+    End Sub
 End Class
