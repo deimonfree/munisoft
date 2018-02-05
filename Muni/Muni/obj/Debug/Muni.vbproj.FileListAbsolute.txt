@@ -394,3 +394,10 @@ I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.vistacentral.resources
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.exe.manifest
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.application
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\Muni.exe.config
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.exe
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.xml
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.pdb
