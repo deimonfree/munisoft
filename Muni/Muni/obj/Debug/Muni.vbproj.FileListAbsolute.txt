@@ -401,3 +401,5 @@ C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbproj
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.exe
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.xml
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.pdb
+I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.uc_rentas_autovaluo_recibo_pagado.resources
+I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.uc_rentas_fichaPago.resources

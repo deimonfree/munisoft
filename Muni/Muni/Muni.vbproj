@@ -542,6 +542,12 @@
     <Compile Include="Views\rentas\ficha\uc_rentas_ficha_new.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Views\rentas\pago\uc_rentas_fichaPago.Designer.vb">
+      <DependentUpon>uc_rentas_fichaPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\pago\uc_rentas_fichaPago.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Views\rentas\predio\d_rentas_busqueda.Designer.vb">
       <DependentUpon>d_rentas_busqueda.vb</DependentUpon>
     </Compile>
@@ -968,6 +974,9 @@
     <EmbeddedResource Include="Views\rentas\ficha\uc_rentas_ficha_new.resx">
       <DependentUpon>uc_rentas_ficha_new.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\pago\uc_rentas_fichaPago.resx">
+      <DependentUpon>uc_rentas_fichaPago.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\predio\d_rentas_busqueda.resx">
       <DependentUpon>d_rentas_busqueda.vb</DependentUpon>
     </EmbeddedResource>
@@ -1322,6 +1331,7 @@
     <None Include="Resources\casa.png" />
     <None Include="Resources\muro.png" />
     <None Include="Resources\calendario.png" />
+    <None Include="Resources\pagos.png" />
     <Content Include="Resources\save.png" />
     <None Include="Resources\save1.png" />
     <None Include="Resources\save-file-button.png" />

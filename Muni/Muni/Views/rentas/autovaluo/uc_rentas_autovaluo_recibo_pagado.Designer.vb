@@ -22,15 +22,9 @@ Partial Class uc_rentas_autovaluo_recibo_pagado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnShared = New System.Windows.Forms.Button()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cbxperiodo = New System.Windows.Forms.ComboBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.cbHoy = New System.Windows.Forms.CheckBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.cbTodos = New System.Windows.Forms.CheckBox()
@@ -49,171 +43,85 @@ Partial Class uc_rentas_autovaluo_recibo_pagado
         Me.txtFeVenc = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtIdentificacion = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.dgwPredio = New System.Windows.Forms.DataGridView()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.cbxperiodo = New System.Windows.Forms.ComboBox()
+        Me.sidePanel = New System.Windows.Forms.Panel()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtIdentificacion = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.pbnombre = New System.Windows.Forms.PictureBox()
+        Me.btnShared = New System.Windows.Forms.Button()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         CType(Me.dgwPredio, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel8.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.pbnombre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.btnShared)
-        Me.Panel1.Controls.Add(Me.Label20)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.cbxperiodo)
-        Me.Panel1.Controls.Add(Me.Label26)
-        Me.Panel1.Controls.Add(Me.PictureBox23)
-        Me.Panel1.Location = New System.Drawing.Point(14, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(832, 105)
-        Me.Panel1.TabIndex = 491
-        '
-        'btnShared
-        '
-        Me.btnShared.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnShared.FlatAppearance.BorderSize = 0
-        Me.btnShared.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnShared.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.btnShared.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.btnShared.Image = Global.Muni.My.Resources.Resources.magnifying_glass_with_two_way_arrows
-        Me.btnShared.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnShared.Location = New System.Drawing.Point(596, 57)
-        Me.btnShared.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.btnShared.Name = "btnShared"
-        Me.btnShared.Size = New System.Drawing.Size(209, 34)
-        Me.btnShared.TabIndex = 483
-        Me.btnShared.Text = "Buscar"
-        Me.btnShared.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnShared.UseVisualStyleBackColor = True
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label20.Location = New System.Drawing.Point(436, 42)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(122, 16)
-        Me.Label20.TabIndex = 607
-        Me.Label20.Text = "Seleccione el Periodo .:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(12, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(181, 25)
-        Me.Label1.TabIndex = 479
-        Me.Label1.Text = "Recibos Pagados"
-        '
-        'cbxperiodo
-        '
-        Me.cbxperiodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.cbxperiodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.cbxperiodo.FormattingEnabled = True
-        Me.cbxperiodo.Location = New System.Drawing.Point(439, 64)
-        Me.cbxperiodo.Name = "cbxperiodo"
-        Me.cbxperiodo.Size = New System.Drawing.Size(134, 28)
-        Me.cbxperiodo.TabIndex = 546
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label26.Location = New System.Drawing.Point(24, 42)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(327, 16)
-        Me.Label26.TabIndex = 485
-        Me.Label26.Text = "Modulo en el que podra verificar los recibos pagados"
-        '
-        'PictureBox23
-        '
-        Me.PictureBox23.Image = Global.Muni.My.Resources.Resources.Bars
-        Me.PictureBox23.Location = New System.Drawing.Point(27, 64)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(77, 30)
-        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox23.TabIndex = 484
-        Me.PictureBox23.TabStop = False
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.GroupBox2.Controls.Add(Me.Label23)
+        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.cbHoy)
         Me.GroupBox2.Controls.Add(Me.dtpFecha)
         Me.GroupBox2.Controls.Add(Me.cbTodos)
-        Me.GroupBox2.Location = New System.Drawing.Point(14, 126)
+        Me.GroupBox2.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(46, 126)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(832, 56)
+        Me.GroupBox2.Size = New System.Drawing.Size(800, 56)
         Me.GroupBox2.TabIndex = 553
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Busqueda por .:"
         '
-        'Label23
+        'Label7
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.Black
-        Me.Label23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label23.Location = New System.Drawing.Point(13, 26)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(105, 13)
-        Me.Label23.TabIndex = 547
-        Me.Label23.Text = "Fecha de Pago .:"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(13, 24)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(59, 17)
+        Me.Label7.TabIndex = 606
+        Me.Label7.Text = "Fecha  ::"
         '
         'cbHoy
         '
         Me.cbHoy.AutoSize = True
-        Me.cbHoy.Location = New System.Drawing.Point(364, 24)
+        Me.cbHoy.Location = New System.Drawing.Point(668, 20)
         Me.cbHoy.Name = "cbHoy"
-        Me.cbHoy.Size = New System.Drawing.Size(45, 17)
+        Me.cbHoy.Size = New System.Drawing.Size(51, 21)
         Me.cbHoy.TabIndex = 549
         Me.cbHoy.Text = "Hoy"
         Me.cbHoy.UseVisualStyleBackColor = True
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(134, 20)
+        Me.dtpFecha.Location = New System.Drawing.Point(87, 21)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(190, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(271, 22)
         Me.dtpFecha.TabIndex = 546
         '
         'cbTodos
         '
         Me.cbTodos.AutoSize = True
-        Me.cbTodos.Location = New System.Drawing.Point(431, 24)
+        Me.cbTodos.Location = New System.Drawing.Point(725, 20)
         Me.cbTodos.Name = "cbTodos"
-        Me.cbTodos.Size = New System.Drawing.Size(56, 17)
+        Me.cbTodos.Size = New System.Drawing.Size(63, 21)
         Me.cbTodos.TabIndex = 550
         Me.cbTodos.Text = "Todos"
         Me.cbTodos.UseVisualStyleBackColor = True
@@ -232,7 +140,7 @@ Partial Class uc_rentas_autovaluo_recibo_pagado
         Me.Panel5.Controls.Add(Me.txtFeVenc)
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.Label15)
-        Me.Panel5.Location = New System.Drawing.Point(14, 197)
+        Me.Panel5.Location = New System.Drawing.Point(31, 197)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(830, 75)
         Me.Panel5.TabIndex = 554
@@ -389,231 +297,291 @@ Partial Class uc_rentas_autovaluo_recibo_pagado
         Me.Label15.TabIndex = 528
         Me.Label15.Text = "Cod. Recibo"
         '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Panel7)
-        Me.Panel3.Controls.Add(Me.txtCodigo)
-        Me.Panel3.Controls.Add(Me.txtNombre)
-        Me.Panel3.Controls.Add(Me.txtIdentificacion)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.txtDireccion)
-        Me.Panel3.Location = New System.Drawing.Point(14, 290)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(832, 106)
-        Me.Panel3.TabIndex = 555
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
-        Me.Panel7.Controls.Add(Me.CheckBox2)
-        Me.Panel7.Controls.Add(Me.Label49)
-        Me.Panel7.Location = New System.Drawing.Point(12, 14)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(800, 22)
-        Me.Panel7.TabIndex = 526
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(782, 5)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 405
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.ForeColor = System.Drawing.Color.White
-        Me.Label49.Location = New System.Drawing.Point(270, -1)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(286, 18)
-        Me.Label49.TabIndex = 278
-        Me.Label49.Text = "DATOS DE REPRESENTATE LEGAL"
-        '
-        'txtCodigo
-        '
-        Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtCodigo.Location = New System.Drawing.Point(12, 62)
-        Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(79, 26)
-        Me.txtCodigo.TabIndex = 523
-        '
-        'txtNombre
-        '
-        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNombre.Enabled = False
-        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(97, 62)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(300, 26)
-        Me.txtNombre.TabIndex = 524
-        '
-        'txtIdentificacion
-        '
-        Me.txtIdentificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtIdentificacion.Enabled = False
-        Me.txtIdentificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdentificacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtIdentificacion.Location = New System.Drawing.Point(403, 62)
-        Me.txtIdentificacion.Name = "txtIdentificacion"
-        Me.txtIdentificacion.Size = New System.Drawing.Size(110, 26)
-        Me.txtIdentificacion.TabIndex = 525
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 42)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 16)
-        Me.Label5.TabIndex = 527
-        Me.Label5.Text = "Codigo ::"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(97, 39)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 16)
-        Me.Label4.TabIndex = 528
-        Me.Label4.Text = "Nombres y Apellidos ::"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(400, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 16)
-        Me.Label3.TabIndex = 529
-        Me.Label3.Text = "Doc. Iden.  ::"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(517, 42)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 16)
-        Me.Label2.TabIndex = 530
-        Me.Label2.Text = "Dirección  ::"
-        '
-        'txtDireccion
-        '
-        Me.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDireccion.Enabled = False
-        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtDireccion.Location = New System.Drawing.Point(520, 62)
-        Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(292, 26)
-        Me.txtDireccion.TabIndex = 531
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.dgwPredio)
-        Me.Panel6.Controls.Add(Me.Panel8)
-        Me.Panel6.Controls.Add(Me.Label9)
-        Me.Panel6.Location = New System.Drawing.Point(12, 411)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(832, 358)
-        Me.Panel6.TabIndex = 556
-        '
         'dgwPredio
         '
         Me.dgwPredio.AllowUserToAddRows = False
         Me.dgwPredio.AllowUserToDeleteRows = False
         Me.dgwPredio.AllowUserToResizeRows = False
+        Me.dgwPredio.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgwPredio.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgwPredio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgwPredio.Location = New System.Drawing.Point(18, 43)
+        Me.dgwPredio.Location = New System.Drawing.Point(44, 409)
         Me.dgwPredio.MultiSelect = False
         Me.dgwPredio.Name = "dgwPredio"
         Me.dgwPredio.ReadOnly = True
-        Me.dgwPredio.Size = New System.Drawing.Size(795, 296)
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwPredio.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgwPredio.Size = New System.Drawing.Size(800, 296)
         Me.dgwPredio.TabIndex = 511
         '
-        'Panel8
+        'Label20
         '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.Label27)
-        Me.Panel8.Location = New System.Drawing.Point(18, 15)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(794, 22)
-        Me.Panel8.TabIndex = 510
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label20.Location = New System.Drawing.Point(503, 42)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(122, 16)
+        Me.Label20.TabIndex = 609
+        Me.Label20.Text = "Seleccione el Periodo .:"
         '
-        'Label27
+        'cbxperiodo
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(251, 4)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(241, 18)
-        Me.Label27.TabIndex = 278
-        Me.Label27.Text = "LISTADO RECIBOS PAGADOS"
+        Me.cbxperiodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.cbxperiodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.cbxperiodo.FormattingEnabled = True
+        Me.cbxperiodo.Location = New System.Drawing.Point(506, 61)
+        Me.cbxperiodo.Name = "cbxperiodo"
+        Me.cbxperiodo.Size = New System.Drawing.Size(134, 28)
+        Me.cbxperiodo.TabIndex = 608
         '
-        'Label9
+        'sidePanel
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(99, 99)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(207, 16)
-        Me.Label9.TabIndex = 509
-        Me.Label9.Text = "Busqueda de Contribuyente::"
+        Me.sidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.sidePanel.Location = New System.Drawing.Point(657, 46)
+        Me.sidePanel.Name = "sidePanel"
+        Me.sidePanel.Size = New System.Drawing.Size(186, 48)
+        Me.sidePanel.TabIndex = 607
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label26.Location = New System.Drawing.Point(39, 47)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(392, 19)
+        Me.Label26.TabIndex = 605
+        Me.Label26.Text = "Rellene los datos para que puede generar la ficha de Liquidación"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Ubuntu", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label12.Location = New System.Drawing.Point(39, 21)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(254, 26)
+        Me.Label12.TabIndex = 603
+        Me.Label12.Text = "Reporte  de Liquidación ::"
+        '
+        'txtDireccion
+        '
+        Me.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDireccion.Enabled = False
+        Me.txtDireccion.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtDireccion.Location = New System.Drawing.Point(553, 341)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(291, 26)
+        Me.txtDireccion.TabIndex = 623
+        '
+        'txtIdentificacion
+        '
+        Me.txtIdentificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtIdentificacion.Enabled = False
+        Me.txtIdentificacion.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdentificacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtIdentificacion.Location = New System.Drawing.Point(436, 341)
+        Me.txtIdentificacion.Name = "txtIdentificacion"
+        Me.txtIdentificacion.Size = New System.Drawing.Size(110, 26)
+        Me.txtIdentificacion.TabIndex = 622
+        '
+        'txtNombre
+        '
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNombre.Enabled = False
+        Me.txtNombre.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtNombre.Location = New System.Drawing.Point(130, 341)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(300, 26)
+        Me.txtNombre.TabIndex = 621
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodigo.Enabled = False
+        Me.txtCodigo.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtCodigo.Location = New System.Drawing.Point(45, 341)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(79, 26)
+        Me.txtCodigo.TabIndex = 620
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(550, 321)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(84, 17)
+        Me.Label10.TabIndex = 619
+        Me.Label10.Text = "Dirección  ::"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(433, 321)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(86, 17)
+        Me.Label8.TabIndex = 618
+        Me.Label8.Text = "Doc. Iden.  ::"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(127, 321)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(151, 17)
+        Me.Label1.TabIndex = 617
+        Me.Label1.Text = "Nombres y Apellidos ::"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(44, 321)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 17)
+        Me.Label3.TabIndex = 616
+        Me.Label3.Text = "Codigo ::"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.Label49)
+        Me.Panel7.Location = New System.Drawing.Point(44, 296)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(800, 22)
+        Me.Panel7.TabIndex = 615
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Ubuntu", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.ForeColor = System.Drawing.Color.White
+        Me.Label49.Location = New System.Drawing.Point(270, -1)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(245, 20)
+        Me.Label49.TabIndex = 278
+        Me.Label49.Text = "DATOS DE REPRESENTATE LEGAL"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Location = New System.Drawing.Point(44, 380)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(800, 22)
+        Me.Panel1.TabIndex = 625
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Ubuntu", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(270, -1)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(211, 20)
+        Me.Label2.TabIndex = 278
+        Me.Label2.Text = "LISTA DE RECIBOS PAGADOS"
+        '
+        'pbnombre
+        '
+        Me.pbnombre.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbnombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbnombre.Location = New System.Drawing.Point(827, 322)
+        Me.pbnombre.Name = "pbnombre"
+        Me.pbnombre.Size = New System.Drawing.Size(16, 16)
+        Me.pbnombre.TabIndex = 624
+        Me.pbnombre.TabStop = False
+        Me.pbnombre.Visible = False
+        '
+        'btnShared
+        '
+        Me.btnShared.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnShared.FlatAppearance.BorderSize = 0
+        Me.btnShared.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShared.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnShared.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.btnShared.Image = Global.Muni.My.Resources.Resources.magnifying_glass_with_two_way_arrows
+        Me.btnShared.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnShared.Location = New System.Drawing.Point(654, 46)
+        Me.btnShared.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnShared.Name = "btnShared"
+        Me.btnShared.Size = New System.Drawing.Size(189, 43)
+        Me.btnShared.TabIndex = 606
+        Me.btnShared.Text = "Buscar Contribuyente"
+        Me.btnShared.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnShared.UseVisualStyleBackColor = True
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.Muni.My.Resources.Resources.Bars
+        Me.PictureBox23.Location = New System.Drawing.Point(42, 70)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(77, 30)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox23.TabIndex = 604
+        Me.PictureBox23.TabStop = False
         '
         'uc_rentas_autovaluo_recibo_pagado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.dgwPredio)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pbnombre)
+        Me.Controls.Add(Me.txtDireccion)
+        Me.Controls.Add(Me.txtIdentificacion)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.txtCodigo)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.cbxperiodo)
+        Me.Controls.Add(Me.btnShared)
+        Me.Controls.Add(Me.sidePanel)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.PictureBox23)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.Panel1)
         Me.Name = "uc_rentas_autovaluo_recibo_pagado"
-        Me.Size = New System.Drawing.Size(859, 787)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Size = New System.Drawing.Size(900, 787)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        CType(Me.dgwPredio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        CType(Me.dgwPredio, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.pbnombre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnShared As Button
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents cbxperiodo As ComboBox
-    Friend WithEvents Label26 As Label
-    Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label23 As Label
     Friend WithEvents cbHoy As CheckBox
     Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents cbTodos As CheckBox
@@ -632,21 +600,26 @@ Partial Class uc_rentas_autovaluo_recibo_pagado
     Friend WithEvents txtFeVenc As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents Label49 As Label
-    Friend WithEvents txtCodigo As TextBox
-    Friend WithEvents txtNombre As TextBox
-    Friend WithEvents txtIdentificacion As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtDireccion As TextBox
-    Friend WithEvents Panel6 As Panel
     Friend WithEvents dgwPredio As DataGridView
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents cbxperiodo As ComboBox
+    Friend WithEvents btnShared As Button
+    Friend WithEvents sidePanel As Panel
+    Friend WithEvents Label26 As Label
+    Friend WithEvents PictureBox23 As PictureBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents pbnombre As PictureBox
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtIdentificacion As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtCodigo As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
 End Class

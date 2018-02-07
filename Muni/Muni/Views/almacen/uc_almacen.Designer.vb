@@ -23,24 +23,25 @@ Partial Class uc_almacen
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.panel_sider = New System.Windows.Forms.Panel()
+        Me.slidePanel = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.panel_barra = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.panel_body_almacen = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.slidePanel = New System.Windows.Forms.Panel()
         Me.btnCatalogoVias = New System.Windows.Forms.Button()
         Me.btn_Arancel = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.btnReportes = New System.Windows.Forms.Button()
         Me.btnAutovaluo = New System.Windows.Forms.Button()
         Me.btnPredio = New System.Windows.Forms.Button()
         Me.btnContribuyente = New System.Windows.Forms.Button()
-        Me.panel_barra = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btn_close = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.panel_body_almacen = New System.Windows.Forms.Panel()
         Me.panel_sider.SuspendLayout()
         Me.panel_barra.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,10 +53,11 @@ Partial Class uc_almacen
         '
         Me.panel_sider.AutoScroll = True
         Me.panel_sider.BackColor = System.Drawing.Color.White
+        Me.panel_sider.Controls.Add(Me.slidePanel)
+        Me.panel_sider.Controls.Add(Me.Button5)
         Me.panel_sider.Controls.Add(Me.Button4)
         Me.panel_sider.Controls.Add(Me.Button2)
         Me.panel_sider.Controls.Add(Me.Button1)
-        Me.panel_sider.Controls.Add(Me.slidePanel)
         Me.panel_sider.Controls.Add(Me.btnCatalogoVias)
         Me.panel_sider.Controls.Add(Me.btn_Arancel)
         Me.panel_sider.Controls.Add(Me.Button3)
@@ -69,6 +71,99 @@ Partial Class uc_almacen
         Me.panel_sider.Name = "panel_sider"
         Me.panel_sider.Size = New System.Drawing.Size(240, 686)
         Me.panel_sider.TabIndex = 4
+        '
+        'slidePanel
+        '
+        Me.slidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.slidePanel.Location = New System.Drawing.Point(0, 100)
+        Me.slidePanel.Name = "slidePanel"
+        Me.slidePanel.Size = New System.Drawing.Size(8, 39)
+        Me.slidePanel.TabIndex = 36
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Black
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(0, 248)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 10, 3, 10)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button3.Size = New System.Drawing.Size(240, 37)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "CATALOGOS"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'panel_barra
+        '
+        Me.panel_barra.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.panel_barra.Controls.Add(Me.Label2)
+        Me.panel_barra.Controls.Add(Me.PictureBox3)
+        Me.panel_barra.Controls.Add(Me.PictureBox2)
+        Me.panel_barra.Controls.Add(Me.btn_close)
+        Me.panel_barra.Controls.Add(Me.Label1)
+        Me.panel_barra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.panel_barra.Location = New System.Drawing.Point(0, 0)
+        Me.panel_barra.Name = "panel_barra"
+        Me.panel_barra.Size = New System.Drawing.Size(240, 100)
+        Me.panel_barra.TabIndex = 25
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Ubuntu", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(18, 12)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(163, 20)
+        Me.Label2.TabIndex = 332
+        Me.Label2.Text = "REGISTRO PREDIAL ::"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(18, 32)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(168, 32)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Modulo de registro predial y " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "emision de recibos"
+        '
+        'panel_body_almacen
+        '
+        Me.panel_body_almacen.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panel_body_almacen.Location = New System.Drawing.Point(240, 0)
+        Me.panel_body_almacen.Name = "panel_body_almacen"
+        Me.panel_body_almacen.Size = New System.Drawing.Size(850, 686)
+        Me.panel_body_almacen.TabIndex = 5
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Ubuntu", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Black
+        Me.Button5.Image = Global.Muni.My.Resources.Resources.pagos
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(0, 470)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 10, 3, 10)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button5.Size = New System.Drawing.Size(240, 37)
+        Me.Button5.TabIndex = 42
+        Me.Button5.Text = "          Lista de Pagos"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -133,14 +228,6 @@ Partial Class uc_almacen
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'slidePanel
-        '
-        Me.slidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.slidePanel.Location = New System.Drawing.Point(0, 100)
-        Me.slidePanel.Name = "slidePanel"
-        Me.slidePanel.Size = New System.Drawing.Size(8, 39)
-        Me.slidePanel.TabIndex = 36
-        '
         'btnCatalogoVias
         '
         Me.btnCatalogoVias.BackColor = System.Drawing.Color.Transparent
@@ -182,26 +269,6 @@ Partial Class uc_almacen
         Me.btn_Arancel.Text = "          Valores Arancelarios"
         Me.btn_Arancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_Arancel.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 248)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 10, 3, 10)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(240, 37)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "CATALOGOS"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'btnReportes
         '
@@ -287,31 +354,6 @@ Partial Class uc_almacen
         Me.btnContribuyente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnContribuyente.UseVisualStyleBackColor = False
         '
-        'panel_barra
-        '
-        Me.panel_barra.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.panel_barra.Controls.Add(Me.Label2)
-        Me.panel_barra.Controls.Add(Me.PictureBox3)
-        Me.panel_barra.Controls.Add(Me.PictureBox2)
-        Me.panel_barra.Controls.Add(Me.btn_close)
-        Me.panel_barra.Controls.Add(Me.Label1)
-        Me.panel_barra.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panel_barra.Location = New System.Drawing.Point(0, 0)
-        Me.panel_barra.Name = "panel_barra"
-        Me.panel_barra.Size = New System.Drawing.Size(240, 100)
-        Me.panel_barra.TabIndex = 25
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ubuntu", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(18, 12)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(163, 20)
-        Me.Label2.TabIndex = 332
-        Me.Label2.Text = "REGISTRO PREDIAL ::"
-        '
         'PictureBox3
         '
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
@@ -344,25 +386,6 @@ Partial Class uc_almacen
         Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btn_close.TabIndex = 45
         Me.btn_close.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(18, 32)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(168, 32)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Modulo de registro predial y " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "emision de recibos"
-        '
-        'panel_body_almacen
-        '
-        Me.panel_body_almacen.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panel_body_almacen.Location = New System.Drawing.Point(240, 0)
-        Me.panel_body_almacen.Name = "panel_body_almacen"
-        Me.panel_body_almacen.Size = New System.Drawing.Size(850, 686)
-        Me.panel_body_almacen.TabIndex = 5
         '
         'uc_almacen
         '
@@ -400,4 +423,5 @@ Partial Class uc_almacen
     Friend WithEvents Button1 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button5 As Button
 End Class

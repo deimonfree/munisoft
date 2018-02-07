@@ -497,6 +497,11 @@ Muni
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Muni.My.Resources.Resources.pagos">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Muni.My.Resources.Resources.pencil">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
