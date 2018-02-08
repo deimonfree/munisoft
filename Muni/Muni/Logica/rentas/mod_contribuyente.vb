@@ -176,4 +176,21 @@ Module mod_contribuyente
             cerrar()
         End Try
     End Sub
+    Sub consulta_datos_contribuyente_by_valor(ByVal tipo As String, ByVal valor As String)
+        Try
+            conex_Global()
+            _conectorMysql.SelectCommand = New MySqlCommand("select * from contribuyente where numero_doc=@valor and cod_tipodoc=@tipo", _conexion)
+            _conectorMysql.SelectCommand.Parameters.Add("@tipo", MySqlDbType.VarChar, 45).Value = tipo
+            _conectorMysql.SelectCommand.Parameters.Add("@valor", MySqlDbType.VarChar, 45).Value = valor
+            _conectorMysql.Fill(_DatasetContribuyente)
+            _dtwContribuyente.Table = _DatasetContribuyente.Tables(0)
+            _conexion.Open()
+            _conectorMysql.SelectCommand.Connection = _conexion
+            _conectorMysql.SelectCommand.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            cerrar()
+        End Try
+    End Sub
 End Module

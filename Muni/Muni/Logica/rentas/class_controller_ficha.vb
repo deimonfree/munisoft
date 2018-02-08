@@ -120,4 +120,22 @@ Public Class class_controller_ficha
         End Try
         Return estado
     End Function
+    Public Function actualizarDatosFichaEstado(ByVal codFicha As String, ByVal estadoFicha As String) As Boolean
+        Dim estado As Boolean = True
+        Try
+            conex_Global()
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE `munisystem`.`ficha` Set `estado`=@estadoFicha WHERE `idficha`=@idFicha", _conexion)
+            _adaptador.UpdateCommand.Parameters.Add("@idFicha", MySqlDbType.Int32).Value = codFicha
+            _adaptador.UpdateCommand.Parameters.Add("@estadoFicha", MySqlDbType.VarChar, 45).Value = estadoFicha
+            _conexion.Open()
+            _adaptador.UpdateCommand.Connection = _conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+            estado = False
+        Finally
+            cerrar()
+        End Try
+        Return estado
+    End Function
 End Class

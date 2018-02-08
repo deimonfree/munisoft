@@ -167,6 +167,7 @@ Partial Class uc_rentas_ficha_mant
         Me.Label47 = New System.Windows.Forms.Label()
         Me.mtFecha = New System.Windows.Forms.MaskedTextBox()
         Me.gb_construcciones = New System.Windows.Forms.GroupBox()
+        Me.lblmrd = New System.Windows.Forms.Label()
         Me.gb_titularidad = New System.Windows.Forms.GroupBox()
         Me.gb_titular = New System.Windows.Forms.GroupBox()
         Me.gb_regimen = New System.Windows.Forms.GroupBox()
@@ -175,7 +176,7 @@ Partial Class uc_rentas_ficha_mant
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gb_ficha = New System.Windows.Forms.GroupBox()
-        Me.lblmrd = New System.Windows.Forms.Label()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.pbValor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1770,6 +1771,16 @@ Partial Class uc_rentas_ficha_mant
         Me.gb_construcciones.TabIndex = 754
         Me.gb_construcciones.TabStop = False
         '
+        'lblmrd
+        '
+        Me.lblmrd.AutoSize = True
+        Me.lblmrd.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmrd.Location = New System.Drawing.Point(651, 372)
+        Me.lblmrd.Name = "lblmrd"
+        Me.lblmrd.Size = New System.Drawing.Size(131, 17)
+        Me.lblmrd.TabIndex = 744
+        Me.lblmrd.Text = "Estado del Predio ::"
+        '
         'gb_titularidad
         '
         Me.gb_titularidad.Controls.Add(Me.mtFecha)
@@ -1904,20 +1915,30 @@ Partial Class uc_rentas_ficha_mant
         Me.gb_ficha.TabIndex = 761
         Me.gb_ficha.TabStop = False
         '
-        'lblmrd
+        'btnCerrar
         '
-        Me.lblmrd.AutoSize = True
-        Me.lblmrd.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblmrd.Location = New System.Drawing.Point(651, 372)
-        Me.lblmrd.Name = "lblmrd"
-        Me.lblmrd.Size = New System.Drawing.Size(131, 17)
-        Me.lblmrd.TabIndex = 744
-        Me.lblmrd.Text = "Estado del Predio ::"
+        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Image = Global.Muni.My.Resources.Resources.blockeado
+        Me.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnCerrar.Location = New System.Drawing.Point(322, 44)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(101, 39)
+        Me.btnCerrar.TabIndex = 762
+        Me.btnCerrar.Text = "Cerrar"
+        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'uc_rentas_ficha_mant
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.btnShared)
         Me.Controls.Add(Me.btnSave)
@@ -2153,4 +2174,5 @@ Partial Class uc_rentas_ficha_mant
     Friend WithEvents Label1 As Label
     Friend WithEvents gb_ficha As GroupBox
     Friend WithEvents lblmrd As Label
+    Friend WithEvents btnCerrar As Button
 End Class

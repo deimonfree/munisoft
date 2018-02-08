@@ -98,6 +98,15 @@ Module mod_ficha
         Finally
             cerrar()
         End Try
-
+    End Sub
+    Sub consulta_ficha_by_idficha(ByVal codFicha As String)
+        Try
+            conex_Global()
+            _conectorMysql.SelectCommand = New MySqlCommand("select * from ficha where idficha=" + codFicha, _conexion)
+            _conectorMysql.Fill(_DatasetFicha)
+            _conexion.Open()
+            _conectorMysql.SelectCommand.Connection = _conexion
+        Catch ex As Exception
+        End Try
     End Sub
 End Module

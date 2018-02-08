@@ -45,17 +45,22 @@
         Dim impuesto_predial As Decimal = 0.00
         Dim annio As Integer
         Dim valor_m As Decimal = 0.00
+
+        For Each row In _DatasetMinimo.Tables(0).Rows
+            valor_m = row("valor")
+        Next
         Try
             annio = cbxperiodo.Text
             impuesto_predial = 0.00
             FormatNumber(impuesto_predial, 2)
-            valor_m = 15000.0
+            'valor_m = 15000.0
             _DatasetUit.Reset()
             consulta_datos_iut(annio)
             For Each row In _DatasetUit.Tables(0).Rows
                 val_uit = row("valor_uit")
             Next
-            If val_uit <> 0 Then
+            If val_uit = 0 Then
+            Else
                 txtuit_valor.Text = val_uit
             End If
             valorAuto = Decimal.Parse(txtBaseTotal.Text)
@@ -101,7 +106,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim alta As Boolean = False
-        Dim impuesto As Double
+
         Try
             Select Case ""
                 Case Trim(txtImp.Text)
@@ -141,6 +146,7 @@
                         Dim namepc As String
                         Dim fechaA As String
                         Dim oIp As New Net.IPAddress(Net.Dns.Resolve(My.Computer.Name).AddressList(0).GetAddressBytes)
+
                         namepc = Environment.UserName.ToString
                         fechaA = DateTime.Now.ToString
                         datosLog.user = My.User.Name
@@ -190,10 +196,17 @@
         Dim suma_deuda As Decimal
         Dim suma_total As Decimal
         Dim estado As Integer
-        Dim cod_recibo As Integer
+        Dim cod_predio As String
+        Dim contador_predios As New Integer
+        Dim contador_fichas As New Integer
+        Dim contador_cerrar As New Integer
         estado = 0
         suma_deuda = 0
         suma_total = 0
+        cod_predio = 0
+        contador_predios = 0
+        contador_predios = 0
+        contador_cerrar = 0
         datoRecuperado = formulario2.ShowDialog()
         If datoRecuperado = DialogResult.OK Then
             limpiarCampos()
@@ -201,13 +214,44 @@
             txtCodigo.Text = IdContibuyente
             llamada_contribuyente(formulario2.valor_contribuyente)
             llamada_direccion_contribuyente(valor_IdDireccion)
-            _DatasetAutovaluo2.Reset()
-            consulta_datos_Autovaluo_by(IdContibuyente, cbxperiodo.SelectedValue)
-            If _DatasetAutovaluo2.Tables(0).Rows.Count > 0 Then
-                dato_base_imponible()
-                impuesto()
+            '_DatasetAutovaluo2.Reset()
+            'consulta_datos_Autovaluo_by(IdContibuyente, cbxperiodo.SelectedValue)
+            _DatasetPredio.Reset()
+            consulta_datos_predio_by(IdContibuyente)
+            contador_predios = _DatasetPredio.Tables(0).Rows.Count
+            If contador_predios > 0 Then
+                For Each row In _DatasetPredio.Tables(0).Rows
+                    '_DatasetDistrito.Reset()
+                    'ficha_ByPredio(row("idpredio"))
+                    cod_predio = row("idpredio")
+                    _DatasetFicha.Reset()
+                    consulta_datos_ficha_by_predio(cod_predio, cbxperiodo.SelectedValue)
+                    For Each row1 In _DatasetFicha.Tables(0).Rows
+                        If row1("estado") = "cerrado" Then
+                            contador_cerrar = contador_cerrar + 1
+                        End If
+                    Next
+                    contador_fichas = contador_fichas + _DatasetFicha.Tables(0).Rows.Count
+                Next
+                _DatasetMinimo.Reset()
+                consulta_datos_valor_minimo(cbxperiodo.Text)
+                If _DatasetMinimo.Tables(0).Rows.Count = 0 Then
+                    MessageBox.Show("No existe un valor minimo para impuesto predial. Vaye al modulo de catalogos de valores minimos para impuesto predial y complete los datos.")
+                Else
+                    'MsgBox(contador_predios.ToString + " " + contador_fichas.ToString)
+                    If contador_predios = contador_fichas Then
+                        If contador_cerrar = contador_fichas Then
+                            dato_base_imponible()
+                            impuesto()
+                        Else
+                            MsgBox("No se puede generar el impuesto predial. Aun no ha cerrado algunas fichas.")
+                        End If
+                    Else
+                        MessageBox.Show("Aun no ha generado algunas fichas para estos predios. Registre estas fichas y vuelva a intentar...")
+                    End If
+                End If
             Else
-                MessageBox.Show("Aun no ha generado las fichas de predios para este presente año correspondiente al contribuyente", "Mensaje importante..!!!")
+                MsgBox("El contribuyente no tiene asociado ningun predio.")
             End If
         End If
     End Sub
@@ -253,5 +297,6 @@
 
 
     End Sub
+
 
 End Class

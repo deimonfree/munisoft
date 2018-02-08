@@ -938,4 +938,34 @@
         btnOption.Text = "Sin Actividad"
         btnOption.Image = My.Resources.padlock
     End Sub
+
+    Private Sub txtnumeroDoc_KeyUp(sender As Object, e As KeyEventArgs) Handles txtnumeroDoc.KeyUp
+        Dim tipo_doc As String
+        Dim valor_doc As String
+        tipo_doc = cbxtipoDocumento.SelectedValue.ToString
+        valor_doc = txtnumeroDoc.Text
+        _DatasetContribuyente.Reset()
+        consulta_datos_contribuyente_by_valor(tipo_doc, valor_doc)
+        If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
+            pbNumeroDoc.Visible = True
+            MsgBox("Ya existe un contribuyente asociado a este número DNI.")
+        Else
+            pbNumeroDoc.Visible = False
+            'sgBox("Disponible")
+        End If
+    End Sub
+
+
+    Private Sub txtNumRuc_KeyUp(sender As Object, e As KeyEventArgs) Handles txtNumRuc.KeyUp
+        Dim valor_ruc As String
+        valor_ruc = txtNumRuc.Text
+        _DatasetContribuyente.Reset()
+        consulta_datos_contribuyente_by_RUC(valor_ruc)
+        If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
+            pbRUC.Visible = True
+            MsgBox("Ya existe un contribuyente asociado a este número de RUC.")
+        Else
+            pbRUC.Visible = False
+        End If
+    End Sub
 End Class

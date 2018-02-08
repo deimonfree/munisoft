@@ -362,7 +362,7 @@ Partial Class uc_rentas_predio_new
         Me.btnOption.ForeColor = System.Drawing.Color.White
         Me.btnOption.Image = Global.Muni.My.Resources.Resources.padlock
         Me.btnOption.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnOption.Location = New System.Drawing.Point(629, 5)
+        Me.btnOption.Location = New System.Drawing.Point(619, 5)
         Me.btnOption.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnOption.Name = "btnOption"
         Me.btnOption.Size = New System.Drawing.Size(166, 53)

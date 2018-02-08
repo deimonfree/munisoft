@@ -53,6 +53,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblInfoFicha = New System.Windows.Forms.Label()
+        Me.btnOption = New System.Windows.Forms.Button()
         Me.lblsubinfo = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -99,6 +100,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.txtTelf_rl = New System.Windows.Forms.TextBox()
+        Me.pbCargoRL = New System.Windows.Forms.PictureBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.txtCargo_rl = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -107,6 +109,10 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.txtNumDoc_rl = New System.Windows.Forms.TextBox()
+        Me.pbDocRL = New System.Windows.Forms.PictureBox()
+        Me.pbApMatRL = New System.Windows.Forms.PictureBox()
+        Me.pbApePatRL = New System.Windows.Forms.PictureBox()
+        Me.pbNomRL = New System.Windows.Forms.PictureBox()
         Me.cbTipoDoc_rl = New System.Windows.Forms.ComboBox()
         Me.txtApemat_rl = New System.Windows.Forms.TextBox()
         Me.txtNom_rl = New System.Windows.Forms.TextBox()
@@ -121,6 +127,11 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
+        Me.pbLoteRL = New System.Windows.Forms.PictureBox()
+        Me.pbMznaRL = New System.Windows.Forms.PictureBox()
+        Me.pbUrbRL = New System.Windows.Forms.PictureBox()
+        Me.pbNumRL = New System.Windows.Forms.PictureBox()
+        Me.pbViaRL = New System.Windows.Forms.PictureBox()
         Me.cbtipoVia_rl = New System.Windows.Forms.ComboBox()
         Me.txtNumApart_rl = New System.Windows.Forms.TextBox()
         Me.txtApart_rl = New System.Windows.Forms.TextBox()
@@ -136,29 +147,19 @@ Partial Class uc_rentas_contribuyente_new
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.pbRUC = New System.Windows.Forms.PictureBox()
+        Me.PBRazonSocial = New System.Windows.Forms.PictureBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.pbnombre = New System.Windows.Forms.PictureBox()
+        Me.pbapepaT = New System.Windows.Forms.PictureBox()
+        Me.Pbapemat = New System.Windows.Forms.PictureBox()
+        Me.pbNumeroDoc = New System.Windows.Forms.PictureBox()
         Me.chkDatosPersonales = New System.Windows.Forms.CheckBox()
         Me.chkDatosEmpresariales = New System.Windows.Forms.CheckBox()
         Me.lblInfoVia = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.gb_datosPersonales = New System.Windows.Forms.GroupBox()
         Me.gb_direccionContribuyente = New System.Windows.Forms.GroupBox()
-        Me.gb_contactoContribuyente = New System.Windows.Forms.GroupBox()
-        Me.gb_RepresentanteLegal = New System.Windows.Forms.GroupBox()
-        Me.gb_TipoContribuyente = New System.Windows.Forms.GroupBox()
-        Me.gb_Observaciones = New System.Windows.Forms.GroupBox()
-        Me.btnOption = New System.Windows.Forms.Button()
-        Me.pbload = New System.Windows.Forms.PictureBox()
-        Me.btnShared = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.pbRUC = New System.Windows.Forms.PictureBox()
-        Me.PBRazonSocial = New System.Windows.Forms.PictureBox()
-        Me.pbnombre = New System.Windows.Forms.PictureBox()
-        Me.pbapepaT = New System.Windows.Forms.PictureBox()
-        Me.Pbapemat = New System.Windows.Forms.PictureBox()
-        Me.pbNumeroDoc = New System.Windows.Forms.PictureBox()
         Me.pbDistrito = New System.Windows.Forms.PictureBox()
         Me.btnBuscarCiudad = New System.Windows.Forms.Button()
         Me.pbprovincia = New System.Windows.Forms.PictureBox()
@@ -166,23 +167,22 @@ Partial Class uc_rentas_contribuyente_new
         Me.pbSector = New System.Windows.Forms.PictureBox()
         Me.pbMzna = New System.Windows.Forms.PictureBox()
         Me.pbVia = New System.Windows.Forms.PictureBox()
+        Me.gb_contactoContribuyente = New System.Windows.Forms.GroupBox()
         Me.pbEmail = New System.Windows.Forms.PictureBox()
         Me.pbNumTelf = New System.Windows.Forms.PictureBox()
         Me.pbNumCel = New System.Windows.Forms.PictureBox()
-        Me.pbCargoRL = New System.Windows.Forms.PictureBox()
-        Me.pbDocRL = New System.Windows.Forms.PictureBox()
-        Me.pbApMatRL = New System.Windows.Forms.PictureBox()
-        Me.pbApePatRL = New System.Windows.Forms.PictureBox()
-        Me.pbNomRL = New System.Windows.Forms.PictureBox()
-        Me.pbLoteRL = New System.Windows.Forms.PictureBox()
-        Me.pbMznaRL = New System.Windows.Forms.PictureBox()
-        Me.pbUrbRL = New System.Windows.Forms.PictureBox()
-        Me.pbNumRL = New System.Windows.Forms.PictureBox()
-        Me.pbViaRL = New System.Windows.Forms.PictureBox()
+        Me.gb_RepresentanteLegal = New System.Windows.Forms.GroupBox()
+        Me.gb_TipoContribuyente = New System.Windows.Forms.GroupBox()
         Me.btnBusqueda_conyuge = New System.Windows.Forms.Button()
         Me.pbConyuge = New System.Windows.Forms.PictureBox()
         Me.PbTipoRelacion = New System.Windows.Forms.PictureBox()
+        Me.gb_Observaciones = New System.Windows.Forms.GroupBox()
         Me.pbObsrv = New System.Windows.Forms.PictureBox()
+        Me.pbload = New System.Windows.Forms.PictureBox()
+        Me.btnShared = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -190,31 +190,6 @@ Partial Class uc_rentas_contribuyente_new
         Me.Panel5.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.gb_datosPersonales.SuspendLayout()
-        Me.gb_direccionContribuyente.SuspendLayout()
-        Me.gb_contactoContribuyente.SuspendLayout()
-        Me.gb_RepresentanteLegal.SuspendLayout()
-        Me.gb_TipoContribuyente.SuspendLayout()
-        Me.gb_Observaciones.SuspendLayout()
-        CType(Me.pbload, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbRUC, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PBRazonSocial, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbnombre, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbapepaT, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Pbapemat, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbNumeroDoc, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbDistrito, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbprovincia, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbDepartamento, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbSector, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbMzna, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbVia, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbNumTelf, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbNumCel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCargoRL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDocRL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbApMatRL, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -225,9 +200,34 @@ Partial Class uc_rentas_contribuyente_new
         CType(Me.pbUrbRL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbNumRL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbViaRL, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.pbRUC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBRazonSocial, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.pbnombre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbapepaT, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Pbapemat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNumeroDoc, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gb_datosPersonales.SuspendLayout()
+        Me.gb_direccionContribuyente.SuspendLayout()
+        CType(Me.pbDistrito, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbprovincia, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDepartamento, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbSector, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMzna, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVia, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gb_contactoContribuyente.SuspendLayout()
+        CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNumTelf, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNumCel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gb_RepresentanteLegal.SuspendLayout()
+        Me.gb_TipoContribuyente.SuspendLayout()
         CType(Me.pbConyuge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbTipoRelacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gb_Observaciones.SuspendLayout()
         CType(Me.pbObsrv, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtApe_mat
@@ -566,6 +566,26 @@ Partial Class uc_rentas_contribuyente_new
         Me.lblInfoFicha.Size = New System.Drawing.Size(271, 17)
         Me.lblInfoFicha.TabIndex = 278
         Me.lblInfoFicha.Text = "Uds. no ha registrado ningun contribuyente"
+        '
+        'btnOption
+        '
+        Me.btnOption.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.btnOption.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOption.Enabled = False
+        Me.btnOption.FlatAppearance.BorderSize = 0
+        Me.btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOption.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnOption.ForeColor = System.Drawing.Color.White
+        Me.btnOption.Image = Global.Muni.My.Resources.Resources.padlock
+        Me.btnOption.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnOption.Location = New System.Drawing.Point(628, 5)
+        Me.btnOption.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnOption.Name = "btnOption"
+        Me.btnOption.Size = New System.Drawing.Size(166, 53)
+        Me.btnOption.TabIndex = 277
+        Me.btnOption.Text = "Sin Actividad"
+        Me.btnOption.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnOption.UseVisualStyleBackColor = False
         '
         'lblsubinfo
         '
@@ -1085,6 +1105,17 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtTelf_rl.Size = New System.Drawing.Size(155, 26)
         Me.txtTelf_rl.TabIndex = 56
         '
+        'pbCargoRL
+        '
+        Me.pbCargoRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbCargoRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbCargoRL.Location = New System.Drawing.Point(606, 123)
+        Me.pbCargoRL.Name = "pbCargoRL"
+        Me.pbCargoRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbCargoRL.TabIndex = 528
+        Me.pbCargoRL.TabStop = False
+        Me.pbCargoRL.Visible = False
+        '
         'Label54
         '
         Me.Label54.AutoSize = True
@@ -1167,6 +1198,50 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumDoc_rl.Name = "txtNumDoc_rl"
         Me.txtNumDoc_rl.Size = New System.Drawing.Size(106, 26)
         Me.txtNumDoc_rl.TabIndex = 45
+        '
+        'pbDocRL
+        '
+        Me.pbDocRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbDocRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbDocRL.Location = New System.Drawing.Point(768, 13)
+        Me.pbDocRL.Name = "pbDocRL"
+        Me.pbDocRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbDocRL.TabIndex = 520
+        Me.pbDocRL.TabStop = False
+        Me.pbDocRL.Visible = False
+        '
+        'pbApMatRL
+        '
+        Me.pbApMatRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbApMatRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbApMatRL.Location = New System.Drawing.Point(535, 14)
+        Me.pbApMatRL.Name = "pbApMatRL"
+        Me.pbApMatRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbApMatRL.TabIndex = 519
+        Me.pbApMatRL.TabStop = False
+        Me.pbApMatRL.Visible = False
+        '
+        'pbApePatRL
+        '
+        Me.pbApePatRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbApePatRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbApePatRL.Location = New System.Drawing.Point(356, 12)
+        Me.pbApePatRL.Name = "pbApePatRL"
+        Me.pbApePatRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbApePatRL.TabIndex = 518
+        Me.pbApePatRL.TabStop = False
+        Me.pbApePatRL.Visible = False
+        '
+        'pbNomRL
+        '
+        Me.pbNomRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbNomRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbNomRL.Location = New System.Drawing.Point(168, 12)
+        Me.pbNomRL.Name = "pbNomRL"
+        Me.pbNomRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbNomRL.TabIndex = 517
+        Me.pbNomRL.TabStop = False
+        Me.pbNomRL.Visible = False
         '
         'cbTipoDoc_rl
         '
@@ -1313,6 +1388,61 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label48.Size = New System.Drawing.Size(89, 17)
         Me.Label48.TabIndex = 502
         Me.Label48.Text = "Tipo de Via ::"
+        '
+        'pbLoteRL
+        '
+        Me.pbLoteRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbLoteRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbLoteRL.Location = New System.Drawing.Point(561, 65)
+        Me.pbLoteRL.Name = "pbLoteRL"
+        Me.pbLoteRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbLoteRL.TabIndex = 499
+        Me.pbLoteRL.TabStop = False
+        Me.pbLoteRL.Visible = False
+        '
+        'pbMznaRL
+        '
+        Me.pbMznaRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbMznaRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbMznaRL.Location = New System.Drawing.Point(478, 65)
+        Me.pbMznaRL.Name = "pbMznaRL"
+        Me.pbMznaRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbMznaRL.TabIndex = 498
+        Me.pbMznaRL.TabStop = False
+        Me.pbMznaRL.Visible = False
+        '
+        'pbUrbRL
+        '
+        Me.pbUrbRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbUrbRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbUrbRL.Location = New System.Drawing.Point(431, 122)
+        Me.pbUrbRL.Name = "pbUrbRL"
+        Me.pbUrbRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbUrbRL.TabIndex = 497
+        Me.pbUrbRL.TabStop = False
+        Me.pbUrbRL.Visible = False
+        '
+        'pbNumRL
+        '
+        Me.pbNumRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbNumRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbNumRL.Location = New System.Drawing.Point(374, 65)
+        Me.pbNumRL.Name = "pbNumRL"
+        Me.pbNumRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbNumRL.TabIndex = 496
+        Me.pbNumRL.TabStop = False
+        Me.pbNumRL.Visible = False
+        '
+        'pbViaRL
+        '
+        Me.pbViaRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbViaRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbViaRL.Location = New System.Drawing.Point(269, 61)
+        Me.pbViaRL.Name = "pbViaRL"
+        Me.pbViaRL.Size = New System.Drawing.Size(16, 16)
+        Me.pbViaRL.TabIndex = 495
+        Me.pbViaRL.TabStop = False
+        Me.pbViaRL.Visible = False
         '
         'cbtipoVia_rl
         '
@@ -1480,6 +1610,28 @@ Partial Class uc_rentas_contribuyente_new
         Me.GroupBox2.TabIndex = 500
         Me.GroupBox2.TabStop = False
         '
+        'pbRUC
+        '
+        Me.pbRUC.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbRUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbRUC.Location = New System.Drawing.Point(171, 15)
+        Me.pbRUC.Name = "pbRUC"
+        Me.pbRUC.Size = New System.Drawing.Size(16, 16)
+        Me.pbRUC.TabIndex = 495
+        Me.pbRUC.TabStop = False
+        Me.pbRUC.Visible = False
+        '
+        'PBRazonSocial
+        '
+        Me.PBRazonSocial.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.PBRazonSocial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBRazonSocial.Location = New System.Drawing.Point(569, 15)
+        Me.PBRazonSocial.Name = "PBRazonSocial"
+        Me.PBRazonSocial.Size = New System.Drawing.Size(16, 16)
+        Me.PBRazonSocial.TabIndex = 488
+        Me.PBRazonSocial.TabStop = False
+        Me.PBRazonSocial.Visible = False
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Label28)
@@ -1501,6 +1653,50 @@ Partial Class uc_rentas_contribuyente_new
         Me.GroupBox3.Size = New System.Drawing.Size(784, 75)
         Me.GroupBox3.TabIndex = 501
         Me.GroupBox3.TabStop = False
+        '
+        'pbnombre
+        '
+        Me.pbnombre.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbnombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbnombre.Location = New System.Drawing.Point(519, 12)
+        Me.pbnombre.Name = "pbnombre"
+        Me.pbnombre.Size = New System.Drawing.Size(16, 16)
+        Me.pbnombre.TabIndex = 167
+        Me.pbnombre.TabStop = False
+        Me.pbnombre.Visible = False
+        '
+        'pbapepaT
+        '
+        Me.pbapepaT.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbapepaT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbapepaT.Location = New System.Drawing.Point(173, 14)
+        Me.pbapepaT.Name = "pbapepaT"
+        Me.pbapepaT.Size = New System.Drawing.Size(16, 16)
+        Me.pbapepaT.TabIndex = 168
+        Me.pbapepaT.TabStop = False
+        Me.pbapepaT.Visible = False
+        '
+        'Pbapemat
+        '
+        Me.Pbapemat.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.Pbapemat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Pbapemat.Location = New System.Drawing.Point(346, 16)
+        Me.Pbapemat.Name = "Pbapemat"
+        Me.Pbapemat.Size = New System.Drawing.Size(16, 16)
+        Me.Pbapemat.TabIndex = 169
+        Me.Pbapemat.TabStop = False
+        Me.Pbapemat.Visible = False
+        '
+        'pbNumeroDoc
+        '
+        Me.pbNumeroDoc.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbNumeroDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbNumeroDoc.Location = New System.Drawing.Point(759, 17)
+        Me.pbNumeroDoc.Name = "pbNumeroDoc"
+        Me.pbNumeroDoc.Size = New System.Drawing.Size(16, 16)
+        Me.pbNumeroDoc.TabIndex = 171
+        Me.pbNumeroDoc.TabStop = False
+        Me.pbNumeroDoc.Visible = False
         '
         'chkDatosPersonales
         '
@@ -1601,6 +1797,89 @@ Partial Class uc_rentas_contribuyente_new
         Me.gb_direccionContribuyente.TabIndex = 507
         Me.gb_direccionContribuyente.TabStop = False
         '
+        'pbDistrito
+        '
+        Me.pbDistrito.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbDistrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbDistrito.Location = New System.Drawing.Point(174, 124)
+        Me.pbDistrito.Name = "pbDistrito"
+        Me.pbDistrito.Size = New System.Drawing.Size(16, 16)
+        Me.pbDistrito.TabIndex = 190
+        Me.pbDistrito.TabStop = False
+        Me.pbDistrito.Visible = False
+        '
+        'btnBuscarCiudad
+        '
+        Me.btnBuscarCiudad.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.btnBuscarCiudad.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscarCiudad.FlatAppearance.BorderSize = 0
+        Me.btnBuscarCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarCiudad.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnBuscarCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.btnBuscarCiudad.Image = Global.Muni.My.Resources.Resources.pointer_city
+        Me.btnBuscarCiudad.Location = New System.Drawing.Point(601, 141)
+        Me.btnBuscarCiudad.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnBuscarCiudad.Name = "btnBuscarCiudad"
+        Me.btnBuscarCiudad.Size = New System.Drawing.Size(48, 31)
+        Me.btnBuscarCiudad.TabIndex = 20
+        Me.btnBuscarCiudad.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnBuscarCiudad.UseVisualStyleBackColor = False
+        '
+        'pbprovincia
+        '
+        Me.pbprovincia.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbprovincia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbprovincia.Location = New System.Drawing.Point(378, 125)
+        Me.pbprovincia.Name = "pbprovincia"
+        Me.pbprovincia.Size = New System.Drawing.Size(16, 16)
+        Me.pbprovincia.TabIndex = 194
+        Me.pbprovincia.TabStop = False
+        Me.pbprovincia.Visible = False
+        '
+        'pbDepartamento
+        '
+        Me.pbDepartamento.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbDepartamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbDepartamento.Location = New System.Drawing.Point(582, 124)
+        Me.pbDepartamento.Name = "pbDepartamento"
+        Me.pbDepartamento.Size = New System.Drawing.Size(16, 16)
+        Me.pbDepartamento.TabIndex = 196
+        Me.pbDepartamento.TabStop = False
+        Me.pbDepartamento.Visible = False
+        '
+        'pbSector
+        '
+        Me.pbSector.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbSector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbSector.Location = New System.Drawing.Point(775, 74)
+        Me.pbSector.Name = "pbSector"
+        Me.pbSector.Size = New System.Drawing.Size(16, 16)
+        Me.pbSector.TabIndex = 175
+        Me.pbSector.TabStop = False
+        Me.pbSector.Visible = False
+        '
+        'pbMzna
+        '
+        Me.pbMzna.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbMzna.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbMzna.Location = New System.Drawing.Point(748, 63)
+        Me.pbMzna.Name = "pbMzna"
+        Me.pbMzna.Size = New System.Drawing.Size(16, 16)
+        Me.pbMzna.TabIndex = 176
+        Me.pbMzna.TabStop = False
+        Me.pbMzna.Visible = False
+        '
+        'pbVia
+        '
+        Me.pbVia.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbVia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbVia.Location = New System.Drawing.Point(271, 9)
+        Me.pbVia.Name = "pbVia"
+        Me.pbVia.Size = New System.Drawing.Size(16, 16)
+        Me.pbVia.TabIndex = 172
+        Me.pbVia.TabStop = False
+        Me.pbVia.Visible = False
+        '
         'gb_contactoContribuyente
         '
         Me.gb_contactoContribuyente.Controls.Add(Me.txtNumCel)
@@ -1620,6 +1899,39 @@ Partial Class uc_rentas_contribuyente_new
         Me.gb_contactoContribuyente.Size = New System.Drawing.Size(800, 66)
         Me.gb_contactoContribuyente.TabIndex = 508
         Me.gb_contactoContribuyente.TabStop = False
+        '
+        'pbEmail
+        '
+        Me.pbEmail.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbEmail.Location = New System.Drawing.Point(231, 8)
+        Me.pbEmail.Name = "pbEmail"
+        Me.pbEmail.Size = New System.Drawing.Size(16, 16)
+        Me.pbEmail.TabIndex = 181
+        Me.pbEmail.TabStop = False
+        Me.pbEmail.Visible = False
+        '
+        'pbNumTelf
+        '
+        Me.pbNumTelf.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbNumTelf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbNumTelf.Location = New System.Drawing.Point(461, 13)
+        Me.pbNumTelf.Name = "pbNumTelf"
+        Me.pbNumTelf.Size = New System.Drawing.Size(16, 16)
+        Me.pbNumTelf.TabIndex = 183
+        Me.pbNumTelf.TabStop = False
+        Me.pbNumTelf.Visible = False
+        '
+        'pbNumCel
+        '
+        Me.pbNumCel.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbNumCel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbNumCel.Location = New System.Drawing.Point(616, 14)
+        Me.pbNumCel.Name = "pbNumCel"
+        Me.pbNumCel.Size = New System.Drawing.Size(16, 16)
+        Me.pbNumCel.TabIndex = 184
+        Me.pbNumCel.TabStop = False
+        Me.pbNumCel.Visible = False
         '
         'gb_RepresentanteLegal
         '
@@ -1648,6 +1960,46 @@ Partial Class uc_rentas_contribuyente_new
         Me.gb_TipoContribuyente.TabIndex = 511
         Me.gb_TipoContribuyente.TabStop = False
         '
+        'btnBusqueda_conyuge
+        '
+        Me.btnBusqueda_conyuge.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.btnBusqueda_conyuge.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBusqueda_conyuge.Enabled = False
+        Me.btnBusqueda_conyuge.FlatAppearance.BorderSize = 0
+        Me.btnBusqueda_conyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBusqueda_conyuge.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnBusqueda_conyuge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.btnBusqueda_conyuge.Image = Global.Muni.My.Resources.Resources.user_with_adding_sign
+        Me.btnBusqueda_conyuge.Location = New System.Drawing.Point(13, 149)
+        Me.btnBusqueda_conyuge.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnBusqueda_conyuge.Name = "btnBusqueda_conyuge"
+        Me.btnBusqueda_conyuge.Size = New System.Drawing.Size(374, 31)
+        Me.btnBusqueda_conyuge.TabIndex = 64
+        Me.btnBusqueda_conyuge.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        Me.btnBusqueda_conyuge.UseVisualStyleBackColor = False
+        '
+        'pbConyuge
+        '
+        Me.pbConyuge.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbConyuge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbConyuge.Location = New System.Drawing.Point(370, 79)
+        Me.pbConyuge.Name = "pbConyuge"
+        Me.pbConyuge.Size = New System.Drawing.Size(16, 16)
+        Me.pbConyuge.TabIndex = 187
+        Me.pbConyuge.TabStop = False
+        Me.pbConyuge.Visible = False
+        '
+        'PbTipoRelacion
+        '
+        Me.PbTipoRelacion.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.PbTipoRelacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbTipoRelacion.Location = New System.Drawing.Point(370, 13)
+        Me.PbTipoRelacion.Name = "PbTipoRelacion"
+        Me.PbTipoRelacion.Size = New System.Drawing.Size(16, 16)
+        Me.PbTipoRelacion.TabIndex = 186
+        Me.PbTipoRelacion.TabStop = False
+        Me.PbTipoRelacion.Visible = False
+        '
         'gb_Observaciones
         '
         Me.gb_Observaciones.Controls.Add(Me.txtObsv)
@@ -1660,25 +2012,16 @@ Partial Class uc_rentas_contribuyente_new
         Me.gb_Observaciones.TabIndex = 512
         Me.gb_Observaciones.TabStop = False
         '
-        'btnOption
+        'pbObsrv
         '
-        Me.btnOption.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
-        Me.btnOption.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnOption.Enabled = False
-        Me.btnOption.FlatAppearance.BorderSize = 0
-        Me.btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOption.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.btnOption.ForeColor = System.Drawing.Color.White
-        Me.btnOption.Image = Global.Muni.My.Resources.Resources.padlock
-        Me.btnOption.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnOption.Location = New System.Drawing.Point(628, 5)
-        Me.btnOption.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.btnOption.Name = "btnOption"
-        Me.btnOption.Size = New System.Drawing.Size(166, 53)
-        Me.btnOption.TabIndex = 277
-        Me.btnOption.Text = "Sin Actividad"
-        Me.btnOption.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnOption.UseVisualStyleBackColor = False
+        Me.pbObsrv.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
+        Me.pbObsrv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbObsrv.Location = New System.Drawing.Point(370, 9)
+        Me.pbObsrv.Name = "pbObsrv"
+        Me.pbObsrv.Size = New System.Drawing.Size(17, 16)
+        Me.pbObsrv.TabIndex = 180
+        Me.pbObsrv.TabStop = False
+        Me.pbObsrv.Visible = False
         '
         'pbload
         '
@@ -1763,349 +2106,6 @@ Partial Class uc_rentas_contribuyente_new
         Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'pbRUC
-        '
-        Me.pbRUC.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbRUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbRUC.Location = New System.Drawing.Point(171, 15)
-        Me.pbRUC.Name = "pbRUC"
-        Me.pbRUC.Size = New System.Drawing.Size(16, 16)
-        Me.pbRUC.TabIndex = 495
-        Me.pbRUC.TabStop = False
-        Me.pbRUC.Visible = False
-        '
-        'PBRazonSocial
-        '
-        Me.PBRazonSocial.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.PBRazonSocial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBRazonSocial.Location = New System.Drawing.Point(569, 15)
-        Me.PBRazonSocial.Name = "PBRazonSocial"
-        Me.PBRazonSocial.Size = New System.Drawing.Size(16, 16)
-        Me.PBRazonSocial.TabIndex = 488
-        Me.PBRazonSocial.TabStop = False
-        Me.PBRazonSocial.Visible = False
-        '
-        'pbnombre
-        '
-        Me.pbnombre.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbnombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbnombre.Location = New System.Drawing.Point(519, 12)
-        Me.pbnombre.Name = "pbnombre"
-        Me.pbnombre.Size = New System.Drawing.Size(16, 16)
-        Me.pbnombre.TabIndex = 167
-        Me.pbnombre.TabStop = False
-        Me.pbnombre.Visible = False
-        '
-        'pbapepaT
-        '
-        Me.pbapepaT.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbapepaT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbapepaT.Location = New System.Drawing.Point(173, 14)
-        Me.pbapepaT.Name = "pbapepaT"
-        Me.pbapepaT.Size = New System.Drawing.Size(16, 16)
-        Me.pbapepaT.TabIndex = 168
-        Me.pbapepaT.TabStop = False
-        Me.pbapepaT.Visible = False
-        '
-        'Pbapemat
-        '
-        Me.Pbapemat.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.Pbapemat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Pbapemat.Location = New System.Drawing.Point(346, 16)
-        Me.Pbapemat.Name = "Pbapemat"
-        Me.Pbapemat.Size = New System.Drawing.Size(16, 16)
-        Me.Pbapemat.TabIndex = 169
-        Me.Pbapemat.TabStop = False
-        Me.Pbapemat.Visible = False
-        '
-        'pbNumeroDoc
-        '
-        Me.pbNumeroDoc.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbNumeroDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbNumeroDoc.Location = New System.Drawing.Point(759, 17)
-        Me.pbNumeroDoc.Name = "pbNumeroDoc"
-        Me.pbNumeroDoc.Size = New System.Drawing.Size(16, 16)
-        Me.pbNumeroDoc.TabIndex = 171
-        Me.pbNumeroDoc.TabStop = False
-        Me.pbNumeroDoc.Visible = False
-        '
-        'pbDistrito
-        '
-        Me.pbDistrito.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbDistrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbDistrito.Location = New System.Drawing.Point(174, 124)
-        Me.pbDistrito.Name = "pbDistrito"
-        Me.pbDistrito.Size = New System.Drawing.Size(16, 16)
-        Me.pbDistrito.TabIndex = 190
-        Me.pbDistrito.TabStop = False
-        Me.pbDistrito.Visible = False
-        '
-        'btnBuscarCiudad
-        '
-        Me.btnBuscarCiudad.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.btnBuscarCiudad.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscarCiudad.FlatAppearance.BorderSize = 0
-        Me.btnBuscarCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscarCiudad.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.btnBuscarCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.btnBuscarCiudad.Image = Global.Muni.My.Resources.Resources.pointer_city
-        Me.btnBuscarCiudad.Location = New System.Drawing.Point(601, 141)
-        Me.btnBuscarCiudad.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.btnBuscarCiudad.Name = "btnBuscarCiudad"
-        Me.btnBuscarCiudad.Size = New System.Drawing.Size(48, 31)
-        Me.btnBuscarCiudad.TabIndex = 20
-        Me.btnBuscarCiudad.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnBuscarCiudad.UseVisualStyleBackColor = False
-        '
-        'pbprovincia
-        '
-        Me.pbprovincia.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbprovincia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbprovincia.Location = New System.Drawing.Point(378, 125)
-        Me.pbprovincia.Name = "pbprovincia"
-        Me.pbprovincia.Size = New System.Drawing.Size(16, 16)
-        Me.pbprovincia.TabIndex = 194
-        Me.pbprovincia.TabStop = False
-        Me.pbprovincia.Visible = False
-        '
-        'pbDepartamento
-        '
-        Me.pbDepartamento.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbDepartamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbDepartamento.Location = New System.Drawing.Point(582, 124)
-        Me.pbDepartamento.Name = "pbDepartamento"
-        Me.pbDepartamento.Size = New System.Drawing.Size(16, 16)
-        Me.pbDepartamento.TabIndex = 196
-        Me.pbDepartamento.TabStop = False
-        Me.pbDepartamento.Visible = False
-        '
-        'pbSector
-        '
-        Me.pbSector.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbSector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbSector.Location = New System.Drawing.Point(775, 74)
-        Me.pbSector.Name = "pbSector"
-        Me.pbSector.Size = New System.Drawing.Size(16, 16)
-        Me.pbSector.TabIndex = 175
-        Me.pbSector.TabStop = False
-        Me.pbSector.Visible = False
-        '
-        'pbMzna
-        '
-        Me.pbMzna.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbMzna.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbMzna.Location = New System.Drawing.Point(748, 63)
-        Me.pbMzna.Name = "pbMzna"
-        Me.pbMzna.Size = New System.Drawing.Size(16, 16)
-        Me.pbMzna.TabIndex = 176
-        Me.pbMzna.TabStop = False
-        Me.pbMzna.Visible = False
-        '
-        'pbVia
-        '
-        Me.pbVia.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbVia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbVia.Location = New System.Drawing.Point(271, 9)
-        Me.pbVia.Name = "pbVia"
-        Me.pbVia.Size = New System.Drawing.Size(16, 16)
-        Me.pbVia.TabIndex = 172
-        Me.pbVia.TabStop = False
-        Me.pbVia.Visible = False
-        '
-        'pbEmail
-        '
-        Me.pbEmail.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbEmail.Location = New System.Drawing.Point(231, 8)
-        Me.pbEmail.Name = "pbEmail"
-        Me.pbEmail.Size = New System.Drawing.Size(16, 16)
-        Me.pbEmail.TabIndex = 181
-        Me.pbEmail.TabStop = False
-        Me.pbEmail.Visible = False
-        '
-        'pbNumTelf
-        '
-        Me.pbNumTelf.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbNumTelf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbNumTelf.Location = New System.Drawing.Point(461, 13)
-        Me.pbNumTelf.Name = "pbNumTelf"
-        Me.pbNumTelf.Size = New System.Drawing.Size(16, 16)
-        Me.pbNumTelf.TabIndex = 183
-        Me.pbNumTelf.TabStop = False
-        Me.pbNumTelf.Visible = False
-        '
-        'pbNumCel
-        '
-        Me.pbNumCel.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbNumCel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbNumCel.Location = New System.Drawing.Point(616, 14)
-        Me.pbNumCel.Name = "pbNumCel"
-        Me.pbNumCel.Size = New System.Drawing.Size(16, 16)
-        Me.pbNumCel.TabIndex = 184
-        Me.pbNumCel.TabStop = False
-        Me.pbNumCel.Visible = False
-        '
-        'pbCargoRL
-        '
-        Me.pbCargoRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbCargoRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbCargoRL.Location = New System.Drawing.Point(606, 123)
-        Me.pbCargoRL.Name = "pbCargoRL"
-        Me.pbCargoRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbCargoRL.TabIndex = 528
-        Me.pbCargoRL.TabStop = False
-        Me.pbCargoRL.Visible = False
-        '
-        'pbDocRL
-        '
-        Me.pbDocRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbDocRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbDocRL.Location = New System.Drawing.Point(768, 13)
-        Me.pbDocRL.Name = "pbDocRL"
-        Me.pbDocRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbDocRL.TabIndex = 520
-        Me.pbDocRL.TabStop = False
-        Me.pbDocRL.Visible = False
-        '
-        'pbApMatRL
-        '
-        Me.pbApMatRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbApMatRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbApMatRL.Location = New System.Drawing.Point(535, 14)
-        Me.pbApMatRL.Name = "pbApMatRL"
-        Me.pbApMatRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbApMatRL.TabIndex = 519
-        Me.pbApMatRL.TabStop = False
-        Me.pbApMatRL.Visible = False
-        '
-        'pbApePatRL
-        '
-        Me.pbApePatRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbApePatRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbApePatRL.Location = New System.Drawing.Point(356, 12)
-        Me.pbApePatRL.Name = "pbApePatRL"
-        Me.pbApePatRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbApePatRL.TabIndex = 518
-        Me.pbApePatRL.TabStop = False
-        Me.pbApePatRL.Visible = False
-        '
-        'pbNomRL
-        '
-        Me.pbNomRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbNomRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbNomRL.Location = New System.Drawing.Point(168, 12)
-        Me.pbNomRL.Name = "pbNomRL"
-        Me.pbNomRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbNomRL.TabIndex = 517
-        Me.pbNomRL.TabStop = False
-        Me.pbNomRL.Visible = False
-        '
-        'pbLoteRL
-        '
-        Me.pbLoteRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbLoteRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbLoteRL.Location = New System.Drawing.Point(561, 65)
-        Me.pbLoteRL.Name = "pbLoteRL"
-        Me.pbLoteRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbLoteRL.TabIndex = 499
-        Me.pbLoteRL.TabStop = False
-        Me.pbLoteRL.Visible = False
-        '
-        'pbMznaRL
-        '
-        Me.pbMznaRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbMznaRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbMznaRL.Location = New System.Drawing.Point(478, 65)
-        Me.pbMznaRL.Name = "pbMznaRL"
-        Me.pbMznaRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbMznaRL.TabIndex = 498
-        Me.pbMznaRL.TabStop = False
-        Me.pbMznaRL.Visible = False
-        '
-        'pbUrbRL
-        '
-        Me.pbUrbRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbUrbRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbUrbRL.Location = New System.Drawing.Point(431, 122)
-        Me.pbUrbRL.Name = "pbUrbRL"
-        Me.pbUrbRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbUrbRL.TabIndex = 497
-        Me.pbUrbRL.TabStop = False
-        Me.pbUrbRL.Visible = False
-        '
-        'pbNumRL
-        '
-        Me.pbNumRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbNumRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbNumRL.Location = New System.Drawing.Point(374, 65)
-        Me.pbNumRL.Name = "pbNumRL"
-        Me.pbNumRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbNumRL.TabIndex = 496
-        Me.pbNumRL.TabStop = False
-        Me.pbNumRL.Visible = False
-        '
-        'pbViaRL
-        '
-        Me.pbViaRL.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbViaRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbViaRL.Location = New System.Drawing.Point(269, 61)
-        Me.pbViaRL.Name = "pbViaRL"
-        Me.pbViaRL.Size = New System.Drawing.Size(16, 16)
-        Me.pbViaRL.TabIndex = 495
-        Me.pbViaRL.TabStop = False
-        Me.pbViaRL.Visible = False
-        '
-        'btnBusqueda_conyuge
-        '
-        Me.btnBusqueda_conyuge.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.btnBusqueda_conyuge.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBusqueda_conyuge.Enabled = False
-        Me.btnBusqueda_conyuge.FlatAppearance.BorderSize = 0
-        Me.btnBusqueda_conyuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBusqueda_conyuge.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.btnBusqueda_conyuge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.btnBusqueda_conyuge.Image = Global.Muni.My.Resources.Resources.user_with_adding_sign
-        Me.btnBusqueda_conyuge.Location = New System.Drawing.Point(13, 149)
-        Me.btnBusqueda_conyuge.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.btnBusqueda_conyuge.Name = "btnBusqueda_conyuge"
-        Me.btnBusqueda_conyuge.Size = New System.Drawing.Size(374, 31)
-        Me.btnBusqueda_conyuge.TabIndex = 64
-        Me.btnBusqueda_conyuge.TextAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.btnBusqueda_conyuge.UseVisualStyleBackColor = False
-        '
-        'pbConyuge
-        '
-        Me.pbConyuge.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbConyuge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbConyuge.Location = New System.Drawing.Point(370, 79)
-        Me.pbConyuge.Name = "pbConyuge"
-        Me.pbConyuge.Size = New System.Drawing.Size(16, 16)
-        Me.pbConyuge.TabIndex = 187
-        Me.pbConyuge.TabStop = False
-        Me.pbConyuge.Visible = False
-        '
-        'PbTipoRelacion
-        '
-        Me.PbTipoRelacion.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.PbTipoRelacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbTipoRelacion.Location = New System.Drawing.Point(370, 13)
-        Me.PbTipoRelacion.Name = "PbTipoRelacion"
-        Me.PbTipoRelacion.Size = New System.Drawing.Size(16, 16)
-        Me.PbTipoRelacion.TabIndex = 186
-        Me.PbTipoRelacion.TabStop = False
-        Me.PbTipoRelacion.Visible = False
-        '
-        'pbObsrv
-        '
-        Me.pbObsrv.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
-        Me.pbObsrv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbObsrv.Location = New System.Drawing.Point(370, 9)
-        Me.pbObsrv.Name = "pbObsrv"
-        Me.pbObsrv.Size = New System.Drawing.Size(17, 16)
-        Me.pbObsrv.TabIndex = 180
-        Me.pbObsrv.TabStop = False
-        Me.pbObsrv.Visible = False
-        '
         'uc_rentas_contribuyente_new
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2149,39 +2149,6 @@ Partial Class uc_rentas_contribuyente_new
         Me.Panel7.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.gb_datosPersonales.ResumeLayout(False)
-        Me.gb_datosPersonales.PerformLayout()
-        Me.gb_direccionContribuyente.ResumeLayout(False)
-        Me.gb_direccionContribuyente.PerformLayout()
-        Me.gb_contactoContribuyente.ResumeLayout(False)
-        Me.gb_contactoContribuyente.PerformLayout()
-        Me.gb_RepresentanteLegal.ResumeLayout(False)
-        Me.gb_TipoContribuyente.ResumeLayout(False)
-        Me.gb_TipoContribuyente.PerformLayout()
-        Me.gb_Observaciones.ResumeLayout(False)
-        Me.gb_Observaciones.PerformLayout()
-        CType(Me.pbload, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbRUC, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PBRazonSocial, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbnombre, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbapepaT, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Pbapemat, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbNumeroDoc, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbDistrito, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbprovincia, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbDepartamento, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbSector, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbMzna, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbVia, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbNumTelf, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbNumCel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCargoRL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbDocRL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbApMatRL, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2192,9 +2159,42 @@ Partial Class uc_rentas_contribuyente_new
         CType(Me.pbUrbRL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbNumRL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbViaRL, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.pbRUC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBRazonSocial, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.pbnombre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbapepaT, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Pbapemat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNumeroDoc, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gb_datosPersonales.ResumeLayout(False)
+        Me.gb_datosPersonales.PerformLayout()
+        Me.gb_direccionContribuyente.ResumeLayout(False)
+        Me.gb_direccionContribuyente.PerformLayout()
+        CType(Me.pbDistrito, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbprovincia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDepartamento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbSector, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMzna, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVia, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gb_contactoContribuyente.ResumeLayout(False)
+        Me.gb_contactoContribuyente.PerformLayout()
+        CType(Me.pbEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNumTelf, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNumCel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gb_RepresentanteLegal.ResumeLayout(False)
+        Me.gb_TipoContribuyente.ResumeLayout(False)
+        Me.gb_TipoContribuyente.PerformLayout()
         CType(Me.pbConyuge, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbTipoRelacion, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gb_Observaciones.ResumeLayout(False)
+        Me.gb_Observaciones.PerformLayout()
         CType(Me.pbObsrv, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbload, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

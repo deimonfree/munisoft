@@ -114,16 +114,7 @@ Public Class MDI_registro_civil
     End Sub
 
     Private Sub MDI_registro_civil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim desktopSize As Size
-        desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
-        Dim height As Integer = 0.87 * desktopSize.Height
-        Dim width As Integer = 0.78 * desktopSize.Width
-        Dim Myfrm As New uc_ciudadano
-        Myfrm.Size = New System.Drawing.Size(width, height)
-        Myfrm.Visible = True
-        Myfrm.Show()
-        pnlContainer.Controls.Clear()
-        pnlContainer.Controls.Add(Myfrm)
+
     End Sub
 
     Private Sub NuevoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem1.Click

@@ -283,7 +283,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p4bWJurcZ46pVnOaXCrnRK+aqJQE35RWwmwhW844Hh4=</dsig:DigestValue>
+        <dsig:DigestValue>YtylANkeGgQWAjphI6YDHqVNm1IU5fKyhg7SFmKft/E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -300,14 +300,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Muni.exe" size="43477504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Muni.exe" size="43445760">
       <assemblyIdentity name="Muni" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OnaE6+bEQHxYMoSfCmxNi17YI1Pu5sFmB1C7n3/wji4=</dsig:DigestValue>
+        <dsig:DigestValue>9+Pwtu5GfU5AWacHH+4yvlH9czrnSufDil7bgkGJ7yI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

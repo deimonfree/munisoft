@@ -767,12 +767,6 @@
     <Compile Include="Views\registro_civil\uc_acta_matrimonio.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\registro_civil\uc_ciudadano.Designer.vb">
-      <DependentUpon>uc_ciudadano.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\registro_civil\uc_ciudadano.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\imprimir_cliente.rpt">
@@ -862,9 +856,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\registro_civil\uc_acta_matrimonio.resx">
       <DependentUpon>uc_acta_matrimonio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\registro_civil\uc_ciudadano.resx">
-      <DependentUpon>uc_ciudadano.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\ab_rentas_zona_new.resx">
       <DependentUpon>ab_rentas_zona_new.vb</DependentUpon>

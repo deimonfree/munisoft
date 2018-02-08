@@ -6,7 +6,7 @@ Public Class class_controller_autovaluo
     Private _DataSetConstruccion As New DataSet
     Public ultimoConstruccion As Integer
     Public Function insertarDatosAutovaluo(ByVal datos_autovaluo As class_datos_autovaluo) As Boolean
-        Dim estado As Boolean
+        Dim estado As Boolean = True
         Try
             conex_Global()
             _adaptador.InsertCommand = New MySqlCommand("insert into autovaluo(valor_autovaluo,annio,estado,cod_cont) values(@val,@annio,@estado,@cod_ficha)", _conexion)

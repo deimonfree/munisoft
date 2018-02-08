@@ -263,7 +263,8 @@ Public Class uc_rentas_predio_new
             activar_paneles()
             estado_boton = 3
             IdContibuyente = formulario2.valor_contribuyente
-            idPredio = formulario2.valor_contribuyente
+            idPredio = formulario2.valor_predio
+            'idPredio = formulario2.valor_contribuyente
             llamada_predio(formulario2.valor_contribuyente)
             llamada_grupoCatastral(idGrupoCatastral)
             llama_serviciosBasicos(idPredio)

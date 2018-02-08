@@ -27,7 +27,7 @@
                         lblinfo_tabla.Text = ""
                     Else
                         lblinfo_tabla.Text = "Tabla de depreciación cerrada"
-                        btnCerrar.Text = "Cerrar Depreciación"
+                        btnCerrar.Text = "Depreciación Cerrada"
                         btnCerrar.Image = My.Resources.padlock
                         btnCerrar.BackColor = Color.FromArgb(255, 140, 1)
                         btnCerrar.Enabled = False
