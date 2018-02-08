@@ -16,35 +16,41 @@ Public Class d_rentas_busqueda_ficha
     End Sub
 
     Private Sub btnlistarall_Click(sender As Object, e As EventArgs) Handles btnlistarall.Click
-        If rbCOD.Checked = True Then
+        If Trim(txtPalabraClave.Text) = "" Then
             _DatasetContribuyente.Reset()
-            consulta_datos_contribuyente_by_codigo(txtPalabraClave.Text)
+            consulta_datos_contribuyente_all()
             dgwContribuyente.DataSource = _dtwContribuyente
-        End If
-        If rbAP.Checked = True Then
-            _DatasetContribuyente.Reset()
-            consulta_datos_contribuyente_by_ApellidoPeterno(txtPalabraClave.Text)
-            dgwContribuyente.DataSource = _dtwContribuyente
-        End If
-        If rbN.Checked = True Then
-            _DatasetContribuyente.Reset()
-            consulta_datos_contribuyente_by_Nombre(txtPalabraClave.Text)
-            dgwContribuyente.DataSource = _dtwContribuyente
-        End If
-        If rbDNI.Checked = True Then
-            _DatasetContribuyente.Reset()
-            consulta_datos_contribuyente_by_DNI(txtPalabraClave.Text)
-            dgwContribuyente.DataSource = _dtwContribuyente
-        End If
-        If rbRZ.Checked = True Then
-            _DatasetContribuyente.Reset()
-            consulta_datos_contribuyente_by_RazonSocial(txtPalabraClave.Text)
-            dgwContribuyente.DataSource = _dtwContribuyente
-        End If
-        If rbRUC.Checked = True Then
-            _DatasetContribuyente.Reset()
-            consulta_datos_contribuyente_by_RUC(txtPalabraClave.Text)
-            dgwContribuyente.DataSource = _dtwContribuyente
+        Else
+            If rbCOD.Checked = True Then
+                _DatasetContribuyente.Reset()
+                consulta_datos_contribuyente_by_codigo(txtPalabraClave.Text)
+                dgwContribuyente.DataSource = _dtwContribuyente
+            End If
+            If rbAP.Checked = True Then
+                _DatasetContribuyente.Reset()
+                consulta_datos_contribuyente_by_ApellidoPeterno(txtPalabraClave.Text)
+                dgwContribuyente.DataSource = _dtwContribuyente
+            End If
+            If rbN.Checked = True Then
+                _DatasetContribuyente.Reset()
+                consulta_datos_contribuyente_by_Nombre(txtPalabraClave.Text)
+                dgwContribuyente.DataSource = _dtwContribuyente
+            End If
+            If rbDNI.Checked = True Then
+                _DatasetContribuyente.Reset()
+                consulta_datos_contribuyente_by_DNI(txtPalabraClave.Text)
+                dgwContribuyente.DataSource = _dtwContribuyente
+            End If
+            If rbRZ.Checked = True Then
+                _DatasetContribuyente.Reset()
+                consulta_datos_contribuyente_by_RazonSocial(txtPalabraClave.Text)
+                dgwContribuyente.DataSource = _dtwContribuyente
+            End If
+            If rbRUC.Checked = True Then
+                _DatasetContribuyente.Reset()
+                consulta_datos_contribuyente_by_RUC(txtPalabraClave.Text)
+                dgwContribuyente.DataSource = _dtwContribuyente
+            End If
         End If
     End Sub
 

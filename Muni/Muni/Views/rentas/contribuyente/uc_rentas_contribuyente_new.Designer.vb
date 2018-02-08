@@ -233,6 +233,7 @@ Partial Class uc_rentas_contribuyente_new
         'txtApe_mat
         '
         Me.txtApe_mat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtApe_mat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApe_mat.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApe_mat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtApe_mat.Location = New System.Drawing.Point(189, 36)
@@ -243,9 +244,10 @@ Partial Class uc_rentas_contribuyente_new
         'txtNombre
         '
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombre.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(364, 34)
+        Me.txtNombre.Location = New System.Drawing.Point(364, 36)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(172, 26)
         Me.txtNombre.TabIndex = 3
@@ -253,6 +255,7 @@ Partial Class uc_rentas_contribuyente_new
         'txtApe_pat
         '
         Me.txtApe_pat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtApe_pat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApe_pat.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApe_pat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtApe_pat.Location = New System.Drawing.Point(7, 36)
@@ -278,7 +281,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.cbxtipoVia.Location = New System.Drawing.Point(8, 32)
         Me.cbxtipoVia.Name = "cbxtipoVia"
         Me.cbxtipoVia.Size = New System.Drawing.Size(90, 28)
-        Me.cbxtipoVia.TabIndex = 11
+        Me.cbxtipoVia.TabIndex = 8
         '
         'txtObsv
         '
@@ -289,7 +292,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtObsv.Multiline = True
         Me.txtObsv.Name = "txtObsv"
         Me.txtObsv.Size = New System.Drawing.Size(381, 146)
-        Me.txtObsv.TabIndex = 71
+        Me.txtObsv.TabIndex = 42
         '
         'txtNumeroPiso
         '
@@ -299,7 +302,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumeroPiso.Location = New System.Drawing.Point(737, 34)
         Me.txtNumeroPiso.Name = "txtNumeroPiso"
         Me.txtNumeroPiso.Size = New System.Drawing.Size(54, 26)
-        Me.txtNumeroPiso.TabIndex = 17
+        Me.txtNumeroPiso.TabIndex = 14
         '
         'txtNom_Dep
         '
@@ -309,7 +312,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNom_Dep.Location = New System.Drawing.Point(593, 34)
         Me.txtNom_Dep.Name = "txtNom_Dep"
         Me.txtNom_Dep.Size = New System.Drawing.Size(138, 26)
-        Me.txtNom_Dep.TabIndex = 16
+        Me.txtNom_Dep.TabIndex = 13
         '
         'txtLote
         '
@@ -319,17 +322,18 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtLote.Location = New System.Drawing.Point(508, 34)
         Me.txtLote.Name = "txtLote"
         Me.txtLote.Size = New System.Drawing.Size(81, 26)
-        Me.txtLote.TabIndex = 15
+        Me.txtLote.TabIndex = 12
         '
         'txtNomSector
         '
         Me.txtNomSector.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNomSector.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNomSector.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomSector.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtNomSector.Location = New System.Drawing.Point(192, 92)
+        Me.txtNomSector.Location = New System.Drawing.Point(192, 91)
         Me.txtNomSector.Name = "txtNomSector"
-        Me.txtNomSector.Size = New System.Drawing.Size(599, 26)
-        Me.txtNomSector.TabIndex = 19
+        Me.txtNomSector.Size = New System.Drawing.Size(543, 26)
+        Me.txtNomSector.TabIndex = 16
         '
         'txtMnza
         '
@@ -339,7 +343,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtMnza.Location = New System.Drawing.Point(411, 34)
         Me.txtMnza.Name = "txtMnza"
         Me.txtMnza.Size = New System.Drawing.Size(90, 26)
-        Me.txtMnza.TabIndex = 14
+        Me.txtMnza.TabIndex = 11
         '
         'txtNumeroVia
         '
@@ -349,17 +353,18 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumeroVia.Location = New System.Drawing.Point(294, 34)
         Me.txtNumeroVia.Name = "txtNumeroVia"
         Me.txtNumeroVia.Size = New System.Drawing.Size(110, 26)
-        Me.txtNumeroVia.TabIndex = 13
+        Me.txtNumeroVia.TabIndex = 10
         '
         'txtNomVia
         '
         Me.txtNomVia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNomVia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNomVia.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomVia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtNomVia.Location = New System.Drawing.Point(102, 34)
         Me.txtNomVia.Name = "txtNomVia"
         Me.txtNomVia.Size = New System.Drawing.Size(185, 26)
-        Me.txtNomVia.TabIndex = 12
+        Me.txtNomVia.TabIndex = 9
         '
         'txtNumCel
         '
@@ -370,7 +375,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumCel.MaxLength = 9
         Me.txtNumCel.Name = "txtNumCel"
         Me.txtNumCel.Size = New System.Drawing.Size(149, 26)
-        Me.txtNumCel.TabIndex = 33
+        Me.txtNumCel.TabIndex = 22
         '
         'txtNumTelf
         '
@@ -380,17 +385,18 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumTelf.Location = New System.Drawing.Point(257, 34)
         Me.txtNumTelf.Name = "txtNumTelf"
         Me.txtNumTelf.Size = New System.Drawing.Size(220, 26)
-        Me.txtNumTelf.TabIndex = 32
+        Me.txtNumTelf.TabIndex = 21
         '
         'txtEmail
         '
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmail.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtEmail.Location = New System.Drawing.Point(8, 34)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(239, 26)
-        Me.txtEmail.TabIndex = 31
+        Me.txtEmail.TabIndex = 20
         '
         'cbxtipoRelacion
         '
@@ -400,18 +406,19 @@ Partial Class uc_rentas_contribuyente_new
         Me.cbxtipoRelacion.Location = New System.Drawing.Point(12, 35)
         Me.cbxtipoRelacion.Name = "cbxtipoRelacion"
         Me.cbxtipoRelacion.Size = New System.Drawing.Size(373, 28)
-        Me.cbxtipoRelacion.TabIndex = 61
+        Me.cbxtipoRelacion.TabIndex = 39
         '
         'txtNombres_conyuge
         '
         Me.txtNombres_conyuge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNombres_conyuge.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombres_conyuge.Enabled = False
         Me.txtNombres_conyuge.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombres_conyuge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtNombres_conyuge.Location = New System.Drawing.Point(141, 1076)
         Me.txtNombres_conyuge.Name = "txtNombres_conyuge"
         Me.txtNombres_conyuge.Size = New System.Drawing.Size(272, 26)
-        Me.txtNombres_conyuge.TabIndex = 63
+        Me.txtNombres_conyuge.TabIndex = 41
         '
         'lblInfo
         '
@@ -428,42 +435,45 @@ Partial Class uc_rentas_contribuyente_new
         'txtDist
         '
         Me.txtDist.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDist.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDist.Enabled = False
         Me.txtDist.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDist.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtDist.Location = New System.Drawing.Point(8, 146)
         Me.txtDist.Name = "txtDist"
         Me.txtDist.Size = New System.Drawing.Size(187, 26)
-        Me.txtDist.TabIndex = 14
+        Me.txtDist.TabIndex = 17
         '
         'txtProv
         '
         Me.txtProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtProv.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtProv.Enabled = False
         Me.txtProv.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProv.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtProv.Location = New System.Drawing.Point(207, 146)
         Me.txtProv.Name = "txtProv"
         Me.txtProv.Size = New System.Drawing.Size(187, 26)
-        Me.txtProv.TabIndex = 15
+        Me.txtProv.TabIndex = 18
         '
         'txtDep
         '
         Me.txtDep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDep.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDep.Enabled = False
         Me.txtDep.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDep.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtDep.Location = New System.Drawing.Point(411, 146)
         Me.txtDep.Name = "txtDep"
         Me.txtDep.Size = New System.Drawing.Size(187, 26)
-        Me.txtDep.TabIndex = 16
+        Me.txtDep.TabIndex = 19
         '
         'txtnumeroDoc
         '
         Me.txtnumeroDoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtnumeroDoc.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtnumeroDoc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtnumeroDoc.Location = New System.Drawing.Point(663, 35)
+        Me.txtnumeroDoc.Location = New System.Drawing.Point(663, 36)
         Me.txtnumeroDoc.MaxLength = 8
         Me.txtnumeroDoc.Name = "txtnumeroDoc"
         Me.txtnumeroDoc.Size = New System.Drawing.Size(112, 26)
@@ -655,9 +665,9 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label30.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.Location = New System.Drawing.Point(542, 16)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(165, 17)
+        Me.Label30.Size = New System.Drawing.Size(115, 17)
         Me.Label30.TabIndex = 382
-        Me.Label30.Text = "Tipo de Indentificación ::"
+        Me.Label30.Text = "Tipo de Indent. ::"
         '
         'Panel3
         '
@@ -695,7 +705,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label9.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(702, 15)
+        Me.Label9.Location = New System.Drawing.Point(663, 14)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(56, 19)
         Me.Label9.TabIndex = 385
@@ -707,7 +717,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label31.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.Label31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label31.Location = New System.Drawing.Point(98, 13)
+        Me.Label31.Location = New System.Drawing.Point(105, 13)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(95, 19)
         Me.Label31.TabIndex = 386
@@ -771,7 +781,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label7.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(158, 71)
+        Me.Label7.Location = New System.Drawing.Point(197, 71)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(152, 19)
         Me.Label7.TabIndex = 394
@@ -795,7 +805,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.cbxTipoUrb.Location = New System.Drawing.Point(9, 90)
         Me.cbxTipoUrb.Name = "cbxTipoUrb"
         Me.cbxTipoUrb.Size = New System.Drawing.Size(180, 28)
-        Me.cbxTipoUrb.TabIndex = 18
+        Me.cbxTipoUrb.TabIndex = 15
         '
         'Label11
         '
@@ -930,7 +940,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtIden_conyuge.Location = New System.Drawing.Point(39, 1076)
         Me.txtIden_conyuge.Name = "txtIden_conyuge"
         Me.txtIden_conyuge.Size = New System.Drawing.Size(96, 26)
-        Me.txtIden_conyuge.TabIndex = 62
+        Me.txtIden_conyuge.TabIndex = 40
         '
         'Label18
         '
@@ -1103,7 +1113,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtTelf_rl.MaxLength = 9
         Me.txtTelf_rl.Name = "txtTelf_rl"
         Me.txtTelf_rl.Size = New System.Drawing.Size(155, 26)
-        Me.txtTelf_rl.TabIndex = 56
+        Me.txtTelf_rl.TabIndex = 38
         '
         'pbCargoRL
         '
@@ -1129,12 +1139,13 @@ Partial Class uc_rentas_contribuyente_new
         'txtCargo_rl
         '
         Me.txtCargo_rl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCargo_rl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCargo_rl.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCargo_rl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtCargo_rl.Location = New System.Drawing.Point(452, 141)
         Me.txtCargo_rl.Name = "txtCargo_rl"
         Me.txtCargo_rl.Size = New System.Drawing.Size(169, 26)
-        Me.txtCargo_rl.TabIndex = 55
+        Me.txtCargo_rl.TabIndex = 37
         '
         'Label16
         '
@@ -1197,7 +1208,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumDoc_rl.MaxLength = 8
         Me.txtNumDoc_rl.Name = "txtNumDoc_rl"
         Me.txtNumDoc_rl.Size = New System.Drawing.Size(106, 26)
-        Me.txtNumDoc_rl.TabIndex = 45
+        Me.txtNumDoc_rl.TabIndex = 27
         '
         'pbDocRL
         '
@@ -1251,37 +1262,40 @@ Partial Class uc_rentas_contribuyente_new
         Me.cbTipoDoc_rl.Location = New System.Drawing.Point(557, 32)
         Me.cbTipoDoc_rl.Name = "cbTipoDoc_rl"
         Me.cbTipoDoc_rl.Size = New System.Drawing.Size(115, 28)
-        Me.cbTipoDoc_rl.TabIndex = 44
+        Me.cbTipoDoc_rl.TabIndex = 26
         '
         'txtApemat_rl
         '
         Me.txtApemat_rl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtApemat_rl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApemat_rl.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApemat_rl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtApemat_rl.Location = New System.Drawing.Point(378, 34)
         Me.txtApemat_rl.Name = "txtApemat_rl"
         Me.txtApemat_rl.Size = New System.Drawing.Size(173, 26)
-        Me.txtApemat_rl.TabIndex = 43
+        Me.txtApemat_rl.TabIndex = 25
         '
         'txtNom_rl
         '
         Me.txtNom_rl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNom_rl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNom_rl.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNom_rl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtNom_rl.Location = New System.Drawing.Point(6, 34)
         Me.txtNom_rl.Name = "txtNom_rl"
         Me.txtNom_rl.Size = New System.Drawing.Size(178, 26)
-        Me.txtNom_rl.TabIndex = 41
+        Me.txtNom_rl.TabIndex = 23
         '
         'txtApepat_rl
         '
         Me.txtApepat_rl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtApepat_rl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApepat_rl.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApepat_rl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtApepat_rl.Location = New System.Drawing.Point(190, 34)
         Me.txtApepat_rl.Name = "txtApepat_rl"
         Me.txtApepat_rl.Size = New System.Drawing.Size(182, 26)
-        Me.txtApepat_rl.TabIndex = 42
+        Me.txtApepat_rl.TabIndex = 24
         '
         'Label40
         '
@@ -1313,7 +1327,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.cbUrba_rl.Location = New System.Drawing.Point(6, 139)
         Me.cbUrba_rl.Name = "cbUrba_rl"
         Me.cbUrba_rl.Size = New System.Drawing.Size(143, 28)
-        Me.cbUrba_rl.TabIndex = 53
+        Me.cbUrba_rl.TabIndex = 35
         '
         'Label42
         '
@@ -1452,7 +1466,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.cbtipoVia_rl.Location = New System.Drawing.Point(6, 86)
         Me.cbtipoVia_rl.Name = "cbtipoVia_rl"
         Me.cbtipoVia_rl.Size = New System.Drawing.Size(90, 28)
-        Me.cbtipoVia_rl.TabIndex = 46
+        Me.cbtipoVia_rl.TabIndex = 28
         '
         'txtNumApart_rl
         '
@@ -1462,7 +1476,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumApart_rl.Location = New System.Drawing.Point(736, 86)
         Me.txtNumApart_rl.Name = "txtNumApart_rl"
         Me.txtNumApart_rl.Size = New System.Drawing.Size(48, 26)
-        Me.txtNumApart_rl.TabIndex = 52
+        Me.txtNumApart_rl.TabIndex = 34
         '
         'txtApart_rl
         '
@@ -1472,7 +1486,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtApart_rl.Location = New System.Drawing.Point(582, 87)
         Me.txtApart_rl.Name = "txtApart_rl"
         Me.txtApart_rl.Size = New System.Drawing.Size(148, 26)
-        Me.txtApart_rl.TabIndex = 51
+        Me.txtApart_rl.TabIndex = 33
         '
         'txtLote_rl
         '
@@ -1482,17 +1496,18 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtLote_rl.Location = New System.Drawing.Point(497, 87)
         Me.txtLote_rl.Name = "txtLote_rl"
         Me.txtLote_rl.Size = New System.Drawing.Size(81, 26)
-        Me.txtLote_rl.TabIndex = 50
+        Me.txtLote_rl.TabIndex = 32
         '
         'txtUrba_rl
         '
         Me.txtUrba_rl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtUrba_rl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtUrba_rl.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUrba_rl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtUrba_rl.Location = New System.Drawing.Point(159, 141)
         Me.txtUrba_rl.Name = "txtUrba_rl"
         Me.txtUrba_rl.Size = New System.Drawing.Size(287, 26)
-        Me.txtUrba_rl.TabIndex = 54
+        Me.txtUrba_rl.TabIndex = 36
         '
         'txtMzna_rl
         '
@@ -1502,7 +1517,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtMzna_rl.Location = New System.Drawing.Point(400, 87)
         Me.txtMzna_rl.Name = "txtMzna_rl"
         Me.txtMzna_rl.Size = New System.Drawing.Size(90, 26)
-        Me.txtMzna_rl.TabIndex = 49
+        Me.txtMzna_rl.TabIndex = 31
         '
         'txtNumero_rl
         '
@@ -1512,21 +1527,23 @@ Partial Class uc_rentas_contribuyente_new
         Me.txtNumero_rl.Location = New System.Drawing.Point(292, 87)
         Me.txtNumero_rl.Name = "txtNumero_rl"
         Me.txtNumero_rl.Size = New System.Drawing.Size(99, 26)
-        Me.txtNumero_rl.TabIndex = 48
+        Me.txtNumero_rl.TabIndex = 30
         '
         'txtNomvia_rl
         '
         Me.txtNomvia_rl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNomvia_rl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNomvia_rl.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNomvia_rl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtNomvia_rl.Location = New System.Drawing.Point(100, 87)
         Me.txtNomvia_rl.Name = "txtNomvia_rl"
         Me.txtNomvia_rl.Size = New System.Drawing.Size(185, 26)
-        Me.txtNomvia_rl.TabIndex = 47
+        Me.txtNomvia_rl.TabIndex = 29
         '
         'txtRazonsocial
         '
         Me.txtRazonsocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtRazonsocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtRazonsocial.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRazonsocial.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
         Me.txtRazonsocial.Location = New System.Drawing.Point(194, 34)
@@ -1540,7 +1557,7 @@ Partial Class uc_rentas_contribuyente_new
         Me.Label53.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.Label53.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label53.Location = New System.Drawing.Point(62, 12)
+        Me.Label53.Location = New System.Drawing.Point(199, 12)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(84, 19)
         Me.Label53.TabIndex = 494
@@ -1625,7 +1642,7 @@ Partial Class uc_rentas_contribuyente_new
         '
         Me.PBRazonSocial.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.PBRazonSocial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBRazonSocial.Location = New System.Drawing.Point(569, 15)
+        Me.PBRazonSocial.Location = New System.Drawing.Point(566, 15)
         Me.PBRazonSocial.Name = "PBRazonSocial"
         Me.PBRazonSocial.Size = New System.Drawing.Size(16, 16)
         Me.PBRazonSocial.TabIndex = 488
@@ -1658,7 +1675,7 @@ Partial Class uc_rentas_contribuyente_new
         '
         Me.pbnombre.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.pbnombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbnombre.Location = New System.Drawing.Point(519, 12)
+        Me.pbnombre.Location = New System.Drawing.Point(514, 14)
         Me.pbnombre.Name = "pbnombre"
         Me.pbnombre.Size = New System.Drawing.Size(16, 16)
         Me.pbnombre.TabIndex = 167
@@ -1669,7 +1686,7 @@ Partial Class uc_rentas_contribuyente_new
         '
         Me.pbapepaT.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.pbapepaT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbapepaT.Location = New System.Drawing.Point(173, 14)
+        Me.pbapepaT.Location = New System.Drawing.Point(166, 14)
         Me.pbapepaT.Name = "pbapepaT"
         Me.pbapepaT.Size = New System.Drawing.Size(16, 16)
         Me.pbapepaT.TabIndex = 168
@@ -1680,7 +1697,7 @@ Partial Class uc_rentas_contribuyente_new
         '
         Me.Pbapemat.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.Pbapemat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Pbapemat.Location = New System.Drawing.Point(346, 16)
+        Me.Pbapemat.Location = New System.Drawing.Point(338, 16)
         Me.Pbapemat.Name = "Pbapemat"
         Me.Pbapemat.Size = New System.Drawing.Size(16, 16)
         Me.Pbapemat.TabIndex = 169
@@ -1712,6 +1729,7 @@ Partial Class uc_rentas_contribuyente_new
         'chkDatosEmpresariales
         '
         Me.chkDatosEmpresariales.AutoSize = True
+        Me.chkDatosEmpresariales.Enabled = False
         Me.chkDatosEmpresariales.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkDatosEmpresariales.Location = New System.Drawing.Point(7, 104)
         Me.chkDatosEmpresariales.Name = "chkDatosEmpresariales"
@@ -1851,7 +1869,7 @@ Partial Class uc_rentas_contribuyente_new
         '
         Me.pbSector.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.pbSector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbSector.Location = New System.Drawing.Point(775, 74)
+        Me.pbSector.Location = New System.Drawing.Point(737, 85)
         Me.pbSector.Name = "pbSector"
         Me.pbSector.Size = New System.Drawing.Size(16, 16)
         Me.pbSector.TabIndex = 175
@@ -1862,7 +1880,7 @@ Partial Class uc_rentas_contribuyente_new
         '
         Me.pbMzna.BackgroundImage = Global.Muni.My.Resources.Resources.exclamation2
         Me.pbMzna.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbMzna.Location = New System.Drawing.Point(748, 63)
+        Me.pbMzna.Location = New System.Drawing.Point(753, 63)
         Me.pbMzna.Name = "pbMzna"
         Me.pbMzna.Size = New System.Drawing.Size(16, 16)
         Me.pbMzna.TabIndex = 176

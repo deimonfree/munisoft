@@ -1302,6 +1302,10 @@
                 For Each row In _DatasetCerrar.Tables(0).Rows
                     If row("estado") = "abierto" Then
                         btnCerrar.Visible = True
+                        btnCerrar.Text = "Cerrar Depreciación"
+                        btnCerrar.Image = My.Resources.cerrar_white
+                        btnCerrar.BackColor = Color.FromArgb(150, 193, 31)
+                        btnCerrar.Enabled = True
                         lblinfo_tabla.Text = ""
                     Else
                         btnCerrar.Text = "5"

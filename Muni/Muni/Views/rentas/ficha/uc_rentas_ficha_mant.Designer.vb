@@ -133,7 +133,6 @@ Partial Class uc_rentas_ficha_mant
         Me.valor_unitario_depreciacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.area_construccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.lblsubinfo = New System.Windows.Forms.Label()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.sidePanel = New System.Windows.Forms.Panel()
@@ -1152,7 +1151,6 @@ Partial Class uc_rentas_ficha_mant
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.TabControl1.Location = New System.Drawing.Point(9, 124)
         Me.TabControl1.Name = "TabControl1"
@@ -1171,7 +1169,7 @@ Partial Class uc_rentas_ficha_mant
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(775, 205)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Construcciones"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button3
@@ -1340,16 +1338,6 @@ Partial Class uc_rentas_ficha_mant
         '
         Me.total.HeaderText = "Total"
         Me.total.Name = "total"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 26)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(775, 205)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'lblsubinfo
         '
@@ -2127,7 +2115,6 @@ Partial Class uc_rentas_ficha_mant
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnDelet As Button
     Friend WithEvents dgwConstruciones As DataGridView
-    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents lblsubinfo As Label
     Friend WithEvents pbload As PictureBox
     Friend WithEvents lblInfo As Label

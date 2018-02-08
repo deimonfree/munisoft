@@ -46,8 +46,11 @@
         Dim annio As Integer
         Dim valor_m As Decimal = 0.00
 
+        _DatasetMinimo.Reset()
+        consulta_datos_valor_minimo(cbxperiodo.Text)
         For Each row In _DatasetMinimo.Tables(0).Rows
             valor_m = row("valor")
+            MsgBox(valor_m.ToString)
         Next
         Try
             annio = cbxperiodo.Text

@@ -27,6 +27,9 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.dtpVenc = New System.Windows.Forms.DateTimePicker()
         Me.cbxPago = New System.Windows.Forms.ComboBox()
         Me.txtAutomatizacion = New System.Windows.Forms.TextBox()
@@ -44,6 +47,11 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbLoad = New System.Windows.Forms.PictureBox()
+        Me.lblsubInfo = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
+        Me.pbFail = New System.Windows.Forms.PictureBox()
+        Me.btnPrintFicha = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -65,26 +73,18 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.monto_insoluto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.automatizacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.monto_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblInfo = New System.Windows.Forms.Label()
-        Me.lblsubInfo = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.btnShared = New System.Windows.Forms.Button()
-        Me.pbFail = New System.Windows.Forms.PictureBox()
-        Me.btnPrintFicha = New System.Windows.Forms.Button()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.pbLoad = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgwPredio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgwFraccionar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbFail, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLoad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbFail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgwFraccionar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label15
@@ -140,6 +140,36 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.GroupBox1.TabIndex = 588
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Recibo"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(6, 25)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(159, 17)
+        Me.Label9.TabIndex = 595
+        Me.Label9.Text = "Fecha de Vencimiento ::"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(16, 84)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(212, 17)
+        Me.Label13.TabIndex = 594
+        Me.Label13.Text = "Costo por Derecho de Emisión ::"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(16, 145)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(103, 17)
+        Me.Label16.TabIndex = 593
+        Me.Label16.Text = "Tipo de Pago  ::"
         '
         'dtpVenc
         '
@@ -326,6 +356,68 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 120)
         Me.Panel1.TabIndex = 572
+        '
+        'pbLoad
+        '
+        Me.pbLoad.Image = Global.Muni.My.Resources.Resources.Bars
+        Me.pbLoad.Location = New System.Drawing.Point(74, 83)
+        Me.pbLoad.Name = "pbLoad"
+        Me.pbLoad.Size = New System.Drawing.Size(77, 30)
+        Me.pbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbLoad.TabIndex = 615
+        Me.pbLoad.TabStop = False
+        Me.pbLoad.Visible = False
+        '
+        'lblsubInfo
+        '
+        Me.lblsubInfo.AutoSize = True
+        Me.lblsubInfo.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblsubInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.lblsubInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblsubInfo.Location = New System.Drawing.Point(73, 88)
+        Me.lblsubInfo.Name = "lblsubInfo"
+        Me.lblsubInfo.Size = New System.Drawing.Size(0, 19)
+        Me.lblsubInfo.TabIndex = 614
+        '
+        'lblInfo
+        '
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.Location = New System.Drawing.Point(74, 66)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(0, 21)
+        Me.lblInfo.TabIndex = 613
+        '
+        'pbFail
+        '
+        Me.pbFail.Image = Global.Muni.My.Resources.Resources.ticked_generado
+        Me.pbFail.Location = New System.Drawing.Point(18, 63)
+        Me.pbFail.Name = "pbFail"
+        Me.pbFail.Size = New System.Drawing.Size(50, 50)
+        Me.pbFail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbFail.TabIndex = 612
+        Me.pbFail.TabStop = False
+        Me.pbFail.Visible = False
+        '
+        'btnPrintFicha
+        '
+        Me.btnPrintFicha.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.btnPrintFicha.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPrintFicha.Enabled = False
+        Me.btnPrintFicha.FlatAppearance.BorderSize = 0
+        Me.btnPrintFicha.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrintFicha.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnPrintFicha.ForeColor = System.Drawing.Color.White
+        Me.btnPrintFicha.Image = Global.Muni.My.Resources.Resources.ticket
+        Me.btnPrintFicha.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnPrintFicha.Location = New System.Drawing.Point(613, 62)
+        Me.btnPrintFicha.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnPrintFicha.Name = "btnPrintFicha"
+        Me.btnPrintFicha.Size = New System.Drawing.Size(169, 47)
+        Me.btnPrintFicha.TabIndex = 553
+        Me.btnPrintFicha.Text = "Generar Recibo Anual"
+        Me.btnPrintFicha.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnPrintFicha.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -530,56 +622,6 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.monto_total.HeaderText = "Monto Total S/"
         Me.monto_total.Name = "monto_total"
         '
-        'lblInfo
-        '
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.Location = New System.Drawing.Point(74, 66)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(0, 21)
-        Me.lblInfo.TabIndex = 613
-        '
-        'lblsubInfo
-        '
-        Me.lblsubInfo.AutoSize = True
-        Me.lblsubInfo.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblsubInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.lblsubInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblsubInfo.Location = New System.Drawing.Point(73, 88)
-        Me.lblsubInfo.Name = "lblsubInfo"
-        Me.lblsubInfo.Size = New System.Drawing.Size(0, 19)
-        Me.lblsubInfo.TabIndex = 614
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(16, 145)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(103, 17)
-        Me.Label16.TabIndex = 593
-        Me.Label16.Text = "Tipo de Pago  ::"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(16, 84)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(212, 17)
-        Me.Label13.TabIndex = 594
-        Me.Label13.Text = "Costo por Derecho de Emisión ::"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 25)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(159, 17)
-        Me.Label9.TabIndex = 595
-        Me.Label9.Text = "Fecha de Vencimiento ::"
-        '
         'btnShared
         '
         Me.btnShared.Cursor = System.Windows.Forms.Cursors.Hand
@@ -598,37 +640,6 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.btnShared.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnShared.UseVisualStyleBackColor = True
         '
-        'pbFail
-        '
-        Me.pbFail.Image = Global.Muni.My.Resources.Resources.ticked_generado
-        Me.pbFail.Location = New System.Drawing.Point(18, 63)
-        Me.pbFail.Name = "pbFail"
-        Me.pbFail.Size = New System.Drawing.Size(50, 50)
-        Me.pbFail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbFail.TabIndex = 612
-        Me.pbFail.TabStop = False
-        Me.pbFail.Visible = False
-        '
-        'btnPrintFicha
-        '
-        Me.btnPrintFicha.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.btnPrintFicha.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPrintFicha.Enabled = False
-        Me.btnPrintFicha.FlatAppearance.BorderSize = 0
-        Me.btnPrintFicha.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrintFicha.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.btnPrintFicha.ForeColor = System.Drawing.Color.White
-        Me.btnPrintFicha.Image = Global.Muni.My.Resources.Resources.ticket
-        Me.btnPrintFicha.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnPrintFicha.Location = New System.Drawing.Point(613, 62)
-        Me.btnPrintFicha.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.btnPrintFicha.Name = "btnPrintFicha"
-        Me.btnPrintFicha.Size = New System.Drawing.Size(169, 47)
-        Me.btnPrintFicha.TabIndex = 553
-        Me.btnPrintFicha.Text = "Generar Recibo Anual"
-        Me.btnPrintFicha.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnPrintFicha.UseVisualStyleBackColor = False
-        '
         'PictureBox23
         '
         Me.PictureBox23.Image = Global.Muni.My.Resources.Resources.Bars
@@ -638,17 +649,6 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox23.TabIndex = 570
         Me.PictureBox23.TabStop = False
-        '
-        'pbLoad
-        '
-        Me.pbLoad.Image = Global.Muni.My.Resources.Resources.Bars
-        Me.pbLoad.Location = New System.Drawing.Point(74, 83)
-        Me.pbLoad.Name = "pbLoad"
-        Me.pbLoad.Size = New System.Drawing.Size(77, 30)
-        Me.pbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbLoad.TabIndex = 615
-        Me.pbLoad.TabStop = False
-        Me.pbLoad.Visible = False
         '
         'uc_rentas_autovaluo_recibo
         '
@@ -691,10 +691,10 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.Panel7.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dgwFraccionar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbFail, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLoad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbFail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgwFraccionar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

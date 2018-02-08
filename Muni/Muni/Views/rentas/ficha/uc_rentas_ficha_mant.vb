@@ -48,7 +48,11 @@
         txtValorConst.Text = valorConst
         baseImponible = valorConst + valorterreno
         txtBaseImponible.Text = baseImponible
-
+        cargar_combox()
+        'estableciendo mascara de date
+        mtFecha.ValidatingType = GetType(System.DateTime)
+    End Sub
+    Private Sub cargar_combox()
         'llenado anio
         _DatasetLlenadoBox.Reset()
         llenado_combox.combox_all("anno")
@@ -104,13 +108,6 @@
         cbxRegExoneracion.DataSource = _DatasetTiporegimenBox.Tables("regimen")
         cbxRegExoneracion.DisplayMember = "nombre"
         cbxRegExoneracion.ValueMember = "idregimen"
-        'estableciendo mascara de date
-
-        mtFecha.ValidatingType = GetType(System.DateTime)
-
-
-
-
     End Sub
 
     Private Sub txtValorConst_TextChanged(sender As Object, e As EventArgs) Handles txtValorConst.TextChanged
@@ -749,7 +746,7 @@
         Dim datoRecuperado As DialogResult
         datoRecuperado = formulario2.ShowDialog()
         If datoRecuperado = DialogResult.OK Then
-            txtCodPredio.Text = formulario2.valor_contribuyente
+            txtCodPredio.Text = formulario2.valor_predio
         End If
     End Sub
     Private Sub busqueda_predio(valor As Integer)
@@ -839,7 +836,7 @@
         '/**************************************/
         activar_paneles()
         clear()
-        btnOption.Text = "Guardar Contribuyente"
+        btnOption.Text = "Guardar Ficha"
         btnOption.Image = My.Resources.save
         btnOption.BackColor = Color.FromArgb(150, 193, 31)
         btnOption.Enabled = True
@@ -1102,60 +1099,70 @@
         Dim datos_ficha As New class_datos_ficha
         cargar_datos_ficha(valor, datos_ficha)
         idFicha = datos_ficha.id_ficha
+        cargar_combox()
         'codigo de ficha
         codigoFicha = datos_ficha.codigo_ficha
         txtNumFicha.Text = datos_ficha.numero_ficha
         txtNumDDJJ.Text = datos_ficha.numero_djj_ficha
         'actualización de año de cobro y tipo de ddjj
-        _DatasetAnnio.Reset()
-        consulta_datos_annio_by(datos_ficha.anno_ficha)
-        cbxAnno.DataSource = _DatasetAnnio.Tables("anno")
-        cbxAnno.DisplayMember = "anno"
-        cbxAnno.ValueMember = "idanno"
+        cbxAnno.SelectedValue = datos_ficha.anno_ficha
+        '_DatasetAnnio.Reset()
+        'consulta_datos_annio_by(datos_ficha.anno_ficha)
+        'cbxAnno.DataSource = _DatasetAnnio.Tables("anno")
+        'cbxAnno.DisplayMember = "anno"
+        'cbxAnno.ValueMember = "idanno"
         '/*********************/
-        _DatasetTipoFichaBox.Reset()
-        consulta_datos_tipoFicha_combox(datos_ficha.cod_tipo_ficha)
-        cbxTipoFicha.DataSource = _DatasetTipoFichaBox.Tables("tipo_ficha")
-        cbxTipoFicha.DisplayMember = "nombre"
-        cbxTipoFicha.ValueMember = "idtipo_ficha"
+        cbxTipoFicha.SelectedValue = datos_ficha.cod_tipo_ficha
+        '_DatasetTipoFichaBox.Reset()
+        'consulta_datos_tipoFicha_combox(datos_ficha.cod_tipo_ficha)
+        'cbxTipoFicha.DataSource = _DatasetTipoFichaBox.Tables("tipo_ficha")
+        'cbxTipoFicha.DisplayMember = "nombre"
+        'cbxTipoFicha.ValueMember = "idtipo_ficha"
         'actualizando exoneración 
-        _DatasetTiporegimenBox.Reset()
-        consulta_datos_tipoRegimen_combox(datos_ficha.codDeduccion_ficha)
-        cbxRegExoneracion.DataSource = _DatasetTiporegimenBox.Tables("regimen")
-        cbxRegExoneracion.DisplayMember = "nombre"
-        cbxRegExoneracion.ValueMember = "idregimen"
+        cbxRegExoneracion.SelectedValue = datos_ficha.codDeduccion_ficha
+        '_DatasetTiporegimenBox.Reset()
+        'consulta_datos_tipoRegimen_combox(datos_ficha.codDeduccion_ficha)
+        'cbxRegExoneracion.DataSource = _DatasetTiporegimenBox.Tables("regimen")
+        'cbxRegExoneracion.DisplayMember = "nombre"
+        'cbxRegExoneracion.ValueMember = "idregimen"
         'actualizando condicion de propiedad
-        _DatasetConTituloBox.Reset()
-        consulta_datos_condTitulo_combox(datos_ficha.condicion_titular_fichas)
-        cbxCondTitular.DataSource = _DatasetConTituloBox.Tables("condicion_titular")
-        cbxCondTitular.DisplayMember = "denominacion"
-        cbxCondTitular.ValueMember = "idcondicion_titular"
+        cbxCondTitular.SelectedValue = datos_ficha.condicion_titular_fichas
+        '_DatasetConTituloBox.Reset()
+        'consulta_datos_condTitulo_combox(datos_ficha.condicion_titular_fichas)
+        'cbxCondTitular.DataSource = _DatasetConTituloBox.Tables("condicion_titular")
+        'cbxCondTitular.DisplayMember = "denominacion"
+        'cbxCondTitular.ValueMember = "idcondicion_titular"
         'actualizando modo de adquisicion
-        _DatasetModoAdqBox.Reset()
-        consulta_datos_modoAdq_combox(datos_ficha.modo_adquisicion_ficha)
-        cbxModoAdq.DataSource = _DatasetModoAdqBox.Tables("modo_adq")
-        cbxModoAdq.DisplayMember = "denominacion"
-        cbxModoAdq.ValueMember = "idmodo_adq"
+        cbxModoAdq.SelectedValue = datos_ficha.modo_adquisicion_ficha
+        '_DatasetModoAdqBox.Reset()
+        'consulta_datos_modoAdq_combox(datos_ficha.modo_adquisicion_ficha)
+        'cbxModoAdq.DataSource = _DatasetModoAdqBox.Tables("modo_adq")
+        'cbxModoAdq.DisplayMember = "denominacion"
+        'cbxModoAdq.ValueMember = "idmodo_adq"
         'actualizar fecha
         mtFecha.Text = fecha_formato_invertido(datos_ficha.fecha_adquisicion_fichas)
         'actualizando  uso de predio
-        _DatasetUsoPredioBox.Reset()
-        consulta_datos_usoPredio_combox(datos_ficha.uso_predial_ficha)
-        cbxusoPredio.DataSource = _DatasetUsoPredioBox.Tables("uso_predio")
-        cbxusoPredio.DisplayMember = "denominacion"
-        cbxusoPredio.ValueMember = "iduso_predio"
+        cbxusoPredio.SelectedValue = datos_ficha.uso_predial_ficha
+        '_DatasetUsoPredioBox.Reset()
+        'consulta_datos_usoPredio_combox(datos_ficha.uso_predial_ficha)
+        'cbxusoPredio.DataSource = _DatasetUsoPredioBox.Tables("uso_predio")
+        'cbxusoPredio.DisplayMember = "denominacion"
+        'cbxusoPredio.ValueMember = "iduso_predio"
         'actualizando  estado de predio
-        _DatasetEstadoPredioBox.Reset()
-        consulta_datos_estadoPredio_combox(datos_ficha.estadoPredio_ficha)
-        cbxEstadoPredio.DataSource = _DatasetEstadoPredioBox.Tables("estado_predio")
-        cbxEstadoPredio.DisplayMember = "denominacion"
-        cbxEstadoPredio.ValueMember = "idestado_predio"
+        cbxEstadoPredio.SelectedValue = datos_ficha.estadoPredio_ficha
+        '_DatasetEstadoPredioBox.Reset()
+        'consulta_datos_estadoPredio_combox(datos_ficha.estadoPredio_ficha)
+        'cbxEstadoPredio.DataSource = _DatasetEstadoPredioBox.Tables("estado_predio")
+        'cbxEstadoPredio.DisplayMember = "denominacion"
+        'cbxEstadoPredio.ValueMember = "idestado_predio"
         'actualizando  tipo de predio
-        _DatasetTipoPredioBox.Reset()
-        consulta_datos_tipoPredio_combox(datos_ficha.tipoPredio_ficha)
-        cbxTipoPredio.DataSource = _DatasetTipoPredioBox.Tables("tipo_predio")
-        cbxTipoPredio.DisplayMember = "denominacion"
-        cbxTipoPredio.ValueMember = "idtipo_predio"
+        cbxTipoPredio.SelectedValue = datos_ficha.tipoPredio_ficha
+        '_DatasetTipoPredioBox.Reset()
+        'consulta_datos_tipoPredio_combox(datos_ficha.tipoPredio_ficha)
+        'cbxTipoPredio.DataSource = _DatasetTipoPredioBox.Tables("tipo_predio")
+        'cbxTipoPredio.DisplayMember = "denominacion"
+        'cbxTipoPredio.ValueMember = "idtipo_predio"
+
         txtAreaTerreno.Text = datos_ficha.area_terreno_ficha
         txtAreaComun.Text = datos_ficha.area_comun_ficha
         txtAreaFrentera.Text = datos_ficha.area_frentera_fichas
@@ -1233,167 +1240,174 @@
                 MessageBox.Show("Lo sentimos no podemos procesar su información debido a que hay campos vacios", "Error: 001",
                MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                datos_fichas.codigo_ficha = codFicha
-                datos_fichas.anno_ficha = cbxAnno.SelectedValue.ToString()
-                datos_fichas.numero_ficha = txtNumFicha.Text
-                datos_fichas.numero_djj_ficha = txtNumDDJJ.Text
-                datos_fichas.arancel_ficha = txtArancel.Text
-                datos_fichas.valor_ficha = txtValorArancel.Text
-                datos_fichas.condicion_titular_fichas = cbxCondTitular.SelectedValue.ToString()
-                datos_fichas.modo_adquisicion_ficha = cbxModoAdq.SelectedValue.ToString()
-                datos_fichas.fecha_adquisicion_fichas = fecha_formato(mtFecha.Text)
-                datos_fichas.area_terreno_ficha = txtAreaTerreno.Text
-                datos_fichas.area_comun_ficha = txtAreaComun.Text
-                datos_fichas.area_construida_fichas = 0
-                datos_fichas.area_frentera_fichas = txtAreaFrentera.Text
-                datos_fichas.uso_predial_ficha = cbxusoPredio.SelectedValue.ToString()
-                datos_fichas.distancia_parque_ficha = txtDistParque.Text
-                datos_fichas.numero_habitante_ficha = txtNumHabitantes.Text
-                datos_fichas.cod_predio = txtCodPredio.Text
-                datos_fichas.cod_tipo_ficha = cbxTipoFicha.SelectedValue.ToString()
-                datos_fichas.valorTerreno_ficha = txtValorterreno.Text
-                datos_fichas.valorConstruccion_ficha = txtValorConst.Text
-                datos_fichas.baseImponible_ficha = txtBaseImponible.Text
-                datos_fichas.valorDeduccion_ficha = valor_deduccion
-                datos_fichas.tipoDeduccion_ficha = tipo_deducion
-                datos_fichas.totalBaseimpDeduccion_ficha = total_base_imponible
-                datos_fichas.estadoPredio_ficha = cbxEstadoPredio.SelectedValue.ToString()
-                datos_fichas.tipoPredio_ficha = cbxTipoPredio.SelectedValue.ToString()
-                datos_fichas.codDeduccion_ficha = cbxRegExoneracion.SelectedValue.ToString()
-                If conexion_ficha.insertarDatosContibuyente(datos_fichas) Then
+                _DatasetFicha.Reset()
+                consulta_datos_ficha_by_predio(txtCodPredio.Text, cbxAnno.SelectedValue.ToString)
+                If _DatasetFicha.Tables(0).Rows.Count = 0 Then
+                    datos_fichas.codigo_ficha = codFicha
+                    datos_fichas.anno_ficha = cbxAnno.SelectedValue.ToString()
+                    datos_fichas.numero_ficha = txtNumFicha.Text
+                    datos_fichas.numero_djj_ficha = txtNumDDJJ.Text
+                    datos_fichas.arancel_ficha = txtArancel.Text
+                    datos_fichas.valor_ficha = txtValorArancel.Text
+                    datos_fichas.condicion_titular_fichas = cbxCondTitular.SelectedValue.ToString()
+                    datos_fichas.modo_adquisicion_ficha = cbxModoAdq.SelectedValue.ToString()
+                    datos_fichas.fecha_adquisicion_fichas = fecha_formato(mtFecha.Text)
+                    datos_fichas.area_terreno_ficha = txtAreaTerreno.Text
+                    datos_fichas.area_comun_ficha = txtAreaComun.Text
+                    datos_fichas.area_construida_fichas = 0
+                    datos_fichas.area_frentera_fichas = txtAreaFrentera.Text
+                    datos_fichas.uso_predial_ficha = cbxusoPredio.SelectedValue.ToString()
+                    datos_fichas.distancia_parque_ficha = txtDistParque.Text
+                    datos_fichas.numero_habitante_ficha = txtNumHabitantes.Text
+                    datos_fichas.cod_predio = txtCodPredio.Text
+                    datos_fichas.cod_tipo_ficha = cbxTipoFicha.SelectedValue.ToString()
+                    datos_fichas.valorTerreno_ficha = txtValorterreno.Text
+                    datos_fichas.valorConstruccion_ficha = txtValorConst.Text
+                    datos_fichas.baseImponible_ficha = txtBaseImponible.Text
+                    datos_fichas.valorDeduccion_ficha = valor_deduccion
+                    datos_fichas.tipoDeduccion_ficha = tipo_deducion
+                    datos_fichas.totalBaseimpDeduccion_ficha = total_base_imponible
+                    datos_fichas.estadoPredio_ficha = cbxEstadoPredio.SelectedValue.ToString()
+                    datos_fichas.tipoPredio_ficha = cbxTipoPredio.SelectedValue.ToString()
+                    datos_fichas.codDeduccion_ficha = cbxRegExoneracion.SelectedValue.ToString()
+                    If conexion_ficha.insertarDatosContibuyente(datos_fichas) Then
 
-                    idFicha = datos_fichas.id_ficha
-                    'MessageBox.Show(idFicha)
-                    Try
-                        For Each row As DataGridViewRow In dgwConstruciones.Rows
-                            Dim datos As New class_datos_construcciones
-                            Dim conexion As New class_controller_construcciones
-                            Dim piso As Integer
-                            Dim antiguedad As Integer
-                            Dim codClas As Integer
-                            Dim clasi As String
-                            Dim codmat As Integer
-                            Dim material As String
-                            Dim codConserv As Integer
-                            Dim conserv As String
-                            Dim categoria As String
-                            Dim valUnit As Double
-                            Dim inc As Double
-                            Dim dep As Double
-                            Dim valDep As Double
-                            Dim valUnitDep As Double
-                            Dim area As Double
-                            Dim total As Double
-                            Dim codFicha As Integer
-                            Dim predio As String
-                            piso = Convert.ToString(row.Cells(0).Value)
-                            datos.piso_construccion = piso
-                            'MessageBox.Show(piso)
+                        idFicha = datos_fichas.id_ficha
+                        'MessageBox.Show(idFicha)
+                        Try
+                            For Each row As DataGridViewRow In dgwConstruciones.Rows
+                                Dim datos As New class_datos_construcciones
+                                Dim conexion As New class_controller_construcciones
+                                Dim piso As Integer
+                                Dim antiguedad As Integer
+                                Dim codClas As Integer
+                                Dim clasi As String
+                                Dim codmat As Integer
+                                Dim material As String
+                                Dim codConserv As Integer
+                                Dim conserv As String
+                                Dim categoria As String
+                                Dim valUnit As Double
+                                Dim inc As Double
+                                Dim dep As Double
+                                Dim valDep As Double
+                                Dim valUnitDep As Double
+                                Dim area As Double
+                                Dim total As Double
+                                Dim codFicha As Integer
+                                Dim predio As String
+                                piso = Convert.ToString(row.Cells(0).Value)
+                                datos.piso_construccion = piso
+                                'MessageBox.Show(piso)
 
-                            predio = Convert.ToString(row.Cells(1).Value)
-                            datos.predio_construccion = predio
-                            'MessageBox.Show(piso)
+                                predio = Convert.ToString(row.Cells(1).Value)
+                                datos.predio_construccion = predio
+                                'MessageBox.Show(piso)
 
-                            antiguedad = Convert.ToString(row.Cells(2).Value)
-                            datos.antiguedad_construccion = antiguedad
-                            'MessageBox.Show(antiguedad)
+                                antiguedad = Convert.ToString(row.Cells(2).Value)
+                                datos.antiguedad_construccion = antiguedad
+                                'MessageBox.Show(antiguedad)
 
-                            codClas = Convert.ToString(row.Cells(3).Value)
-                            datos.codClasificacion_construccion = codClas
-                            'MessageBox.Show(codClas)
+                                codClas = Convert.ToString(row.Cells(3).Value)
+                                datos.codClasificacion_construccion = codClas
+                                'MessageBox.Show(codClas)
 
-                            clasi = Convert.ToString(row.Cells(4).Value)
-                            datos.clasificacion_construccion = clasi
-                            'MessageBox.Show(clasi)
+                                clasi = Convert.ToString(row.Cells(4).Value)
+                                datos.clasificacion_construccion = clasi
+                                'MessageBox.Show(clasi)
 
-                            codmat = Convert.ToString(row.Cells(5).Value)
-                            datos.codMaterial_construccion = codmat
-                            'MessageBox.Show(codmat)
+                                codmat = Convert.ToString(row.Cells(5).Value)
+                                datos.codMaterial_construccion = codmat
+                                'MessageBox.Show(codmat)
 
-                            material = Convert.ToString(row.Cells(6).Value)
-                            datos.material_construccion = material
-                            'MessageBox.Show(material)
+                                material = Convert.ToString(row.Cells(6).Value)
+                                datos.material_construccion = material
+                                'MessageBox.Show(material)
 
-                            codConserv = Convert.ToString(row.Cells(7).Value)
-                            datos.codEstConserv_construccion = codConserv
-                            'MessageBox.Show(codConserv)
+                                codConserv = Convert.ToString(row.Cells(7).Value)
+                                datos.codEstConserv_construccion = codConserv
+                                'MessageBox.Show(codConserv)
 
-                            conserv = Convert.ToString(row.Cells(8).Value)
-                            datos.estConserv_construccion = conserv
-                            'MessageBox.Show(conserv)
+                                conserv = Convert.ToString(row.Cells(8).Value)
+                                datos.estConserv_construccion = conserv
+                                'MessageBox.Show(conserv)
 
-                            categoria = Convert.ToString(row.Cells(9).Value)
-                            datos.categoria_construccion = categoria
-                            'MessageBox.Show(categoria)
+                                categoria = Convert.ToString(row.Cells(9).Value)
+                                datos.categoria_construccion = categoria
+                                'MessageBox.Show(categoria)
 
-                            valUnit = Convert.ToString(row.Cells(10).Value)
-                            datos.valorUnitario_construccion = valUnit
-                            'MessageBox.Show(valUnit)
+                                valUnit = Convert.ToString(row.Cells(10).Value)
+                                datos.valorUnitario_construccion = valUnit
+                                'MessageBox.Show(valUnit)
 
-                            inc = Convert.ToString(row.Cells(11).Value)
-                            datos.inc5x100_construccion = inc
-                            'MessageBox.Show(inc)
+                                inc = Convert.ToString(row.Cells(11).Value)
+                                datos.inc5x100_construccion = inc
+                                'MessageBox.Show(inc)
 
-                            dep = Convert.ToString(row.Cells(12).Value)
-                            datos.x100_dep_construccion = dep
-                            'MessageBox.Show(dep)
+                                dep = Convert.ToString(row.Cells(12).Value)
+                                datos.x100_dep_construccion = dep
+                                'MessageBox.Show(dep)
 
-                            valDep = Convert.ToString(row.Cells(13).Value)
-                            datos.valDepreciacion_construccion = valDep
-                            'MessageBox.Show(valDep)
+                                valDep = Convert.ToString(row.Cells(13).Value)
+                                datos.valDepreciacion_construccion = valDep
+                                'MessageBox.Show(valDep)
 
-                            valUnitDep = Convert.ToString(row.Cells(14).Value)
-                            datos.valUnitDep_construccion = valUnitDep
-                            'MessageBox.Show(valUnitDep)
+                                valUnitDep = Convert.ToString(row.Cells(14).Value)
+                                datos.valUnitDep_construccion = valUnitDep
+                                'MessageBox.Show(valUnitDep)
 
-                            area = Convert.ToString(row.Cells(15).Value)
-                            datos.areaConst_construccion = area
-                            'MessageBox.Show(area)
+                                area = Convert.ToString(row.Cells(15).Value)
+                                datos.areaConst_construccion = area
+                                'MessageBox.Show(area)
 
-                            total = Convert.ToString(row.Cells(16).Value)
-                            datos.total_construccion = total
-                            'MessageBox.Show(total)
+                                total = Convert.ToString(row.Cells(16).Value)
+                                datos.total_construccion = total
+                                'MessageBox.Show(total)
 
-                            codFicha = idFicha
-                            datos.cod_ficha_construccion = codFicha
-                            'MessageBox.Show(codFicha)
+                                codFicha = idFicha
+                                datos.cod_ficha_construccion = codFicha
+                                'MessageBox.Show(codFicha)
 
-                            If conexion.insertarDatosConstrucciones(datos) Then
+                                If conexion.insertarDatosConstrucciones(datos) Then
+                                    'MessageBox.Show("datos guardados")
+                                Else
+                                    'MessageBox.Show("datos no guardados")
+                                End If
+
+                            Next
+                            'guardando documentos de base legal
+                            Dim datos_doc As New class_datos_docBaseLegal
+                            Dim conexion_doc As New class_controller_docBaseLegal
+                            datos_doc.numExpediente_docBaseLegal = cbxBaseLegal.SelectedValue.ToString()
+                            datos_doc.numExpediente_docBaseLegal = txtNumeroExpediente.Text
+                            datos_doc.numResolucion_docBaseLegal = txtResolMuni.Text
+                            datos_doc.codFicha_docBaseLegal = idFicha
+                            If conexion_doc.insertarDatosDocbaselegal(datos_doc) Then
                                 'MessageBox.Show("datos guardados")
                             Else
                                 'MessageBox.Show("datos no guardados")
                             End If
 
-                        Next
-                        'guardando documentos de base legal
-                        Dim datos_doc As New class_datos_docBaseLegal
-                        Dim conexion_doc As New class_controller_docBaseLegal
-                        datos_doc.numExpediente_docBaseLegal = cbxBaseLegal.SelectedValue.ToString()
-                        datos_doc.numExpediente_docBaseLegal = txtNumeroExpediente.Text
-                        datos_doc.numResolucion_docBaseLegal = txtResolMuni.Text
-                        datos_doc.codFicha_docBaseLegal = idFicha
-                        If conexion_doc.insertarDatosDocbaselegal(datos_doc) Then
-                            'MessageBox.Show("datos guardados")
-                        Else
-                            'MessageBox.Show("datos no guardados")
-                        End If
-
-                    Catch ex As Exception
-                        MessageBox.Show("los datos ingresados no son los correctos")
-                    End Try
-                    MessageBox.Show("Se han guardado los datos correctamente", "Datos Guardados de la Ficha",
-               MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    sidePanel.Visible = False
-                    estado_boton = 0
-                    btnOption.Enabled = False
-                    btnOption.Text = "Bloqueado"
-                    btnOption.Image = My.Resources.padlock
-                    btnOption.BackColor = Color.FromArgb(128, 131, 140)
-                    desactivar_paneles()
-                    'clear()
+                        Catch ex As Exception
+                            MessageBox.Show("los datos ingresados no son los correctos")
+                        End Try
+                        MessageBox.Show("Se han guardado los datos correctamente", "Datos Guardados de la Ficha",
+                   MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        sidePanel.Visible = False
+                        estado_boton = 0
+                        btnOption.Enabled = False
+                        btnOption.Text = "Bloqueado"
+                        btnOption.Image = My.Resources.padlock
+                        btnOption.BackColor = Color.FromArgb(128, 131, 140)
+                        desactivar_paneles()
+                        consulta_cerrar_ficha()
+                        'clear()
+                    Else
+                        MessageBox.Show("Lo sentimos no podemos pudimos guardar sus datos verefique los datos ingresados", "Error: 002",
+                   MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
                 Else
-                    MessageBox.Show("Lo sentimos no podemos pudimos guardar sus datos verefique los datos ingresados", "Error: 002",
-               MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MsgBox("No se puede generar la ficha porque ya existe.")
                 End If
             End If
         End If
@@ -1699,6 +1713,66 @@
                     btnCerrar.Enabled = False
                 End If
             Next
+        End If
+    End Sub
+
+    Private Sub txtCodPredio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCodPredio.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtAreaTerreno_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAreaTerreno.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtAreaComun_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAreaComun.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtAreaFrentera_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAreaFrentera.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtDistParque_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDistParque.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtNumHabitantes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumHabitantes.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
         End If
     End Sub
 End Class

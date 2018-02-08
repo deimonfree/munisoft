@@ -133,7 +133,7 @@ Public Class uc_rentas_predio_new
         sidePanel.Top = btnSave.Bottom
         sidePanel.Location = btnSave.Location
         '/*****************************************/
-        btnOption.Text = "Guardar Contribuyente"
+        btnOption.Text = "Guardar Predio"
         btnOption.Image = My.Resources.save
         btnOption.BackColor = Color.FromArgb(150, 193, 31)
         btnOption.Enabled = True
@@ -265,7 +265,7 @@ Public Class uc_rentas_predio_new
             IdContibuyente = formulario2.valor_contribuyente
             idPredio = formulario2.valor_predio
             'idPredio = formulario2.valor_contribuyente
-            llamada_predio(formulario2.valor_contribuyente)
+            llamada_predio(formulario2.valor_predio)
             llamada_grupoCatastral(idGrupoCatastral)
             llama_serviciosBasicos(idPredio)
             btnOption.Enabled = True
@@ -403,8 +403,10 @@ Public Class uc_rentas_predio_new
             activar_paneles()
             estado_boton = 4
             IdContibuyente = formulario2.valor_contribuyente
-            idPredio = formulario2.valor_contribuyente
-            llamada_predio(formulario2.valor_contribuyente)
+            'MsgBox(IdContibuyente.ToString)
+            idPredio = formulario2.valor_predio
+            'MsgBox(idPredio.ToString)
+            llamada_predio(formulario2.valor_predio)
             llamada_grupoCatastral(idGrupoCatastral)
             btnOption.Enabled = True
             btnOption.Text = "Dar de Baja"
@@ -596,7 +598,24 @@ Public Class uc_rentas_predio_new
                 End If
             End If
         End If
-        If estado_boton = 5 Then
+        If estado_boton = 4 Then
+            Dim Result As DialogResult
+            Dim cod_predio As String
+            Dim estado_predio As String
+            Result = MessageBox.Show("Estas seguro que deseas dar de baja el Predio los cambios no podran ser revertidos ?", "Confimación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If Result = System.Windows.Forms.DialogResult.Yes Then
+                Dim control As New class_controller_predio
+                cod_predio = lblInfoCodPredio.Text
+                estado_predio = "Inactivo"
+                If control.actualizarDatosPredioBaja(cod_predio, estado_predio) Then
+                    MsgBox("Predio dado de baja")
+                Else
+                    MsgBox("No se ha podido dar de baja")
+                End If
+            Else
+            End If
+        End If
+            If estado_boton = 5 Then
             Dim Result As DialogResult
             Result = MessageBox.Show("Estas seguro que deseas eliminar el Predio los cambios no podran ser revertidos ?", "Confimación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
             If Result = System.Windows.Forms.DialogResult.Yes Then
@@ -655,8 +674,8 @@ Public Class uc_rentas_predio_new
         If datoRecuperado = DialogResult.OK Then
             estado_boton = 5
             IdContibuyente = formulario2.valor_contribuyente
-            idPredio = formulario2.valor_contribuyente
-            llamada_predio(formulario2.valor_contribuyente)
+            idPredio = formulario2.valor_predio
+            llamada_predio(formulario2.valor_predio)
             llamada_grupoCatastral(idGrupoCatastral)
             btnOption.Enabled = True
             btnOption.Text = "Eliminar Predio"
@@ -671,6 +690,26 @@ Public Class uc_rentas_predio_new
             btnOption.Text = "Bloqueado"
             limpiar_infoPanel()
             desactivar_paneles()
+        End If
+    End Sub
+
+    Private Sub txtCodContribuyente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCodContribuyente.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtcodSector_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcodSector.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
         End If
     End Sub
 End Class

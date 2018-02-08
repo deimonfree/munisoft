@@ -246,6 +246,7 @@
             Else
                 For Each row In _DatasetCerrar.Tables(0).Rows
                     If row("estado") = "abierto" Then
+                        btnCerrar.Enabled = True
                         btnCerrar.Visible = True
                         lblinfo_tabla.Text = ""
                         lblinfo_tabla.Text = ""

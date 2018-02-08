@@ -237,7 +237,7 @@ Partial Class uc_rentas_predio_new
         Me.txtNumvia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNumvia.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumvia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtNumvia.Location = New System.Drawing.Point(262, 43)
+        Me.txtNumvia.Location = New System.Drawing.Point(261, 42)
         Me.txtNumvia.Name = "txtNumvia"
         Me.txtNumvia.Size = New System.Drawing.Size(65, 26)
         Me.txtNumvia.TabIndex = 286
@@ -267,7 +267,7 @@ Partial Class uc_rentas_predio_new
         Me.txtNumLote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNumLote.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumLote.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtNumLote.Location = New System.Drawing.Point(690, 40)
+        Me.txtNumLote.Location = New System.Drawing.Point(690, 39)
         Me.txtNumLote.Name = "txtNumLote"
         Me.txtNumLote.Size = New System.Drawing.Size(83, 26)
         Me.txtNumLote.TabIndex = 293
@@ -297,7 +297,7 @@ Partial Class uc_rentas_predio_new
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(107, 14)
+        Me.Label10.Location = New System.Drawing.Point(113, 14)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(115, 17)
         Me.Label10.TabIndex = 300
@@ -318,7 +318,7 @@ Partial Class uc_rentas_predio_new
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(422, 14)
+        Me.Label11.Location = New System.Drawing.Point(430, 14)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(81, 17)
         Me.Label11.TabIndex = 303

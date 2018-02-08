@@ -282,6 +282,7 @@
     Private Sub cbxPago_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxPago.SelectedIndexChanged
         If cbxPago.Text = "Contado" Then
             btnPrintFicha.Enabled = estado_boton
+            dtpVenc.Enabled = True
         End If
         txtTotalAutovaluo.Text = ""
         If cont_tipo > 0 Then
@@ -293,7 +294,7 @@
                     txtAutomatizacion.Select()
                 Else
                     If cbxPago.Text = "Fraccionado" Then
-                        'btnPrintFicha.Enabled = False
+                        dtpVenc.Enabled = False
                         Dim id_autovaluo As New Integer
                         Dim valor_autovaluo As New Decimal
                         Dim annio_autovaluo As New Integer
@@ -451,5 +452,75 @@
         End Try
     End Sub
 
+    Private Sub txtAutomatizacion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAutomatizacion.KeyPress
+        ' Referenciamos el control TextBox que ha desencadeno el evento
+        '
+        Dim tb As TextBox = DirectCast(sender, TextBox)
+        Dim separadorDecimal As String =
+           Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator
 
+        If ((e.KeyChar = "."c) OrElse (e.KeyChar = ","c)) Then
+            ' Si en el control hay ya escrito un separador decimal, 
+            ' deshechamos insertar otro separador más. 
+            ' 
+            If (tb.Text.IndexOf(separadorDecimal) >= 0) And Not (tb.SelectionLength <> 0) Then
+                e.Handled = True
+                Return
+
+            Else
+                If ((tb.TextLength = 0) OrElse (tb.SelectionLength > 0) OrElse
+                  ((tb.TextLength = 1) And (tb.Text.Chars(0) = "-"c))) Then
+                    ' Si no hay ningún número, insertamos un cero
+                    ' antes del separador decimal.
+                    tb.SelectedText = "0"
+                End If
+
+                ' Insertamos el separador decimal. 
+                '
+                e.KeyChar = CChar(separadorDecimal)
+                Return
+            End If
+        End If
+
+        If (Convert.ToInt32(e.KeyChar) = 8) Then
+            ' Se ha pulsado la tecla retroceso 
+            Return
+
+        ElseIf (e.KeyChar = "-"c) Then
+            ' Únicamente si no está seleccionado el texto del control 
+            If (tb.SelectionLength = 0) Then
+                ' Si en el control hay ya escrito un signo menos, 
+                ' deshechamos todos los que posteriormente se escriban 
+                If (tb.Text.IndexOf("-"c) >= 0) Then
+                    e.Handled = True
+                    Return
+                End If
+
+                ' Solo permito el signo menos si aparece en primera posición 
+                '
+                e.Handled = (tb.SelectionStart <> 0)
+            End If
+
+        ElseIf (Not (Char.IsDigit(e.KeyChar))) Then
+            ' No se ha pulsado un dígito. 
+            e.Handled = True
+            Return
+
+        End If
+
+        ' Si existe el separador decimal, no permitimos que
+        ' se escriban más de dos números decimales.
+        '
+        Dim index As Integer = tb.Text.IndexOf(separadorDecimal)
+
+        If (index >= 0) Then
+            Dim decimales As String = tb.Text.Substring(index + 1)
+            e.Handled = (decimales.Length = 2)
+        End If
+
+        ' Si el texto del control actualmente está seleccionado, 
+        ' permitimos que se pueda reemplazar por el carácter tecleado.
+        '
+        If (tb.SelectionLength > 0) Then e.Handled = False
+    End Sub
 End Class

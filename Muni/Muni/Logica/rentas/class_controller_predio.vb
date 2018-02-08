@@ -93,5 +93,22 @@ Public Class class_controller_predio
         End Try
         Return estado
     End Function
-
+    Public Function actualizarDatosPredioBaja(ByVal codPredio As String, ByVal estadoPredio As String) As Boolean
+        Dim estado As Boolean = True
+        Try
+            conex_Global()
+            _adaptador.UpdateCommand = New MySqlCommand("UPDATE `munisystem`.`predio` SET `estado`=@estadoPredio WHERE `idpredio`=@id", _conexion)
+            _adaptador.UpdateCommand.Parameters.Add("@id", MySqlDbType.VarChar, 45).Value = codPredio
+            _adaptador.UpdateCommand.Parameters.Add("@estadoPredio", MySqlDbType.VarChar, 45).Value = estadoPredio
+            _conexion.Open()
+            _adaptador.UpdateCommand.Connection = _conexion
+            _adaptador.UpdateCommand.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+            estado = False
+        Finally
+            cerrar()
+        End Try
+        Return estado
+    End Function
 End Class

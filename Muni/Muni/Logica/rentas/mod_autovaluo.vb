@@ -120,7 +120,7 @@ Module mod_autovaluo
             inner join anno on anno.idanno=ficha.anio_fecha
             inner join via on via.idvia=predio.cod_via
             inner join tipo_via on tipo_via.idtipo_via=via.tipo
-            where contribuyente.idcontribuyente=" + valor + " and ficha.anio_fecha=" + annio, _conexion)
+            where contribuyente.idcontribuyente=" + valor + " and ficha.anio_fecha=" + annio + " and predio.estado='Activo'", _conexion)
             _conectorMysql.Fill(_DatasetAutovaluo2)
             _dtwAutovaluo2.Table = _DatasetAutovaluo2.Tables(0)
             _conexion.Open()

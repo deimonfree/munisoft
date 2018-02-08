@@ -13,6 +13,7 @@
     Dim datosDepartamento As New class_datos_departamento
     Dim estado_button As Integer = 0
     Dim IdSociedadConyugal As Integer
+    Dim numero_dni As String
 
     Private Sub uc_rentas_contribuyente_new_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'deacbihiltando conbox
@@ -97,6 +98,7 @@
             Dim datoRecuperado As DialogResult
             datoRecuperado = formulario2.ShowDialog()
             If datoRecuperado = DialogResult.OK Then
+                numero_dni = ""
                 estado_button = 3
                 btnOption.Enabled = True
                 btnOption.Image = My.Resources.update_white
@@ -148,6 +150,7 @@
                 lblContri.Text = datos_contribuyente.numero_doc_cont & " :: " & datos_contribuyente.apellido_paterno_cont & " " & datos_contribuyente.apellido_materno_cont & " " & datos_contribuyente.nombres_cont
 
             End If
+            numero_dni = txtnumeroDoc.Text
         End If
         If estado_button = 4 Then
             If Trim(datos_contribuyente.nombres_cont) = "" Or Trim(datos_contribuyente.nombres_cont) = "--" Then
@@ -704,80 +707,85 @@
                 MessageBox.Show("Lo sentimos no podemos procesar su información debido a que hay campos vacios", "Error: 001",
                MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                'guaradando datos de contribuyente 
-                datos_contribuyente.nombres_cont = txtNombre.Text
-                datos_contribuyente.apellido_paterno_cont = txtApe_pat.Text
-                datos_contribuyente.apellido_materno_cont = txtApe_mat.Text
-                datos_contribuyente.cod_tipo_doc = cbxtipoDocumento.SelectedValue.ToString()
-                datos_contribuyente.numero_doc_cont = txtnumeroDoc.Text
-                datos_contribuyente.telefono_cont = txtNumTelf.Text
-                datos_contribuyente.celular_cont = txtNumCel.Text
-                datos_contribuyente.email_contn = txtEmail.Text
-                datos_contribuyente.cont_relacion_cont = txtNombres_conyuge.Text
-                datos_contribuyente.observacion_cont = txtObsv.Text
-                datos_contribuyente.cod_urbanizacion_cont = cbxTipoUrb.SelectedValue.ToString()
-                datos_contribuyente.cod_relacion_cont = cbxtipoRelacion.SelectedValue.ToString()
-                datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
-                datos_contribuyente.ruc_cont = txtNumRuc.Text
-
-                If conexion_contribuyente.insertarDatosContibuyente(datos_contribuyente) Then
-                    'recuperando el id del ultimo contibuyente insertado
-                    codigoContribuyente = datos_contribuyente.id_contribuyente
-                    'datos de direecion del contribuyente
-                    datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
-                    datos_direccion.via_direccion = txtNomVia.Text
-                    datos_direccion.numero_direccion = txtNumeroVia.Text
-                    datos_direccion.mzna_direccion = txtMnza.Text
-                    datos_direccion.lote_direccion = txtLote.Text
-                    datos_direccion.departamento_direccion = txtNom_Dep.Text
-                    datos_direccion.piso_direccion = txtNumeroPiso.Text
-                    datos_direccion.sector_direccion = txtNomSector.Text
-                    datos_direccion.codDistrito_direccion = Valor_Distrito
-                    datos_direccion.codContribuyente_direccion = codigoContribuyente
-                    If conexion_direccion.insertarDatosDireccion(datos_direccion) Then
-                        'MessageBox.Show("datos guardados de direecion")
-                    End If
-                    'datos de representante legal
-                    If chkReprelegal.Checked = True Then
-                        datos_reprelegal.nombre_representanteLegal = txtNom_rl.Text
-                        datos_reprelegal.apePat_representanteLegal = txtApepat_rl.Text
-                        datos_reprelegal.apeMat_representanteLegal = txtApemat_rl.Text
-                        datos_reprelegal.codidentificacion_representanteLegal = cbTipoDoc_rl.SelectedValue.ToString()
-                        datos_reprelegal.numeroDoc_representanteLegal = txtnumeroDoc.Text
-                        datos_reprelegal.codVia_representanteLegal = cbtipoVia_rl.SelectedValue.ToString()
-                        datos_reprelegal.nomVia_representanteLegal = txtNomvia_rl.Text
-                        datos_reprelegal.numero_representanteLegal = txtNumero_rl.Text
-                        datos_reprelegal.manzana_representanteLegal = txtMzna_rl.Text
-                        datos_reprelegal.lote_representanteLegal = txtLote_rl.Text
-                        datos_reprelegal.nomApart_representanteLegal = txtApart_rl.Text
-                        datos_reprelegal.numApart_representanteLegal = txtNumApart_rl.Text
-                        datos_reprelegal.codUrbanizacion_representanteLegal = 1
-                        datos_reprelegal.nomUrbanizacion_representanteLegal = txtUrba_rl.Text
-                        datos_reprelegal.codContribuyente_representanteLegal = codigoContribuyente
-                        datos_reprelegal.cargo_representanteLegal = txtCargo_rl.Text
-                        datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
-                        If conexion_repreLegal.insertarRepresentantelegal(datos_reprelegal) Then
-                            'MessageBox.Show("datos guardados de representante legal")
-                        End If
-                    Else
-                    End If
-                    'guardando datos de sociedad conyugal
-                    If cbxtipoRelacion.SelectedValue.ToString() = 2 Then
-                        datos_sociedadConyugal.numIdentificacion_sociedadConyugal = txtIden_conyuge.Text
-                        datos_sociedadConyugal.nombreCompleto_sociedadConyugal = txtNombres_conyuge.Text
-                        datos_sociedadConyugal.codContri_sociedadConyugal = codigoContribuyente
-                        If conexion_sociedadConyugal.insertarDatosSociedadConyugal(datos_sociedadConyugal) Then
-                            'MessageBox.Show("datos guardados")
-                        End If
-                    End If
-                    MessageBox.Show("Los Datos se han guardado correctamente", "Mensaje de Confimación",
-               MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    clean()
-                    desactivar_paneles()
+                If verificar_dni() Then
+                    'MsgBox("Ya existe un contribuyente asociado a este número DNI.")
                 Else
-                    MessageBox.Show("Lo sentimos no pudimos guardar su informacion por que huvo errores", "Error: 002",
-               MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    'guaradando datos de contribuyente 
+                    datos_contribuyente.nombres_cont = txtNombre.Text
+                    datos_contribuyente.apellido_paterno_cont = txtApe_pat.Text
+                    datos_contribuyente.apellido_materno_cont = txtApe_mat.Text
+                    datos_contribuyente.cod_tipo_doc = cbxtipoDocumento.SelectedValue.ToString()
+                    datos_contribuyente.numero_doc_cont = txtnumeroDoc.Text
+                    datos_contribuyente.telefono_cont = txtNumTelf.Text
+                    datos_contribuyente.celular_cont = txtNumCel.Text
+                    datos_contribuyente.email_contn = txtEmail.Text
+                    datos_contribuyente.cont_relacion_cont = txtNombres_conyuge.Text
+                    datos_contribuyente.observacion_cont = txtObsv.Text
+                    datos_contribuyente.cod_urbanizacion_cont = cbxTipoUrb.SelectedValue.ToString()
+                    datos_contribuyente.cod_relacion_cont = cbxtipoRelacion.SelectedValue.ToString()
+                    datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
+                    datos_contribuyente.ruc_cont = txtNumRuc.Text
+
+                    If conexion_contribuyente.insertarDatosContibuyente(datos_contribuyente) Then
+                        'recuperando el id del ultimo contibuyente insertado
+                        codigoContribuyente = datos_contribuyente.id_contribuyente
+                        'datos de direecion del contribuyente
+                        datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
+                        datos_direccion.via_direccion = txtNomVia.Text
+                        datos_direccion.numero_direccion = txtNumeroVia.Text
+                        datos_direccion.mzna_direccion = txtMnza.Text
+                        datos_direccion.lote_direccion = txtLote.Text
+                        datos_direccion.departamento_direccion = txtNom_Dep.Text
+                        datos_direccion.piso_direccion = txtNumeroPiso.Text
+                        datos_direccion.sector_direccion = txtNomSector.Text
+                        datos_direccion.codDistrito_direccion = Valor_Distrito
+                        datos_direccion.codContribuyente_direccion = codigoContribuyente
+                        If conexion_direccion.insertarDatosDireccion(datos_direccion) Then
+                            'MessageBox.Show("datos guardados de direecion")
+                        End If
+                        'datos de representante legal
+                        If chkReprelegal.Checked = True Then
+                            datos_reprelegal.nombre_representanteLegal = txtNom_rl.Text
+                            datos_reprelegal.apePat_representanteLegal = txtApepat_rl.Text
+                            datos_reprelegal.apeMat_representanteLegal = txtApemat_rl.Text
+                            datos_reprelegal.codidentificacion_representanteLegal = cbTipoDoc_rl.SelectedValue.ToString()
+                            datos_reprelegal.numeroDoc_representanteLegal = txtnumeroDoc.Text
+                            datos_reprelegal.codVia_representanteLegal = cbtipoVia_rl.SelectedValue.ToString()
+                            datos_reprelegal.nomVia_representanteLegal = txtNomvia_rl.Text
+                            datos_reprelegal.numero_representanteLegal = txtNumero_rl.Text
+                            datos_reprelegal.manzana_representanteLegal = txtMzna_rl.Text
+                            datos_reprelegal.lote_representanteLegal = txtLote_rl.Text
+                            datos_reprelegal.nomApart_representanteLegal = txtApart_rl.Text
+                            datos_reprelegal.numApart_representanteLegal = txtNumApart_rl.Text
+                            datos_reprelegal.codUrbanizacion_representanteLegal = 1
+                            datos_reprelegal.nomUrbanizacion_representanteLegal = txtUrba_rl.Text
+                            datos_reprelegal.codContribuyente_representanteLegal = codigoContribuyente
+                            datos_reprelegal.cargo_representanteLegal = txtCargo_rl.Text
+                            datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
+                            If conexion_repreLegal.insertarRepresentantelegal(datos_reprelegal) Then
+                                'MessageBox.Show("datos guardados de representante legal")
+                            End If
+                        Else
+                        End If
+                        'guardando datos de sociedad conyugal
+                        If cbxtipoRelacion.SelectedValue.ToString() = 2 Then
+                            datos_sociedadConyugal.numIdentificacion_sociedadConyugal = txtIden_conyuge.Text
+                            datos_sociedadConyugal.nombreCompleto_sociedadConyugal = txtNombres_conyuge.Text
+                            datos_sociedadConyugal.codContri_sociedadConyugal = codigoContribuyente
+                            If conexion_sociedadConyugal.insertarDatosSociedadConyugal(datos_sociedadConyugal) Then
+                                'MessageBox.Show("datos guardados")
+                            End If
+                        End If
+                        MessageBox.Show("Los Datos se han guardado correctamente", "Mensaje de Confimación",
+                   MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        clean()
+                        desactivar_paneles()
+                    Else
+                        MessageBox.Show("Lo sentimos no pudimos guardar su informacion por que huvo errores", "Error: 002",
+                   MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
                 End If
+
             End If
         End If
         If estado_button = 3 Then
@@ -787,84 +795,164 @@
                 MessageBox.Show("Lo sentimos no podemos procesar su información debido a que hay campos vacios", "Error: 123",
            MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                Dim conexion_contribuyente As New class_controller_contribuyente
-                Dim datos_contribuyente As New class_datos_contribuyente
-                Dim datos_direccion As New class_datos_direccion
-                Dim conexion_direccion As New class_controller_direccion
-                Dim conexion_repreLegal As New class_controller_representanteLegal
-                Dim datos_reprelegal As New class_datos_representanteLegal
-                'actualizando datos personales
-                datos_contribuyente.id_contribuyente = IdContibuyente
-                datos_contribuyente.nombres_cont = txtNombre.Text
-                datos_contribuyente.apellido_paterno_cont = txtApe_pat.Text
-                datos_contribuyente.apellido_materno_cont = txtApe_mat.Text
-                datos_contribuyente.cod_tipo_doc = cbxtipoDocumento.SelectedValue.ToString()
-                datos_contribuyente.numero_doc_cont = txtnumeroDoc.Text
-                datos_contribuyente.telefono_cont = txtNumTelf.Text
-                datos_contribuyente.celular_cont = txtNumCel.Text
-                datos_contribuyente.email_contn = txtEmail.Text
-                datos_contribuyente.cont_relacion_cont = txtNombres_conyuge.Text
-                datos_contribuyente.observacion_cont = txtObsv.Text
-                datos_contribuyente.cod_urbanizacion_cont = cbxTipoUrb.SelectedValue.ToString()
-                datos_contribuyente.cod_relacion_cont = cbxtipoRelacion.SelectedValue.ToString()
-                datos_contribuyente.ruc_cont = txtNumRuc.Text
-                datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
-                If conexion_contribuyente.actualizarDatoContribuyente(datos_contribuyente) Then
-                    'actualizando direccion
-                    datos_direccion.id_direccion = IdDireccion
-                    datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
-                    datos_direccion.via_direccion = txtNomVia.Text
-                    datos_direccion.numero_direccion = txtNumeroVia.Text
-                    datos_direccion.mzna_direccion = txtMnza.Text
-                    datos_direccion.lote_direccion = txtLote.Text
-                    datos_direccion.departamento_direccion = txtNom_Dep.Text
-                    datos_direccion.piso_direccion = txtNumeroPiso.Text
-                    datos_direccion.sector_direccion = txtNomSector.Text
-                    datos_direccion.codDistrito_direccion = Valor_Distrito
-                    datos_direccion.codContribuyente_direccion = IdContibuyente
-                    If conexion_direccion.actualizarDatosDireccion(datos_direccion) Then
-                        MessageBox.Show("datos guardados de direecion")
-                    End If
-                    'datos de representante legal
-                    If chkReprelegal.Checked = True Then
-                        datos_reprelegal.id_representanteLegal = IdRepreLegal
-                        datos_reprelegal.nombre_representanteLegal = txtNom_rl.Text
-                        datos_reprelegal.apePat_representanteLegal = txtApepat_rl.Text
-                        datos_reprelegal.apeMat_representanteLegal = txtApemat_rl.Text
-                        datos_reprelegal.codidentificacion_representanteLegal = cbTipoDoc_rl.SelectedValue.ToString()
-                        datos_reprelegal.numeroDoc_representanteLegal = txtnumeroDoc.Text
-                        datos_reprelegal.codVia_representanteLegal = cbtipoVia_rl.SelectedValue.ToString()
-                        datos_reprelegal.nomVia_representanteLegal = txtNomvia_rl.Text
-                        datos_reprelegal.numero_representanteLegal = txtNumero_rl.Text
-                        datos_reprelegal.manzana_representanteLegal = txtMzna_rl.Text
-                        datos_reprelegal.lote_representanteLegal = txtLote_rl.Text
-                        datos_reprelegal.nomApart_representanteLegal = txtApart_rl.Text
-                        datos_reprelegal.numApart_representanteLegal = txtNumApart_rl.Text
-                        datos_reprelegal.codUrbanizacion_representanteLegal = 1
-                        datos_reprelegal.nomUrbanizacion_representanteLegal = txtUrba_rl.Text
-                        datos_reprelegal.codContribuyente_representanteLegal = IdContibuyente
-                        datos_reprelegal.cargo_representanteLegal = txtCargo_rl.Text
-                        datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
-                        If conexion_repreLegal.actualizarRepresentantelegal(datos_reprelegal) Then
-                            MessageBox.Show("datos guardados de representante legal")
+                If numero_dni = txtnumeroDoc.Text Then
+                    Dim conexion_contribuyente As New class_controller_contribuyente
+                    Dim datos_contribuyente As New class_datos_contribuyente
+                    Dim datos_direccion As New class_datos_direccion
+                    Dim conexion_direccion As New class_controller_direccion
+                    Dim conexion_repreLegal As New class_controller_representanteLegal
+                    Dim datos_reprelegal As New class_datos_representanteLegal
+                    'actualizando datos personales
+                    datos_contribuyente.id_contribuyente = IdContibuyente
+                    datos_contribuyente.nombres_cont = txtNombre.Text
+                    datos_contribuyente.apellido_paterno_cont = txtApe_pat.Text
+                    datos_contribuyente.apellido_materno_cont = txtApe_mat.Text
+                    datos_contribuyente.cod_tipo_doc = cbxtipoDocumento.SelectedValue.ToString()
+                    datos_contribuyente.numero_doc_cont = txtnumeroDoc.Text
+                    datos_contribuyente.telefono_cont = txtNumTelf.Text
+                    datos_contribuyente.celular_cont = txtNumCel.Text
+                    datos_contribuyente.email_contn = txtEmail.Text
+                    datos_contribuyente.cont_relacion_cont = txtNombres_conyuge.Text
+                    datos_contribuyente.observacion_cont = txtObsv.Text
+                    datos_contribuyente.cod_urbanizacion_cont = cbxTipoUrb.SelectedValue.ToString()
+                    datos_contribuyente.cod_relacion_cont = cbxtipoRelacion.SelectedValue.ToString()
+                    datos_contribuyente.ruc_cont = txtNumRuc.Text
+                    datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
+                    If conexion_contribuyente.actualizarDatoContribuyente(datos_contribuyente) Then
+                        'actualizando direccion
+                        datos_direccion.id_direccion = IdDireccion
+                        datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
+                        datos_direccion.via_direccion = txtNomVia.Text
+                        datos_direccion.numero_direccion = txtNumeroVia.Text
+                        datos_direccion.mzna_direccion = txtMnza.Text
+                        datos_direccion.lote_direccion = txtLote.Text
+                        datos_direccion.departamento_direccion = txtNom_Dep.Text
+                        datos_direccion.piso_direccion = txtNumeroPiso.Text
+                        datos_direccion.sector_direccion = txtNomSector.Text
+                        datos_direccion.codDistrito_direccion = Valor_Distrito
+                        datos_direccion.codContribuyente_direccion = IdContibuyente
+                        If conexion_direccion.actualizarDatosDireccion(datos_direccion) Then
+                            'MessageBox.Show("datos guardados de direccion")
                         End If
-                    Else
-                        'eliminar representante legal
-                        datos_reprelegal.id_representanteLegal = IdRepreLegal
-                        If conexion_repreLegal.eliminarRepresentantelegal(datos_reprelegal) Then
-                            MessageBox.Show("datos Eliminados")
+                        'datos de representante legal
+                        If chkReprelegal.Checked = True Then
+                            datos_reprelegal.id_representanteLegal = IdRepreLegal
+                            datos_reprelegal.nombre_representanteLegal = txtNom_rl.Text
+                            datos_reprelegal.apePat_representanteLegal = txtApepat_rl.Text
+                            datos_reprelegal.apeMat_representanteLegal = txtApemat_rl.Text
+                            datos_reprelegal.codidentificacion_representanteLegal = cbTipoDoc_rl.SelectedValue.ToString()
+                            datos_reprelegal.numeroDoc_representanteLegal = txtnumeroDoc.Text
+                            datos_reprelegal.codVia_representanteLegal = cbtipoVia_rl.SelectedValue.ToString()
+                            datos_reprelegal.nomVia_representanteLegal = txtNomvia_rl.Text
+                            datos_reprelegal.numero_representanteLegal = txtNumero_rl.Text
+                            datos_reprelegal.manzana_representanteLegal = txtMzna_rl.Text
+                            datos_reprelegal.lote_representanteLegal = txtLote_rl.Text
+                            datos_reprelegal.nomApart_representanteLegal = txtApart_rl.Text
+                            datos_reprelegal.numApart_representanteLegal = txtNumApart_rl.Text
+                            datos_reprelegal.codUrbanizacion_representanteLegal = 1
+                            datos_reprelegal.nomUrbanizacion_representanteLegal = txtUrba_rl.Text
+                            datos_reprelegal.codContribuyente_representanteLegal = IdContibuyente
+                            datos_reprelegal.cargo_representanteLegal = txtCargo_rl.Text
+                            datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
+                            If conexion_repreLegal.actualizarRepresentantelegal(datos_reprelegal) Then
+                                MessageBox.Show("datos guardados de representante legal")
+                            End If
                         Else
-                            MessageBox.Show("datos no eliminados")
+                            'eliminar representante legal
+                            datos_reprelegal.id_representanteLegal = IdRepreLegal
+                            If conexion_repreLegal.eliminarRepresentantelegal(datos_reprelegal) Then
+                                MessageBox.Show("Datos eliminados.")
+                            Else
+                                MessageBox.Show("Datos no guardados.")
+                            End If
+                        End If
+
+                    Else
+                        MessageBox.Show("datos no guardados")
+                    End If
+                Else
+                    If verificar_dni() Then
+                        'MsgBox("Ya existe un contribuyente asociado a este número DNI.")
+                    Else
+                        Dim conexion_contribuyente As New class_controller_contribuyente
+                        Dim datos_contribuyente As New class_datos_contribuyente
+                        Dim datos_direccion As New class_datos_direccion
+                        Dim conexion_direccion As New class_controller_direccion
+                        Dim conexion_repreLegal As New class_controller_representanteLegal
+                        Dim datos_reprelegal As New class_datos_representanteLegal
+                        'actualizando datos personales
+                        datos_contribuyente.id_contribuyente = IdContibuyente
+                        datos_contribuyente.nombres_cont = txtNombre.Text
+                        datos_contribuyente.apellido_paterno_cont = txtApe_pat.Text
+                        datos_contribuyente.apellido_materno_cont = txtApe_mat.Text
+                        datos_contribuyente.cod_tipo_doc = cbxtipoDocumento.SelectedValue.ToString()
+                        datos_contribuyente.numero_doc_cont = txtnumeroDoc.Text
+                        datos_contribuyente.telefono_cont = txtNumTelf.Text
+                        datos_contribuyente.celular_cont = txtNumCel.Text
+                        datos_contribuyente.email_contn = txtEmail.Text
+                        datos_contribuyente.cont_relacion_cont = txtNombres_conyuge.Text
+                        datos_contribuyente.observacion_cont = txtObsv.Text
+                        datos_contribuyente.cod_urbanizacion_cont = cbxTipoUrb.SelectedValue.ToString()
+                        datos_contribuyente.cod_relacion_cont = cbxtipoRelacion.SelectedValue.ToString()
+                        datos_contribuyente.ruc_cont = txtNumRuc.Text
+                        datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
+                        If conexion_contribuyente.actualizarDatoContribuyente(datos_contribuyente) Then
+                            'actualizando direccion
+                            datos_direccion.id_direccion = IdDireccion
+                            datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
+                            datos_direccion.via_direccion = txtNomVia.Text
+                            datos_direccion.numero_direccion = txtNumeroVia.Text
+                            datos_direccion.mzna_direccion = txtMnza.Text
+                            datos_direccion.lote_direccion = txtLote.Text
+                            datos_direccion.departamento_direccion = txtNom_Dep.Text
+                            datos_direccion.piso_direccion = txtNumeroPiso.Text
+                            datos_direccion.sector_direccion = txtNomSector.Text
+                            datos_direccion.codDistrito_direccion = Valor_Distrito
+                            datos_direccion.codContribuyente_direccion = IdContibuyente
+                            If conexion_direccion.actualizarDatosDireccion(datos_direccion) Then
+                                MessageBox.Show("datos guardados de direccion")
+                            End If
+                            'datos de representante legal
+                            If chkReprelegal.Checked = True Then
+                                datos_reprelegal.id_representanteLegal = IdRepreLegal
+                                datos_reprelegal.nombre_representanteLegal = txtNom_rl.Text
+                                datos_reprelegal.apePat_representanteLegal = txtApepat_rl.Text
+                                datos_reprelegal.apeMat_representanteLegal = txtApemat_rl.Text
+                                datos_reprelegal.codidentificacion_representanteLegal = cbTipoDoc_rl.SelectedValue.ToString()
+                                datos_reprelegal.numeroDoc_representanteLegal = txtnumeroDoc.Text
+                                datos_reprelegal.codVia_representanteLegal = cbtipoVia_rl.SelectedValue.ToString()
+                                datos_reprelegal.nomVia_representanteLegal = txtNomvia_rl.Text
+                                datos_reprelegal.numero_representanteLegal = txtNumero_rl.Text
+                                datos_reprelegal.manzana_representanteLegal = txtMzna_rl.Text
+                                datos_reprelegal.lote_representanteLegal = txtLote_rl.Text
+                                datos_reprelegal.nomApart_representanteLegal = txtApart_rl.Text
+                                datos_reprelegal.numApart_representanteLegal = txtNumApart_rl.Text
+                                datos_reprelegal.codUrbanizacion_representanteLegal = 1
+                                datos_reprelegal.nomUrbanizacion_representanteLegal = txtUrba_rl.Text
+                                datos_reprelegal.codContribuyente_representanteLegal = IdContibuyente
+                                datos_reprelegal.cargo_representanteLegal = txtCargo_rl.Text
+                                datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
+                                If conexion_repreLegal.actualizarRepresentantelegal(datos_reprelegal) Then
+                                    MessageBox.Show("datos guardados de representante legal")
+                                End If
+                            Else
+                                'eliminar representante legal
+                                datos_reprelegal.id_representanteLegal = IdRepreLegal
+                                If conexion_repreLegal.eliminarRepresentantelegal(datos_reprelegal) Then
+                                    MessageBox.Show("Actualización Correta.")
+                                Else
+                                    MessageBox.Show("Datos no guardados.")
+                                End If
+                            End If
+
+                        Else
+                            MessageBox.Show("datos no guardados")
                         End If
                     End If
-
-                Else
-                    MessageBox.Show("datos no guardados")
                 End If
             End If
         End If
         If estado_button = 4 Then
-
             Dim Message As String = "Estas seguro que deseas eliminar al Contribuyente los cambios no podran ser revertidos ?"
             Dim Caption As String = "Confimación de eliminación"
             Dim Buttons As MessageBoxButtons = MessageBoxButtons.YesNo
@@ -882,11 +970,8 @@
                 Else
                     MessageBox.Show("No pudimos eliminar al Contribuyente, Intente de nuevo", "Información de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
-
             Else
             End If
-
-
         End If
     End Sub
     Private Sub clean()
@@ -940,6 +1025,10 @@
     End Sub
 
     Private Sub txtnumeroDoc_KeyUp(sender As Object, e As KeyEventArgs) Handles txtnumeroDoc.KeyUp
+        verificar_dni()
+    End Sub
+    Private Function verificar_dni() As Boolean
+        Dim estado_dni As Boolean = False
         Dim tipo_doc As String
         Dim valor_doc As String
         tipo_doc = cbxtipoDocumento.SelectedValue.ToString
@@ -949,11 +1038,13 @@
         If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
             pbNumeroDoc.Visible = True
             MsgBox("Ya existe un contribuyente asociado a este número DNI.")
+            estado_dni = True
         Else
             pbNumeroDoc.Visible = False
-            'sgBox("Disponible")
+            estado_dni = False
         End If
-    End Sub
+        Return estado_dni
+    End Function
 
 
     Private Sub txtNumRuc_KeyUp(sender As Object, e As KeyEventArgs) Handles txtNumRuc.KeyUp
@@ -966,6 +1057,92 @@
             MsgBox("Ya existe un contribuyente asociado a este número de RUC.")
         Else
             pbRUC.Visible = False
+        End If
+    End Sub
+
+    Private Sub cbxtipoDocumento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxtipoDocumento.SelectedValueChanged
+        If cbxtipoDocumento.Text = "ruc" Then
+            txtnumeroDoc.Enabled = False
+            chkDatosEmpresariales.Checked = True
+            GroupBox2.Enabled = True
+        Else
+            txtnumeroDoc.Enabled = True
+            chkDatosEmpresariales.Checked = False
+            GroupBox2.Enabled = False
+        End If
+    End Sub
+
+    Private Sub btnConsultarRuc_Click(sender As Object, e As EventArgs) Handles btnConsultarRuc.Click
+        Dim valor_ruc As String
+        valor_ruc = txtNumRuc.Text
+        _DatasetContribuyente.Reset()
+        consulta_datos_contribuyente_by_RUC(valor_ruc)
+        If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
+            pbRUC.Visible = True
+            MsgBox("Ya existe un contribuyente asociado a este número de RUC.")
+        Else
+            pbRUC.Visible = False
+            MsgBox("Número de RUC valido.")
+        End If
+    End Sub
+
+    Private Sub txtnumeroDoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnumeroDoc.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtApe_pat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApe_pat.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Or Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtApe_mat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtApe_mat.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Or Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Or Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtRazonsocial_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRazonsocial.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Or Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtNumRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumRuc.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
         End If
     End Sub
 End Class

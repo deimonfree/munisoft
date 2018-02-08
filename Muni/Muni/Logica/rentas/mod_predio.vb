@@ -24,7 +24,7 @@ Module mod_predio
     Sub consulta_datos_predio_by(ByVal cont As Integer)
         Try
             conex_Global()
-            _conectorMysql.SelectCommand = New MySqlCommand("select * from predio where cod_contribuyente=@cod", _conexion)
+            _conectorMysql.SelectCommand = New MySqlCommand("select * from predio where cod_contribuyente=@cod and estado='Activo'", _conexion)
             _conectorMysql.SelectCommand.Parameters.Add("@cod", MySqlDbType.Int32).Value = cont
             _conectorMysql.Fill(_DatasetPredio)
             _dtwPredio.Table = _DatasetPredio.Tables(0)
@@ -77,7 +77,7 @@ Module mod_predio
     'comprobar si existe valores en la cosnulta
     Public Function comprobar_predio(ByVal idpredio As Integer) As Integer
         conex_Global()
-        _conectorMysql.SelectCommand = New MySqlCommand("select * from predio where idpredio= @idPredio", _conexion)
+        _conectorMysql.SelectCommand = New MySqlCommand("select * from predio where idpredio= @idPredio and estado='Activo'", _conexion)
         _conectorMysql.SelectCommand.Parameters.Add("@idPredio", MySqlDbType.Int32).Value = idpredio
         _conexion.Open()
         _conectorMysql.SelectCommand.Connection = _conexion
@@ -104,7 +104,7 @@ Module mod_predio
     Sub consulta_datos_predio_by_esquema(ByVal cont As Integer)
         Try
             conex_Global()
-            _conectorMysql.SelectCommand = New MySqlCommand("select predio.idpredio as 'Codigo de Predio', tipo_via.nom_tipovia as 'Tipo de Via', via.nombre as 'Nombre de Via',predio.cuadra as 'Cuadra', predio.numero as 'Numero' from predio inner join via on predio.cod_via = via.idvia inner join tipo_via on via.tipo = tipo_via.idtipo_via where predio.cod_contribuyente = @cod", _conexion)
+            _conectorMysql.SelectCommand = New MySqlCommand("select predio.idpredio as 'Codigo de Predio', tipo_via.nom_tipovia as 'Tipo de Via', via.nombre as 'Nombre de Via',predio.cuadra as 'Cuadra', predio.numero as 'Numero' from predio inner join via on predio.cod_via = via.idvia inner join tipo_via on via.tipo = tipo_via.idtipo_via where predio.cod_contribuyente = @cod and predio.estado='Activo'", _conexion)
             _conectorMysql.SelectCommand.Parameters.Add("@cod", MySqlDbType.Int32).Value = cont
             _conectorMysql.Fill(_DatasetPredio)
             _dtwPredio.Table = _DatasetPredio.Tables(0)
