@@ -534,23 +534,26 @@
         lblInfoVia.Visible = False
         'comprovacion de datos personales
         If chkDatosPersonales.Checked Then
-            Select Case ""
-                Case Trim(txtNombre.Text)
-                    valor_alta = True
-                    pbnombre.Visible = True
-                Case Trim(txtApe_pat.Text)
-                    valor_alta = True
-                    pbapepaT.Visible = True
-                Case Trim(txtApe_mat.Text)
-                    valor_alta = True
-                    Pbapemat.Visible = True
-                Case Trim(cbxtipoDocumento.Text)
-                    valor_alta = True
-                    pbNumeroDoc.Visible = True
-                Case Trim(txtnumeroDoc.Text)
-                    valor_alta = True
-                    pbNumeroDoc.Visible = True
-            End Select
+            If cbxtipoDocumento.Text <> "ruc" Then
+                Select Case ""
+                    Case Trim(txtNombre.Text)
+                        valor_alta = True
+                        pbnombre.Visible = True
+                    Case Trim(txtApe_pat.Text)
+                        valor_alta = True
+                        pbapepaT.Visible = True
+                    Case Trim(txtApe_mat.Text)
+                        valor_alta = True
+                        Pbapemat.Visible = True
+                    Case Trim(cbxtipoDocumento.Text)
+                        valor_alta = True
+                        pbNumeroDoc.Visible = True
+                    Case Trim(txtnumeroDoc.Text)
+                        valor_alta = True
+                        pbNumeroDoc.Visible = True
+                End Select
+            End If
+
         Else
             txtNombre.Text = "--"
             txtApe_pat.Text = "--"
@@ -703,11 +706,23 @@
             Dim conexion_sociedadConyugal As New class_controller_sociedadConyugal
             Dim alta As Boolean = False
             Dim codigoContribuyente As Integer
+            Dim verificado As Boolean = False
             If alta2() = True Then
                 MessageBox.Show("Lo sentimos no podemos procesar su información debido a que hay campos vacios", "Error: 001",
                MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                If verificar_dni() Then
+                If cbxtipoDocumento.Text = "ruc" Then
+                    If verificar_ruc() Then
+                        verificado = True
+                    End If
+
+                Else
+                    If verificar_dni() Then
+                        verificado = True
+                    End If
+                End If
+
+                If verificado Then
                     'MsgBox("Ya existe un contribuyente asociado a este número DNI.")
                 Else
                     'guaradando datos de contribuyente 
@@ -791,11 +806,18 @@
         If estado_button = 3 Then
             Dim controlador As New class_controller_contribuyente
             Dim datos As New class_datos_contribuyente
+            Dim contadorActualizacion As New Integer
             If alta2() = True Then
                 MessageBox.Show("Lo sentimos no podemos procesar su información debido a que hay campos vacios", "Error: 123",
            MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
+                If cbxtipoDocumento.Text = "ruc" Then
+                    txtApe_pat.Text = ""
+                    txtApe_mat.Text = ""
+                    txtNombre.Text = ""
+                End If
                 If numero_dni = txtnumeroDoc.Text Then
+                    contadorActualizacion = 0
                     Dim conexion_contribuyente As New class_controller_contribuyente
                     Dim datos_contribuyente As New class_datos_contribuyente
                     Dim datos_direccion As New class_datos_direccion
@@ -820,6 +842,7 @@
                     datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
                     If conexion_contribuyente.actualizarDatoContribuyente(datos_contribuyente) Then
                         'actualizando direccion
+                        contadorActualizacion += 1
                         datos_direccion.id_direccion = IdDireccion
                         datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
                         datos_direccion.via_direccion = txtNomVia.Text
@@ -833,6 +856,9 @@
                         datos_direccion.codContribuyente_direccion = IdContibuyente
                         If conexion_direccion.actualizarDatosDireccion(datos_direccion) Then
                             'MessageBox.Show("datos guardados de direccion")
+                            contadorActualizacion += 1
+                        Else
+                            contadorActualizacion = 0
                         End If
                         'datos de representante legal
                         If chkReprelegal.Checked = True Then
@@ -856,24 +882,31 @@
                             datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
                             If conexion_repreLegal.actualizarRepresentantelegal(datos_reprelegal) Then
                                 MessageBox.Show("datos guardados de representante legal")
+                                contadorActualizacion += 1
                             End If
                         Else
                             'eliminar representante legal
                             datos_reprelegal.id_representanteLegal = IdRepreLegal
                             If conexion_repreLegal.eliminarRepresentantelegal(datos_reprelegal) Then
-                                MessageBox.Show("Datos eliminados.")
+                                'MessageBox.Show("Datos eliminados.")
                             Else
-                                MessageBox.Show("Datos no guardados.")
+                                'MessageBox.Show("Datos no guardados.")
                             End If
                         End If
 
                     Else
-                        MessageBox.Show("datos no guardados")
+                        'MessageBox.Show("datos no guardados")
+                    End If
+                    If contadorActualizacion = 2 Or contadorActualizacion = 3 Then
+                        MessageBox.Show("Actualizacion Correcta.", "Muni", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        MessageBox.Show("No se ha podido actualizar.", "Muni", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
                 Else
                     If verificar_dni() Then
                         'MsgBox("Ya existe un contribuyente asociado a este número DNI.")
                     Else
+                        contadorActualizacion = 0
                         Dim conexion_contribuyente As New class_controller_contribuyente
                         Dim datos_contribuyente As New class_datos_contribuyente
                         Dim datos_direccion As New class_datos_direccion
@@ -898,6 +931,7 @@
                         datos_contribuyente.razonSocial_cont = txtRazonsocial.Text
                         If conexion_contribuyente.actualizarDatoContribuyente(datos_contribuyente) Then
                             'actualizando direccion
+                            contadorActualizacion += 1
                             datos_direccion.id_direccion = IdDireccion
                             datos_direccion.codTipoVia_direccion = cbxtipoVia.SelectedValue.ToString()
                             datos_direccion.via_direccion = txtNomVia.Text
@@ -910,7 +944,10 @@
                             datos_direccion.codDistrito_direccion = Valor_Distrito
                             datos_direccion.codContribuyente_direccion = IdContibuyente
                             If conexion_direccion.actualizarDatosDireccion(datos_direccion) Then
-                                MessageBox.Show("datos guardados de direccion")
+                                'MessageBox.Show("datos guardados de direccion")
+                                contadorActualizacion += 1
+                            Else
+                                contadorActualizacion = 0
                             End If
                             'datos de representante legal
                             If chkReprelegal.Checked = True Then
@@ -933,20 +970,26 @@
                                 datos_reprelegal.cargo_representanteLegal = txtCargo_rl.Text
                                 datos_reprelegal.telefono_representanteLegal = txtTelf_rl.Text
                                 If conexion_repreLegal.actualizarRepresentantelegal(datos_reprelegal) Then
-                                    MessageBox.Show("datos guardados de representante legal")
+                                    'MessageBox.Show("datos guardados de representante legal")
+                                    contadorActualizacion += 1
                                 End If
                             Else
                                 'eliminar representante legal
                                 datos_reprelegal.id_representanteLegal = IdRepreLegal
                                 If conexion_repreLegal.eliminarRepresentantelegal(datos_reprelegal) Then
-                                    MessageBox.Show("Actualización Correta.")
+                                    'MessageBox.Show("Actualización Correta.")
                                 Else
-                                    MessageBox.Show("Datos no guardados.")
+                                    'MessageBox.Show("Datos no guardados.")
                                 End If
                             End If
 
                         Else
-                            MessageBox.Show("datos no guardados")
+                            'MessageBox.Show("datos no guardados")
+                        End If
+                        If contadorActualizacion = 2 Or contadorActualizacion = 3 Then
+                            MessageBox.Show("Actualizacion Correcta.", "Muni", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Else
+                            MessageBox.Show("No se ha podido actualizar.", "Muni", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         End If
                     End If
                 End If
@@ -1026,28 +1069,37 @@
 
     Private Sub txtnumeroDoc_KeyUp(sender As Object, e As KeyEventArgs) Handles txtnumeroDoc.KeyUp
         verificar_dni()
+
     End Sub
     Private Function verificar_dni() As Boolean
         Dim estado_dni As Boolean = False
-        Dim tipo_doc As String
-        Dim valor_doc As String
-        tipo_doc = cbxtipoDocumento.SelectedValue.ToString
-        valor_doc = txtnumeroDoc.Text
-        _DatasetContribuyente.Reset()
-        consulta_datos_contribuyente_by_valor(tipo_doc, valor_doc)
-        If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
-            pbNumeroDoc.Visible = True
-            MsgBox("Ya existe un contribuyente asociado a este número DNI.")
-            estado_dni = True
-        Else
-            pbNumeroDoc.Visible = False
-            estado_dni = False
+        If cbxtipoDocumento.Text <> "ruc" Then
+
+            Dim tipo_doc As String
+            Dim valor_doc As String
+            tipo_doc = cbxtipoDocumento.SelectedValue.ToString
+            valor_doc = txtnumeroDoc.Text
+            _DatasetContribuyente.Reset()
+            consulta_datos_contribuyente_by_valor(tipo_doc, valor_doc)
+            If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
+                pbNumeroDoc.Visible = True
+                MsgBox("Ya existe un contribuyente asociado a este número DNI.")
+                estado_dni = True
+            Else
+                pbNumeroDoc.Visible = False
+                estado_dni = False
+            End If
+
         End If
         Return estado_dni
     End Function
 
 
     Private Sub txtNumRuc_KeyUp(sender As Object, e As KeyEventArgs) Handles txtNumRuc.KeyUp
+        verificar_ruc()
+    End Sub
+    Private Function verificar_ruc() As Boolean
+        Dim estado_ruc As Boolean = False
         Dim valor_ruc As String
         valor_ruc = txtNumRuc.Text
         _DatasetContribuyente.Reset()
@@ -1055,20 +1107,40 @@
         If _DatasetContribuyente.Tables(0).Rows.Count > 0 Then
             pbRUC.Visible = True
             MsgBox("Ya existe un contribuyente asociado a este número de RUC.")
+            estado_ruc = True
         Else
             pbRUC.Visible = False
+            estado_ruc = False
         End If
-    End Sub
+        Return estado_ruc
+    End Function
 
     Private Sub cbxtipoDocumento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxtipoDocumento.SelectedValueChanged
         If cbxtipoDocumento.Text = "ruc" Then
+            txtnumeroDoc.Text = ""
             txtnumeroDoc.Enabled = False
+            txtApe_pat.Enabled = False
+            txtApe_mat.Enabled = False
+            txtNombre.Enabled = False
             chkDatosEmpresariales.Checked = True
             GroupBox2.Enabled = True
+            gb_RepresentanteLegal.Enabled = True
+            chkReprelegal.Checked = True
+            pbNumeroDoc.Visible = False
+            gb_direccionContribuyente.Enabled = False
+            gb_contactoContribuyente.Enabled = False
         Else
             txtnumeroDoc.Enabled = True
+            txtApe_pat.Enabled = True
+            txtApe_mat.Enabled = True
+            txtNombre.Enabled = True
             chkDatosEmpresariales.Checked = False
             GroupBox2.Enabled = False
+            'GroupBox1.Enabled = True
+            gb_RepresentanteLegal.Enabled = False
+            chkReprelegal.Checked = False
+            gb_direccionContribuyente.Enabled = True
+            gb_contactoContribuyente.Enabled = True
         End If
     End Sub
 
@@ -1145,4 +1217,5 @@
             e.Handled = True
         End If
     End Sub
+
 End Class

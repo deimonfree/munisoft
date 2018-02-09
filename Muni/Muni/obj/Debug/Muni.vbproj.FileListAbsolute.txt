@@ -394,13 +394,9 @@ I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.vistacentral.resources
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.exe.manifest
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.application
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\Muni.exe.config
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.exe
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.xml
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.pdb
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.uc_rentas_autovaluo_recibo_pagado.resources
 I:\GITHUB-MUNISOFT\munisoft\Muni\Muni\obj\Debug\Muni.uc_rentas_fichaPago.resources
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\Muni.exe.config
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\Muni.exe.manifest
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\Muni.application
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\Muni.exe
@@ -429,8 +425,7 @@ C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\CrystalDeci
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\stdole.dll
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\CircularProgressBar.xml
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\bin\Debug\WinFormAnimation.xml
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbprojFakesResolveAssemblyReference.cache
-C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbprojResolveAssemblyReference.cache
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.ab_proveedor.resources
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.uc_alamacen_transaccion.resources
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.uc_almacen.resources
@@ -506,3 +501,6 @@ C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vistac
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.GenerateResource.Cache
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.exe.manifest
 C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.application
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.exe
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.xml
+C:\Users\Robert Mamani\Documents\GitHub\munisoft\Muni\Muni\obj\Debug\Muni.pdb

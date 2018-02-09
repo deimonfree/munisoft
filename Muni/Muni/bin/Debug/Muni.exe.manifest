@@ -276,14 +276,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Muni.exe" size="43453440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Muni.exe" size="43453952">
       <assemblyIdentity name="Muni" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KD5Bcau19Sgj/P9sLHPRdPQ7uXOwtU+FjZkXkK7MjE0=</dsig:DigestValue>
+        <dsig:DigestValue>Aif3y2OTzgGtwZEMLaDIPjX2ipOA79taZ7WjX753cMU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
