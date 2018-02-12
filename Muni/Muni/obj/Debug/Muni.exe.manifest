@@ -48,6 +48,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.AcroPDFLib.dll" size="8192">
+      <assemblyIdentity name="AxInterop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>VmnJNwzH77MFsaz77wvt8hKx/y0uw1lsmKddhoHkMR4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CircularProgressBar.dll" size="16896">
       <assemblyIdentity name="CircularProgressBar" version="2.5.6403.13419" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -264,6 +276,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.AcroPDFLib.dll" size="11776">
+      <assemblyIdentity name="Interop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>lGTPPYCCcD+qsvvhyroJUkXimDTeZhaqo0mQeCgybuo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisSkin2.dll" size="536576">
       <assemblyIdentity name="IrisSkin2" version="2006.3.22.45" publicKeyToken="F4D76DD8D689A256" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -276,14 +300,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Muni.exe" size="43453952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Muni.exe" size="43531776">
       <assemblyIdentity name="Muni" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Aif3y2OTzgGtwZEMLaDIPjX2ipOA79taZ7WjX753cMU=</dsig:DigestValue>
+        <dsig:DigestValue>0XsoZyUqyjuh0djOG4/gEkZ84jByFleXK+c1HnYB3Ak=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -353,13 +377,13 @@
       <dsig:DigestValue>TKsHdZQAC7gdRn/4RXOplsyd0yLFL0Rjj9sWWZGWAQs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Muni.exe.config" size="188">
+  <file name="Muni.exe.config" size="1439">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>j5XMowm9qYcyNWR87Ke1KpLLXBlaYAR38CaZywZFE9o=</dsig:DigestValue>
+      <dsig:DigestValue>AFAJ4mCK0KP7MxGJDOdVT1Nzwm7mCXjtXcHWj6LS46Y=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\save.png" size="535">

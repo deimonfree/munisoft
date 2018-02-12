@@ -25,6 +25,7 @@ Partial Class principal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(principal))
         Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.lblServer = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblname = New System.Windows.Forms.Label()
@@ -39,6 +40,7 @@ Partial Class principal
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.RestaurarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -47,9 +49,29 @@ Partial Class principal
         Me.SalirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.panelDerecha = New System.Windows.Forms.Panel()
+        Me.PnlMenuChat = New System.Windows.Forms.Panel()
+        Me.sidePanelChat = New System.Windows.Forms.Panel()
+        Me.btnComunicador = New System.Windows.Forms.Button()
+        Me.btnServidores = New System.Windows.Forms.Button()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.panelChat = New System.Windows.Forms.Panel()
+        Me.TextBoxCHAT = New System.Windows.Forms.TextBox()
+        Me.btnMessage = New System.Windows.Forms.Button()
+        Me.txtMessage = New System.Windows.Forms.TextBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblEstado = New System.Windows.Forms.Label()
+        Me.flpContenedor = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lblServer = New System.Windows.Forms.Label()
+        Me.panelFooter = New System.Windows.Forms.Panel()
+        Me.lblInfoFotter = New System.Windows.Forms.Label()
+        Me.tmAnimacion = New System.Windows.Forms.Timer(Me.components)
+        Me.pUser = New System.Windows.Forms.PictureBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -63,7 +85,16 @@ Partial Class principal
         Me.btn_close = New System.Windows.Forms.PictureBox()
         Me.pnlHeader.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.panelDerecha.SuspendLayout()
+        Me.PnlMenuChat.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.panelChat.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.panelFooter.SuspendLayout()
+        CType(Me.pUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_server, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +121,18 @@ Partial Class principal
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(1024, 50)
         Me.pnlHeader.TabIndex = 17
+        '
+        'lblServer
+        '
+        Me.lblServer.AutoSize = True
+        Me.lblServer.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblServer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.lblServer.Location = New System.Drawing.Point(156, 28)
+        Me.lblServer.Name = "lblServer"
+        Me.lblServer.Size = New System.Drawing.Size(41, 16)
+        Me.lblServer.TabIndex = 50
+        Me.lblServer.Text = "Online"
+        Me.lblServer.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label3
         '
@@ -160,7 +203,7 @@ Partial Class principal
         Me.pnlContenedor.Location = New System.Drawing.Point(76, 50)
         Me.pnlContenedor.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlContenedor.Name = "pnlContenedor"
-        Me.pnlContenedor.Size = New System.Drawing.Size(948, 586)
+        Me.pnlContenedor.Size = New System.Drawing.Size(948, 561)
         Me.pnlContenedor.TabIndex = 20
         '
         'pnlMenu
@@ -183,7 +226,7 @@ Partial Class principal
         Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlMenu.Location = New System.Drawing.Point(0, 50)
         Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.Size = New System.Drawing.Size(76, 586)
+        Me.pnlMenu.Size = New System.Drawing.Size(76, 561)
         Me.pnlMenu.TabIndex = 19
         '
         'Panel7
@@ -236,11 +279,21 @@ Partial Class principal
         '
         'Panel6
         '
+        Me.Panel6.Controls.Add(Me.Panel10)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(76, 32)
         Me.Panel6.TabIndex = 30
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(76, 10)
+        Me.Panel10.TabIndex = 0
         '
         'ContextMenuStrip1
         '
@@ -288,29 +341,258 @@ Partial Class principal
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
+        'panelDerecha
+        '
+        Me.panelDerecha.BackColor = System.Drawing.SystemColors.Control
+        Me.panelDerecha.Controls.Add(Me.PnlMenuChat)
+        Me.panelDerecha.Controls.Add(Me.TabControl1)
+        Me.panelDerecha.Dock = System.Windows.Forms.DockStyle.Right
+        Me.panelDerecha.Location = New System.Drawing.Point(679, 50)
+        Me.panelDerecha.Name = "panelDerecha"
+        Me.panelDerecha.Size = New System.Drawing.Size(345, 561)
+        Me.panelDerecha.TabIndex = 21
+        '
+        'PnlMenuChat
+        '
+        Me.PnlMenuChat.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(236, Byte), Integer))
+        Me.PnlMenuChat.Controls.Add(Me.sidePanelChat)
+        Me.PnlMenuChat.Controls.Add(Me.btnComunicador)
+        Me.PnlMenuChat.Controls.Add(Me.btnServidores)
+        Me.PnlMenuChat.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlMenuChat.Location = New System.Drawing.Point(0, 0)
+        Me.PnlMenuChat.Name = "PnlMenuChat"
+        Me.PnlMenuChat.Size = New System.Drawing.Size(345, 40)
+        Me.PnlMenuChat.TabIndex = 5
+        '
+        'sidePanelChat
+        '
+        Me.sidePanelChat.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.sidePanelChat.Location = New System.Drawing.Point(7, 0)
+        Me.sidePanelChat.Name = "sidePanelChat"
+        Me.sidePanelChat.Size = New System.Drawing.Size(97, 5)
+        Me.sidePanelChat.TabIndex = 67
+        Me.sidePanelChat.Visible = False
+        '
+        'btnComunicador
+        '
+        Me.btnComunicador.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(236, Byte), Integer))
+        Me.btnComunicador.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnComunicador.FlatAppearance.BorderSize = 0
+        Me.btnComunicador.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnComunicador.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnComunicador.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(108, Byte), Integer))
+        Me.btnComunicador.Location = New System.Drawing.Point(107, 3)
+        Me.btnComunicador.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnComunicador.Name = "btnComunicador"
+        Me.btnComunicador.Size = New System.Drawing.Size(118, 40)
+        Me.btnComunicador.TabIndex = 65
+        Me.btnComunicador.Text = "&Comunicados"
+        Me.btnComunicador.UseVisualStyleBackColor = False
+        '
+        'btnServidores
+        '
+        Me.btnServidores.BackColor = System.Drawing.Color.White
+        Me.btnServidores.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnServidores.FlatAppearance.BorderSize = 0
+        Me.btnServidores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnServidores.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnServidores.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnServidores.Location = New System.Drawing.Point(4, 3)
+        Me.btnServidores.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnServidores.Name = "btnServidores"
+        Me.btnServidores.Size = New System.Drawing.Size(97, 40)
+        Me.btnServidores.TabIndex = 64
+        Me.btnServidores.Text = "&Servidores"
+        Me.btnServidores.UseVisualStyleBackColor = False
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(345, 561)
+        Me.TabControl1.TabIndex = 28
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.panelChat)
+        Me.TabPage1.Controls.Add(Me.flpContenedor)
+        Me.TabPage1.Controls.Add(Me.Panel9)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(337, 535)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "TabPage1"
+        '
+        'panelChat
+        '
+        Me.panelChat.BackColor = System.Drawing.Color.White
+        Me.panelChat.Controls.Add(Me.TextBoxCHAT)
+        Me.panelChat.Controls.Add(Me.btnMessage)
+        Me.panelChat.Controls.Add(Me.txtMessage)
+        Me.panelChat.Controls.Add(Me.Panel8)
+        Me.panelChat.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.panelChat.Location = New System.Drawing.Point(3, 256)
+        Me.panelChat.Name = "panelChat"
+        Me.panelChat.Size = New System.Drawing.Size(331, 276)
+        Me.panelChat.TabIndex = 3
+        '
+        'TextBoxCHAT
+        '
+        Me.TextBoxCHAT.BackColor = System.Drawing.Color.White
+        Me.TextBoxCHAT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.TextBoxCHAT.Location = New System.Drawing.Point(11, 68)
+        Me.TextBoxCHAT.Multiline = True
+        Me.TextBoxCHAT.Name = "TextBoxCHAT"
+        Me.TextBoxCHAT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBoxCHAT.Size = New System.Drawing.Size(310, 138)
+        Me.TextBoxCHAT.TabIndex = 62
+        '
+        'btnMessage
+        '
+        Me.btnMessage.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.btnMessage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(173, Byte), Integer))
+        Me.btnMessage.FlatAppearance.BorderSize = 0
+        Me.btnMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMessage.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMessage.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnMessage.Location = New System.Drawing.Point(221, 221)
+        Me.btnMessage.Name = "btnMessage"
+        Me.btnMessage.Size = New System.Drawing.Size(100, 35)
+        Me.btnMessage.TabIndex = 61
+        Me.btnMessage.Text = "Enviar"
+        Me.btnMessage.UseVisualStyleBackColor = False
+        '
+        'txtMessage
+        '
+        Me.txtMessage.Location = New System.Drawing.Point(11, 221)
+        Me.txtMessage.Multiline = True
+        Me.txtMessage.Name = "txtMessage"
+        Me.txtMessage.Size = New System.Drawing.Size(204, 36)
+        Me.txtMessage.TabIndex = 60
+        '
         'Panel8
         '
-        Me.Panel8.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel8.Location = New System.Drawing.Point(824, 50)
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.pUser)
+        Me.Panel8.Controls.Add(Me.Label4)
+        Me.Panel8.Controls.Add(Me.lblEstado)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel8.Location = New System.Drawing.Point(0, 0)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(200, 586)
-        Me.Panel8.TabIndex = 21
+        Me.Panel8.Size = New System.Drawing.Size(331, 53)
+        Me.Panel8.TabIndex = 59
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(65, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label4.Location = New System.Drawing.Point(48, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(58, 17)
+        Me.Label4.TabIndex = 50
+        Me.Label4.Text = "A Todos"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblEstado
+        '
+        Me.lblEstado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblEstado.AutoSize = True
+        Me.lblEstado.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEstado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.lblEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblEstado.Location = New System.Drawing.Point(48, 26)
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(130, 18)
+        Me.lblEstado.TabIndex = 49
+        Me.lblEstado.Text = "Enviando Mensaje ..."
+        Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'flpContenedor
+        '
+        Me.flpContenedor.AutoScroll = True
+        Me.flpContenedor.BackColor = System.Drawing.Color.White
+        Me.flpContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flpContenedor.Location = New System.Drawing.Point(3, 31)
+        Me.flpContenedor.Name = "flpContenedor"
+        Me.flpContenedor.Size = New System.Drawing.Size(331, 501)
+        Me.flpContenedor.TabIndex = 2
+        '
+        'Panel9
+        '
+        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel9.Location = New System.Drawing.Point(3, 3)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(331, 28)
+        Me.Panel9.TabIndex = 1
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(337, 535)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(337, 535)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'Timer1
         '
         '
-        'lblServer
+        'panelFooter
         '
-        Me.lblServer.AutoSize = True
-        Me.lblServer.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblServer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.lblServer.Location = New System.Drawing.Point(156, 28)
-        Me.lblServer.Name = "lblServer"
-        Me.lblServer.Size = New System.Drawing.Size(41, 16)
-        Me.lblServer.TabIndex = 50
-        Me.lblServer.Text = "Online"
-        Me.lblServer.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.panelFooter.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.panelFooter.Controls.Add(Me.lblInfoFotter)
+        Me.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.panelFooter.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panelFooter.ForeColor = System.Drawing.Color.White
+        Me.panelFooter.Location = New System.Drawing.Point(0, 611)
+        Me.panelFooter.Name = "panelFooter"
+        Me.panelFooter.Size = New System.Drawing.Size(1024, 25)
+        Me.panelFooter.TabIndex = 25
+        '
+        'lblInfoFotter
+        '
+        Me.lblInfoFotter.AutoSize = True
+        Me.lblInfoFotter.Location = New System.Drawing.Point(14, 5)
+        Me.lblInfoFotter.Name = "lblInfoFotter"
+        Me.lblInfoFotter.Size = New System.Drawing.Size(13, 16)
+        Me.lblInfoFotter.TabIndex = 4
+        Me.lblInfoFotter.Text = "-"
+        '
+        'tmAnimacion
+        '
+        '
+        'pUser
+        '
+        Me.pUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pUser.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pUser.Image = Global.Muni.My.Resources.Resources.grupoPersonas
+        Me.pUser.Location = New System.Drawing.Point(7, 9)
+        Me.pUser.Name = "pUser"
+        Me.pUser.Size = New System.Drawing.Size(35, 35)
+        Me.pUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pUser.TabIndex = 48
+        Me.pUser.TabStop = False
         '
         'Button6
         '
@@ -494,10 +776,11 @@ Partial Class principal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1024, 636)
-        Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.panelDerecha)
         Me.Controls.Add(Me.pnlContenedor)
         Me.Controls.Add(Me.pnlMenu)
         Me.Controls.Add(Me.pnlHeader)
+        Me.Controls.Add(Me.panelFooter)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.Name = "principal"
@@ -506,7 +789,19 @@ Partial Class principal
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.pnlMenu.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
         Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.panelDerecha.ResumeLayout(False)
+        Me.PnlMenuChat.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.panelChat.ResumeLayout(False)
+        Me.panelChat.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.panelFooter.ResumeLayout(False)
+        Me.panelFooter.PerformLayout()
+        CType(Me.pUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_server, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -549,8 +844,30 @@ Partial Class principal
     Friend WithEvents btn_close As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Panel8 As Panel
+    Friend WithEvents panelDerecha As Panel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblServer As Label
     Friend WithEvents pb_server As PictureBox
+    Friend WithEvents PnlMenuChat As Panel
+    Friend WithEvents sidePanelChat As Panel
+    Friend WithEvents btnComunicador As Button
+    Friend WithEvents btnServidores As Button
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents panelChat As Panel
+    Friend WithEvents TextBoxCHAT As TextBox
+    Friend WithEvents btnMessage As Button
+    Friend WithEvents txtMessage As TextBox
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents pUser As PictureBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblEstado As Label
+    Friend WithEvents flpContenedor As FlowLayoutPanel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents panelFooter As Panel
+    Friend WithEvents lblInfoFotter As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents tmAnimacion As Timer
 End Class

@@ -1,7 +1,14 @@
 ﻿Imports System.Windows.Forms
 Public Class principal
+    Inherits System.Windows.Forms.Form
+    Dim WithEvents inboox As New Cliente_mensajes
+    Dim numeross As Integer = 0
+    'variables de entrono
     Public UserName As String
     Dim valor_server As Integer = 0
+    '********************** variables de socket **********************
+    Public estado_servidor As Boolean = True
+    Public cliente As String
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -81,22 +88,18 @@ Public Class principal
 
     Private m_ChildFormNumber As Integer
     Private Sub principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CheckForIllegalCrossThreadCalls = False
         Dim desktopSize As Size
         desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
         Dim height As Integer = 0.9 * desktopSize.Height
         Dim width As Integer = 0.76 * desktopSize.Width
-        'Dim Myfrm As New cu_almacen
-        'Myfrm.Size = New System.Drawing.Size(width, height)
-        'Myfrm.Visible = True
-        'Myfrm.Show()
-        'pnlContenedor.Controls.Clear()
-        'pnlContenedor.Controls.Add(Myfrm)
-        'añandir el monbre de usuario
         lblname.Text = My.User.Name
-        Timer1.Start()
-        Timer1.Enabled = True
-        Timer1.Interval = 1000
-
+        tmAnimacion.Start()
+        tmAnimacion.Enabled = True
+        tmAnimacion.Interval = 1000
+        lblServer.Text = "Online"
+        ConectarServidor()
+        tmAnimacion.Start()
     End Sub
     Private Sub Minimizar()
         Me.WindowState = FormWindowState.Minimized
@@ -254,19 +257,128 @@ Public Class principal
         pnlContenedor.Controls.Add(Myfrm)
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        valor_server += 1
-        Select Case valor_server
-            Case 1
-                pb_server.Image = My.Resources.server_1
-            Case 2
-                pb_server.Image = My.Resources.server2
-            Case 3
-                pb_server.Image = My.Resources.server3
-        End Select
-        If valor_server = 3 Then
-            valor_server = 0
+    Private Sub desconeccion_server()
+        pnlHeader.BackColor = Color.FromArgb(255, 140, 1)
+        tmAnimacion.Stop()
+        lblServer.Text = "Sin Conexion"
+        pnlMenu.Enabled = False
+        pnlContenedor.Enabled = False
+        lblServer.Text = My.Settings.ServerIP
+    End Sub
+    Private Sub Form1_FormClosed(sender As Object, e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+        cerrar_conexion(My.User.Name)
+        System.Environment.Exit(System.Environment.ExitCode)
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles tmAnimacion.Tick, Timer1.Tick
+        If mensaje_jodido <> "" Then
+            cliente = mensaje_jodido
+            inboox.inbox(cliente)
+            mensaje_jodido = ""
+        Else
         End If
     End Sub
+    Private Sub recuperar_inbox(ByVal dato As String) Handles inboox.Datosibox
+        Dim paquete As New Paquete
+        paquete.paquete(dato)
 
+        Select Case paquete.comando_paquete.ToString()
+            Case "Conexion"
+                Dim paneluser As New Usuarios
+                paneluser.lblname.Text = paquete.contenido_paquete.ToString
+                paneluser.lblEstado.Text = "En Linea"
+                flpContenedor.Controls.Add(paneluser)
+            Case "Desconexion"
+
+        End Select
+        lblInfoFotter.Text = dato
+        Dim USUARIO As String
+        Select Case dato.StartsWith("Servidor:")
+            Case True
+                Dim MENSAJE As String = lblInfoFotter.Text
+                USUARIO = MENSAJE.Remove(0, MENSAJE.IndexOf(":") + 1)
+                USUARIO = USUARIO.Trim("")
+                If MENSAJE.StartsWith("Conexion:") Then
+                    Label1.Text = USUARIO
+
+                ElseIf MENSAJE.StartsWith("Desconexion:") Then
+                    Label1.Text = USUARIO
+
+                ElseIf MENSAJE.StartsWith("deimonfree:") Then
+                    Dim Cadena As String = Me.lblInfoFotter.Text
+                    Dim split As String() = Cadena.Split(New [Char]() {":"c, CChar(vbLf), Nothing})
+                    For i = 1 To split.Count - 1
+                        Dim SentenciaSQL As String = Trim(split(i))
+                        If SentenciaSQL = "100" Then
+                            lblServer.Text = "100"
+                        Else
+                            lblServer.Text = "00"
+                        End If
+                    Next
+                    TextBoxCHAT.AppendText(vbCrLf & MENSAJE)
+                ElseIf MENSAJE.StartsWith("Servidor:") Then
+                    Dim Cadena As String = Me.lblInfoFotter.Text
+                    Dim split As String() = Cadena.Split(New [Char]() {":"c, CChar(vbLf), Nothing})
+                    For i = 1 To split.Count - 1
+                        Dim SentenciaSQL As String = Trim(split(i))
+                        If SentenciaSQL = "100" Then
+                            lblServer.Text = "100"
+                        Else
+                            lblServer.Text = "00"
+                        End If
+                    Next
+                    TextBoxCHAT.AppendText(vbCrLf & MENSAJE)
+                Else
+                    Dim Cadena As String = Me.lblInfoFotter.Text
+                    Dim split As String() = Cadena.Split(New [Char]() {":"c, CChar(vbLf), Nothing})
+                    For i = 1 To split.Count - 1
+                        Dim SentenciaSQL As String = Trim(split(i))
+                        If SentenciaSQL = "100" Then
+                            lblServer.Text = "100"
+                        Else
+                            lblServer.Text = "00"
+                        End If
+                    Next
+                End If
+                TextBoxCHAT.AppendText(vbCrLf & MENSAJE)
+                Dim popup As New PopUp
+                server_message("Mensaje de Servidor:", "Servidor se suspendera", "Cerrar")
+                popup.Show()
+            Case False
+        End Select
+
+    End Sub
+    Public Event Agregar(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    Private Sub btnServidores_Click(sender As Object, e As EventArgs) Handles btnServidores.Click
+        sidePanelChat.Width = btnServidores.Width
+        sidePanelChat.Location = btnServidores.Location
+        btnServidores.BackColor = Color.FromArgb(255, 255, 255)
+        btnServidores.ForeColor = Color.FromArgb(6, 60, 107)
+        sidePanelChat.Visible = True
+        btnComunicador.BackColor = Color.FromArgb(232, 232, 236)
+        btnComunicador.ForeColor = Color.FromArgb(6, 60, 107)
+        Me.TabControl1.SelectedTab = TabPage1
+    End Sub
+
+    Private Sub btnComunicador_Click(sender As Object, e As EventArgs) Handles btnComunicador.Click
+        sidePanelChat.Width = btnComunicador.Width
+        sidePanelChat.Location = btnComunicador.Location
+        btnComunicador.BackColor = Color.FromArgb(255, 255, 255)
+        btnComunicador.ForeColor = Color.FromArgb(6, 60, 107)
+        sidePanelChat.Visible = True
+        btnServidores.BackColor = Color.FromArgb(232, 232, 236)
+        btnServidores.ForeColor = Color.FromArgb(6, 60, 107)
+        Me.TabControl1.SelectedTab = TabPage2
+    End Sub
+
+    Private Sub btnMessage_Click(sender As Object, e As EventArgs) Handles btnMessage.Click
+        If Trim(txtMessage.Text) = "" Then
+            txtMessage.Text = ""
+            txtMessage.Select()
+        Else
+            enviarMensajeServidor(txtMessage.Text)
+            txtMessage.Text = ""
+            txtMessage.Select()
+        End If
+    End Sub
 End Class

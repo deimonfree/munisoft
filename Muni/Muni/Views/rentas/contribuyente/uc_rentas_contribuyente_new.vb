@@ -1,5 +1,4 @@
 ﻿Public Class uc_rentas_contribuyente_new
-
     Dim estado_button_update As Integer = 0
     Dim Valor_Distrito As Integer
     Dim Valor_provincia As Integer
@@ -58,7 +57,7 @@
         '/**************************************/
         activar_paneles()
         clean()
-        btnOption.Text = "Guardar Predio"
+        btnOption.Text = "Guardar Contibuyente"
         btnOption.Image = My.Resources.save
         btnOption.BackColor = Color.FromArgb(150, 193, 31)
         btnOption.Enabled = True
@@ -794,7 +793,6 @@
                         End If
                         MessageBox.Show("Los Datos se han guardado correctamente", "Mensaje de Confimación",
                    MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        clean()
                         desactivar_paneles()
                     Else
                         MessageBox.Show("Lo sentimos no pudimos guardar su informacion por que huvo errores", "Error: 002",
@@ -827,9 +825,9 @@
                         Else
                             Actualizar_contribuyente()
                         End If
+                    End If
                 End If
             End If
-        End If
         End If
         If estado_button = 4 Then
             Dim Message As String = "Estas seguro que deseas eliminar al Contribuyente los cambios no podran ser revertidos ?"
@@ -933,6 +931,7 @@
             'contadorActualizacion = 0
             If contadorActualizacion = 2 Or contadorActualizacion = 3 Then
                 MessageBox.Show("Actualizacion Correcta.", "Muni", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                desactivar_paneles()
             Else
                 MessageBox.Show("No se ha podido actualizar.", "Muni", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
@@ -979,6 +978,21 @@
         gb_Observaciones.Enabled = False
         gb_RepresentanteLegal.Enabled = False
         gb_TipoContribuyente.Enabled = False
+        clean()
+        If estado_button = 2 Then
+            btnOption.Text = "Desabilitado"
+            btnOption.Image = My.Resources.blockeado
+            btnOption.BackColor = Color.FromArgb(128, 131, 140)
+            btnOption.Enabled = False
+            sidePanel.Visible = False
+        End If
+        If estado_button = 3 Then
+            btnOption.Text = "Desabilitado"
+            btnOption.Image = My.Resources.blockeado
+            btnOption.BackColor = Color.FromArgb(128, 131, 140)
+            btnOption.Enabled = False
+            sidePanel.Visible = False
+        End If
     End Sub
     Sub limpiar_infoPanel()
         lblCodigoContri.Text = ""

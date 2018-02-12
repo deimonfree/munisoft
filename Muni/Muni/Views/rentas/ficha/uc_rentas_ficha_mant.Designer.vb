@@ -145,7 +145,6 @@ Partial Class uc_rentas_ficha_mant
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pbload = New System.Windows.Forms.PictureBox()
         Me.pbHabitantes = New System.Windows.Forms.PictureBox()
         Me.pbFechaAdq = New System.Windows.Forms.PictureBox()
         Me.pbAF = New System.Windows.Forms.PictureBox()
@@ -189,7 +188,6 @@ Partial Class uc_rentas_ficha_mant
         Me.TabPage1.SuspendLayout()
         CType(Me.dgwConstruciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbload, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbHabitantes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbFechaAdq, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAF, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1347,9 +1345,9 @@ Partial Class uc_rentas_ficha_mant
         Me.lblsubinfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblsubinfo.Location = New System.Drawing.Point(26, 26)
         Me.lblsubinfo.Name = "lblsubinfo"
-        Me.lblsubinfo.Size = New System.Drawing.Size(370, 19)
+        Me.lblsubinfo.Size = New System.Drawing.Size(458, 19)
         Me.lblsubinfo.TabIndex = 738
-        Me.lblsubinfo.Text = "Rellene los datos para que puede agregar una ficha catastral"
+        Me.lblsubinfo.Text = "Despues de rellenar cierra la ficha para poder procesar los siguientes datos."
         '
         'lblInfo
         '
@@ -1498,17 +1496,6 @@ Partial Class uc_rentas_ficha_mant
         Me.PictureBox1.TabIndex = 742
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
-        '
-        'pbload
-        '
-        Me.pbload.Image = Global.Muni.My.Resources.Resources.Bars
-        Me.pbload.Location = New System.Drawing.Point(19, 49)
-        Me.pbload.Name = "pbload"
-        Me.pbload.Size = New System.Drawing.Size(77, 30)
-        Me.pbload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbload.TabIndex = 737
-        Me.pbload.TabStop = False
-        Me.pbload.Visible = False
         '
         'pbHabitantes
         '
@@ -1907,19 +1894,21 @@ Partial Class uc_rentas_ficha_mant
         '
         Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.Enabled = False
         Me.btnCerrar.FlatAppearance.BorderSize = 0
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnCerrar.ForeColor = System.Drawing.Color.White
         Me.btnCerrar.Image = Global.Muni.My.Resources.Resources.blockeado
-        Me.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnCerrar.Location = New System.Drawing.Point(322, 44)
+        Me.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCerrar.Location = New System.Drawing.Point(30, 47)
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(101, 39)
-        Me.btnCerrar.TabIndex = 762
-        Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btnCerrar.Size = New System.Drawing.Size(144, 31)
+        Me.btnCerrar.TabIndex = 763
+        Me.btnCerrar.Text = "Cerra Ficha"
+        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'uc_rentas_ficha_mant
@@ -1933,7 +1922,6 @@ Partial Class uc_rentas_ficha_mant
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblsubinfo)
-        Me.Controls.Add(Me.pbload)
         Me.Controls.Add(Me.lblInfo)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
@@ -1972,7 +1960,6 @@ Partial Class uc_rentas_ficha_mant
         Me.TabPage1.ResumeLayout(False)
         CType(Me.dgwConstruciones, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbload, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbHabitantes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbFechaAdq, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbAF, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2116,7 +2103,6 @@ Partial Class uc_rentas_ficha_mant
     Friend WithEvents btnDelet As Button
     Friend WithEvents dgwConstruciones As DataGridView
     Friend WithEvents lblsubinfo As Label
-    Friend WithEvents pbload As PictureBox
     Friend WithEvents lblInfo As Label
     Friend WithEvents btnShared As Button
     Friend WithEvents sidePanel As Panel

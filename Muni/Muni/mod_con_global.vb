@@ -9,8 +9,7 @@ Module mod_con_global
     Public Function conex_Global() As Boolean
         Dim estado As Boolean = True
         Try
-            '_cadena = ("server=192.168.1.250;user id=deimonfree;password=s1st3m4s;database=munisystem")
-            _cadena = ("server=localhost;user id=root;password=root;database=munisystem")
+            _cadena = ("server=192.168.1.250;user id=deimonfree;password=s1st3m4s;database=munisystem")
             '_cadena = ("server=localhost;user id=root;password=root;database=pruebas")
             _conexion = New MySqlConnection(_cadena)
         Catch ex As Exception

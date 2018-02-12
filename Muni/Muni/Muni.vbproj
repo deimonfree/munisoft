@@ -13,18 +13,21 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>I:\proyecto munisoft\instalador\</PublishUrl>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>\\Munisoft\plantillas de paginas web\modrentas\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <InstallUrl>http://192.168.1.250/modrentas/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -214,6 +217,11 @@
     <Compile Include="Logica\rentas\mod_via.vb" />
     <Compile Include="Logica\rentas\mod_viasRelacionadas.vb" />
     <Compile Include="Logica\rentas\mod_zona.vb" />
+    <Compile Include="Logica\server\class_controller_log_usuarios.vb" />
+    <Compile Include="Logica\server\class_datos_log_login.vb" />
+    <Compile Include="Logica\server\Cliente.vb" />
+    <Compile Include="Logica\server\Cliente_mensajes.vb" />
+    <Compile Include="Logica\server\Paquete.vb" />
     <Compile Include="Models\almacen\class_datos_almacen.vb" />
     <Compile Include="Models\almacen\class_datos_area.vb" />
     <Compile Include="Models\almacen\class_datos_bien.vb" />
@@ -281,6 +289,9 @@
     <Compile Include="Models\rentas\class_datos_vu_techos.vb" />
     <Compile Include="Models\rentas\class_datos_zona.vb" />
     <Compile Include="Models\rentas\class_dats_antiguedad.vb" />
+    <Compile Include="Models\server\modulo_popup.vb" />
+    <Compile Include="Models\server\servers.vb" />
+    <Compile Include="Models\server\Cliente_mod.vb" />
     <Compile Include="Reportes\imprimir_cliente.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -325,6 +336,24 @@
     </Compile>
     <Compile Include="Views\almacen\ab_rentas_zona_nuevo.Designer.vb">
       <DependentUpon>ab_rentas_zona_nuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\inbox\Mensaje.Designer.vb">
+      <DependentUpon>Mensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\inbox\Mensaje.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\inbox\PopUp.Designer.vb">
+      <DependentUpon>PopUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\inbox\PopUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\inbox\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\inbox\Usuarios.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\rentas\ab_rentas_zona_new.Designer.vb">
       <DependentUpon>ab_rentas_zona_new.vb</DependentUpon>
@@ -823,6 +852,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\cu_modulos.resx">
       <DependentUpon>cu_modulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\inbox\Mensaje.resx">
+      <DependentUpon>Mensaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\inbox\PopUp.resx">
+      <DependentUpon>PopUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\inbox\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -1323,6 +1361,9 @@
     <None Include="Resources\muro.png" />
     <None Include="Resources\calendario.png" />
     <None Include="Resources\pagos.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\paper-plane.png" />
+    <None Include="Resources\grupoPersonas.png" />
     <Content Include="Resources\save.png" />
     <None Include="Resources\save1.png" />
     <None Include="Resources\save-file-button.png" />

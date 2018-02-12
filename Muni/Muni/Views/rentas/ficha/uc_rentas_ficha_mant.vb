@@ -843,7 +843,7 @@
         estado_boton = 2
         lblInfo.Text = "Agregando un nuevo contribuyente"
         lblsubinfo.Text = "Rellene los datos correspondientes para agregar un nuevo contribuyente"
-        pbload.Visible = True
+        'pbload.Visible = True
         '********************************************
     End Sub
     Private Function alta() As Boolean
@@ -1775,4 +1775,6 @@
             e.Handled = True
         End If
     End Sub
+
+
 End Class

@@ -8,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("Muni")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Muni")>
-<Assembly: AssemblyCopyright("Copyright ©  2016")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTitle("Munisoft Modulo Rentas")>
+<Assembly: AssemblyDescription("Modulo de rentas de la aplicación munisfot")>
+<Assembly: AssemblyCompany("Munisoft")>
+<Assembly: AssemblyProduct("Munisoft")>
+<Assembly: AssemblyCopyright("Copyright ©  2018")>
+<Assembly: AssemblyTrademark("Munisfot")>
 
 <Assembly: ComVisible(False)>
 

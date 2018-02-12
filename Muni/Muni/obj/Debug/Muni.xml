@@ -122,6 +122,11 @@ Muni
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Muni.My.Resources.Resources.chat">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Muni.My.Resources.Resources.check_mark">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -327,6 +332,11 @@ Muni
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Muni.My.Resources.Resources.grupoPersonas">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Muni.My.Resources.Resources.hospital">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -498,6 +508,11 @@ Muni
 </summary>
 </member>
 <member name="P:Muni.My.Resources.Resources.pagos">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Muni.My.Resources.Resources.paper_plane">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
