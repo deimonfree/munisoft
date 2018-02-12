@@ -64,9 +64,6 @@
 
     End Sub
 
-    Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
-
-    End Sub
 
     Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
 
