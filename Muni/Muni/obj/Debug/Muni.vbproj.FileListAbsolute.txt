@@ -536,8 +536,6 @@ I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\bin\Debug\CircularProgress
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\bin\Debug\WinFormAnimation.xml
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\bin\Debug\Interop.AcroPDFLib.dll
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\bin\Debug\AxInterop.AcroPDFLib.dll
-I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.vbprojFakesResolveAssemblyReference.cache
-I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.vbprojResolveAssemblyReference.cache
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Interop.AcroPDFLib.dll
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\AxInterop.AcroPDFLib.dll
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.vbproj.ResolveComReference.cache
@@ -550,6 +548,9 @@ I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.uc_rentas_z
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.uc_rentas_zonas_buscar.resources
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.cu_base.resources
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.cu_almacen.resources
+I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.Mensaje.resources
+I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.PopUp.resources
+I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.Usuarios.resources
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.login.resources
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.MDI_registro_civil.resources
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.principal.resources
@@ -619,6 +620,3 @@ I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.application
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.exe
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.xml
 I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.pdb
-I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.PopUp.resources
-I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.Usuarios.resources
-I:\GITHUB-MUNISOFT\munisoft-rentas\munisoft\Muni\Muni\obj\Debug\Muni.Mensaje.resources

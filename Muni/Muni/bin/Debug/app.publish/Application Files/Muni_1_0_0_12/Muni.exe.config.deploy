@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Muni.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+    <userSettings>
+        <Muni.My.MySettings>
+            <setting name="Usuario" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="Pass" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="Login" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ServerIP" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ServerPort" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="EstaConfServ" serializeAs="String">
+                <value>0</value>
+            </setting>
+        </Muni.My.MySettings>
+    </userSettings>
+</configuration>

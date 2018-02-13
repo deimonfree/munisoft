@@ -63,21 +63,13 @@
         End If
     End Sub
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Close()
-    End Sub
+
     Private Sub btn_close_Click_1(sender As Object, e As EventArgs) Handles btn_close.Click
         Me.Close()
     End Sub
     Private Sub login_Load(sender As Object, e As EventArgs) Handles Me.Load
         cargar_servidores()
         verificar_servidor()
-        If My.Settings.Login = 0 Then
-        Else
-            UsernameTextBox.Text = My.Settings.Usuario
-            PasswordTextBox.Text = My.Settings.Pass
-            chkPass.Checked = True
-        End If
     End Sub
     Sub verificar_servidor()
         If My.Settings.EstaConfServ = 0 Then
@@ -137,12 +129,16 @@
         My.Settings.Save()
     End Sub
     Sub cargar_servidores()
-        _DatasetServidoresBox.Reset()
-        Listado_Servidores()
-        cbxServidores.DataSource = _DatasetServidoresBox.Tables("servers")
-        cbxServidores.DisplayMember = "ip"
-        cbxServidores.ValueMember = "puerto"
-        verificar_servidor()
+        Try
+            _DatasetServidoresBox.Reset()
+            Listado_Servidores()
+            cbxServidores.DataSource = _DatasetServidoresBox.Tables("servers")
+            cbxServidores.DisplayMember = "ip"
+            cbxServidores.ValueMember = "puerto"
+            verificar_servidor()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub cbxServidores_Click(sender As Object, e As EventArgs) Handles cbxServidores.Click
