@@ -281,10 +281,10 @@ Public Class principal
         Dim paquete As New Paquete
         paquete.paquete(dato)
 
-        Select Case paquete.comando_paquete.ToString()
+        Select Case paquete.modulo_paquete.ToString()
             Case "Conexion"
                 Dim paneluser As New Usuarios
-                paneluser.lblname.Text = paquete.contenido_paquete.ToString
+                paneluser.lblname.Text = paquete.modulo_paquete.ToString
                 paneluser.lblEstado.Text = "En Linea"
                 flpContenedor.Controls.Add(paneluser)
             Case "Desconexion"
@@ -327,8 +327,32 @@ Public Class principal
                         End If
                     Next
                     TextBoxCHAT.AppendText(vbCrLf & MENSAJE)
-                Else
-                    Dim Cadena As String = Me.lblInfoFotter.Text
+                    '------------------------------------------
+                    Dim paq As New Paquete
+                    paq.paquete(MENSAJE)
+                    TextBox2.Text = paq.modulo_paquete
+                    TextBox3.Text = paq.esatdo_paquete
+                    If paq.submodulo_paquete = "hr" Then
+                        Dim desktopSize As Size
+                        Dim rent As New uc_rentas_contribuyente
+                        desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
+                        'Dim height As Integer = 0.9 * desktopSize.Height
+                        'Dim width As Integer = 0.76 * desktopSize.Width
+                        Dim Myfrm As New uc_rentas_contribuyente_new
+                        'Myfrm.Size = New System.Drawing.Size(width, height)
+                        Myfrm.Visible = True
+                        Myfrm.Show()
+                        rent.panel_body.Controls.Clear()
+                        rent.panel_body.Controls.Add(Myfrm)
+                    End If
+                    TextBox4.Text = paq.submodulo_paquete
+                        TextBox5.Text = paq.mensaje_paquete
+                        For i As Integer = 0 To paq.variables_paquete.Count - 1
+                            DataGridView1.Rows.Add(paq.variables_paquete.Item(i))
+                        Next
+                        '------------------------------------------
+                    Else
+                        Dim Cadena As String = Me.lblInfoFotter.Text
                     Dim split As String() = Cadena.Split(New [Char]() {":"c, CChar(vbLf), Nothing})
                     For i = 1 To split.Count - 1
                         Dim SentenciaSQL As String = Trim(split(i))
@@ -339,7 +363,7 @@ Public Class principal
                         End If
                     Next
                 End If
-                TextBoxCHAT.AppendText(vbCrLf & MENSAJE)
+                'TextBoxCHAT.AppendText(vbCrLf & MENSAJE)
                 Dim popup As New PopUp
                 server_message("Mensaje de Servidor:", "Servidor se suspendera", "Cerrar")
                 popup.Show()
@@ -380,5 +404,37 @@ Public Class principal
             txtMessage.Text = ""
             txtMessage.Select()
         End If
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim paq As New Paquete
+        paq.paquete(TextBox1.Text)
+        MsgBox(paq.modulo_paquete)
+        MsgBox(paq.esatdo_paquete)
+        MsgBox(paq.submodulo_paquete)
+        MsgBox(paq.mensaje_paquete)
+        MsgBox("Iteraciones: " + paq.variables_paquete.Count.ToString)
+        For i = 0 To paq.variables_paquete.Count - 1
+            MsgBox(paq.variables_paquete.Item(i))
+        Next
+
+    End Sub
+
+    Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim paq As New Paquete
+        paq.modulo_paquete = "Rentas"
+        'paq.esatdo_paquete = "Conexion"
+        'paq.submodulo_paquete = "Actualizar"
+        'paq.mensaje_paquete = "Que tal"
+        'paq.variables_paquete.Add("10")
+        'paq.variables_paquete.Add("1")
+        'paq.variables_paquete.Add("100")
+        'paq.variables_paquete.Add("20")
+        'paq.variables_paquete.Add("99")
+        paq.encriptar()
     End Sub
 End Class

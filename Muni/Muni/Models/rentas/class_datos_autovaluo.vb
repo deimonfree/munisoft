@@ -4,6 +4,7 @@
     Private _annio As String
     Private _estado As String
     Private _cod_ficha As Integer
+    Private _fecha_creacion As String
 
     Public Property id_autovaluo As Integer
         Get
@@ -43,6 +44,14 @@
         End Get
         Set(value As Integer)
             _cod_ficha = value
+        End Set
+    End Property
+    Public Property fecha_creacion_autovaluo As String
+        Get
+            Return _fecha_creacion
+        End Get
+        Set(value As String)
+            _fecha_creacion = value
         End Set
     End Property
 End Class

@@ -3,10 +3,10 @@ Imports MySql.Data.Types
 Imports MySql.Data.MySqlClient
 Module mod_anno
     Private _adaptador As New MySqlDataAdapter
-    Public _DatasetAnnio As New DataSet
+    Public _DatasetAnnio, _DatasetAnnio2 As New DataSet
     Public _dtwAnnio As New DataView
     Public _DatatableAnnio As New DataTable
-    Public _DatasetAnnioAll As New DataSet
+    Public _DatasetAnnioAll, _DatasetAnnioAll2 As New DataSet
     Sub consulta_datos_annio()
         Try
             conex_Global()
@@ -28,6 +28,38 @@ Module mod_anno
             conex_Global()
             _adaptador.SelectCommand = New MySqlCommand("select * from anno order by idanno desc", _conexion)
             _adaptador.Fill(_DatasetAnnioAll, "anno")
+            _conexion.Open()
+            _adaptador.SelectCommand.Connection = _conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            cerrar()
+        End Try
+
+    End Sub
+    Sub consulta_datos_annio2()
+        Try
+            conex_Global()
+            _adaptador.SelectCommand = New MySqlCommand("select * from  anno order by idanno desc", _conexion)
+            _adaptador.Fill(_DatasetAnnio2, "annio")
+            _dtwAnnio.Table = _DatasetAnnio2.Tables(0)
+            _conexion.Open()
+            _adaptador.SelectCommand.Connection = _conexion
+            _adaptador.SelectCommand.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            cerrar()
+        End Try
+    End Sub
+    'consulta para llenado de combox all
+    Sub consulta_datos_annio_all2()
+        Try
+            conex_Global()
+            _adaptador.SelectCommand = New MySqlCommand("select * from anno order by idanno desc", _conexion)
+            _adaptador.Fill(_DatasetAnnioAll2, "anno")
             _conexion.Open()
             _adaptador.SelectCommand.Connection = _conexion
             _adaptador.SelectCommand.ExecuteNonQuery()

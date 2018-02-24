@@ -148,7 +148,9 @@
     <Compile Include="Logica\registro_civil\mod_ubigeo.vb" />
     <Compile Include="Logica\rentas\class_controller_annio.vb" />
     <Compile Include="Logica\rentas\class_controller_autovaluo.vb" />
+    <Compile Include="Logica\rentas\class_controller_campania.vb" />
     <Compile Include="Logica\rentas\class_controller_cerrar_periodo.vb" />
+    <Compile Include="Logica\rentas\class_controller_detalle_campania.vb" />
     <Compile Include="Logica\rentas\class_controller_docBaseLegal.vb" />
     <Compile Include="Logica\rentas\class_controller_construcciones.vb" />
     <Compile Include="Logica\rentas\class_controller_contribuyente.vb" />
@@ -180,6 +182,7 @@
     <Compile Include="Logica\rentas\mod_anno.vb" />
     <Compile Include="Logica\rentas\mod_autovaluo.vb" />
     <Compile Include="Logica\rentas\mod_baseLegal.vb" />
+    <Compile Include="Logica\rentas\mod_campania.vb" />
     <Compile Include="Logica\rentas\mod_cerrar_periodo.vb" />
     <Compile Include="Logica\rentas\mod_condicionTitularidad.vb" />
     <Compile Include="Logica\rentas\mod_contribuyente.vb" />
@@ -221,6 +224,7 @@
     <Compile Include="Logica\server\class_datos_log_login.vb" />
     <Compile Include="Logica\server\Cliente.vb" />
     <Compile Include="Logica\server\Cliente_mensajes.vb" />
+    <Compile Include="Logica\server\diccionario_server.vb" />
     <Compile Include="Logica\server\Paquete.vb" />
     <Compile Include="Models\almacen\class_datos_almacen.vb" />
     <Compile Include="Models\almacen\class_datos_area.vb" />
@@ -243,6 +247,7 @@
     <Compile Include="Models\registro_civil\class_datos_zona.vb" />
     <Compile Include="Models\rentas\anno.vb" />
     <Compile Include="Models\rentas\class_datos_autovaluo.vb" />
+    <Compile Include="Models\rentas\class_datos_campania.vb" />
     <Compile Include="Models\rentas\class_datos_cerrar_periodo.vb" />
     <Compile Include="Models\rentas\class_datos_clasificacion.vb" />
     <Compile Include="Models\rentas\class_datos_ClasificacionVivienda.vb" />
@@ -251,6 +256,7 @@
     <Compile Include="Models\rentas\class_datos_construcciones.vb" />
     <Compile Include="Models\rentas\class_datos_contribuyente.vb" />
     <Compile Include="Models\rentas\class_datos_departamento.vb" />
+    <Compile Include="Models\rentas\class_datos_detalle_campania.vb" />
     <Compile Include="Models\rentas\class_datos_direccion.vb" />
     <Compile Include="Models\rentas\class_datos_distrito.vb" />
     <Compile Include="Models\rentas\class_datos_docBaseLegal.vb" />
@@ -332,6 +338,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>report_rentas_ticket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\report_resumen_general.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_resumen_general.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\almacen\ab_rentas_zona_nuevo.Designer.vb">
@@ -419,6 +431,24 @@
       <DependentUpon>uc_rentas_recibo.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\rentas\autovaluo\uc_rentas_recibo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\campaña\uc_rentas_campania_new.Designer.vb">
+      <DependentUpon>uc_rentas_campania_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\campaña\uc_rentas_campania_new.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\campaña\uc_rentas_campania.Designer.vb">
+      <DependentUpon>uc_rentas_campania.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\campaña\uc_rentas_campania.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\rentas\campaña\uc_rentas_exonerar_moras.Designer.vb">
+      <DependentUpon>uc_rentas_exonerar_moras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\rentas\campaña\uc_rentas_exonerar_moras.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\rentas\catalago\d_rentas_busqueda_sector.Designer.vb">
@@ -826,6 +856,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>report_rentas_ticket.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\report_resumen_general.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_resumen_general.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\almacen\ab_rentas_zona_nuevo.resx">
       <DependentUpon>ab_rentas_zona_nuevo.vb</DependentUpon>
     </EmbeddedResource>
@@ -927,6 +961,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\autovaluo\uc_rentas_recibo.resx">
       <DependentUpon>uc_rentas_recibo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\campaña\uc_rentas_campania.resx">
+      <DependentUpon>uc_rentas_campania.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\campaña\uc_rentas_campania_new.resx">
+      <DependentUpon>uc_rentas_campania_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rentas\campaña\uc_rentas_exonerar_moras.resx">
+      <DependentUpon>uc_rentas_exonerar_moras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\rentas\catalago\d_rentas_busqueda_sector.resx">
       <DependentUpon>d_rentas_busqueda_sector.vb</DependentUpon>

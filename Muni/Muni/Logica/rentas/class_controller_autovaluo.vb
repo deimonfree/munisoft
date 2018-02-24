@@ -9,11 +9,12 @@ Public Class class_controller_autovaluo
         Dim estado As Boolean = True
         Try
             conex_Global()
-            _adaptador.InsertCommand = New MySqlCommand("insert into autovaluo(valor_autovaluo,annio,estado,cod_cont) values(@val,@annio,@estado,@cod_ficha)", _conexion)
+            _adaptador.InsertCommand = New MySqlCommand("insert into autovaluo(valor_autovaluo,annio,estado,cod_cont,fecha_creacion) values(@val,@annio,@estado,@cod_ficha,@creacion)", _conexion)
             _adaptador.InsertCommand.Parameters.Add("@val", MySqlDbType.VarChar, 45).Value = datos_autovaluo.valor_autovaluo
             _adaptador.InsertCommand.Parameters.Add("@annio", MySqlDbType.VarChar, 45).Value = datos_autovaluo.annio_autovaluo
             _adaptador.InsertCommand.Parameters.Add("@estado", MySqlDbType.VarChar, 45).Value = datos_autovaluo.estado_autovaluo
-            _adaptador.InsertCommand.Parameters.Add("@cod_ficha", MySqlDbType.VarChar, 45).Value = datos_autovaluo.cod_ficaha_autovaluo
+            _adaptador.InsertCommand.Parameters.Add("@cod_ficha", MySqlDbType.Int32).Value = datos_autovaluo.cod_ficaha_autovaluo
+            _adaptador.InsertCommand.Parameters.Add("@creacion", MySqlDbType.VarChar, 45).Value = datos_autovaluo.fecha_creacion_autovaluo
             _conexion.Open()
             _adaptador.InsertCommand.Connection = _conexion
             _adaptador.InsertCommand.ExecuteNonQuery()

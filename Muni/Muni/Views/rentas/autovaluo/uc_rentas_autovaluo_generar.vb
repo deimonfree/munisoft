@@ -67,40 +67,45 @@
                 txtuit_valor.Text = val_uit
             End If
             valorAuto = Decimal.Parse(txtBaseTotal.Text)
-            If valorAuto > valor_m Then
-                'MessageBox.Show("Valor autovaluo " + valorAuto.ToString)
-                'MessageBox.Show("Valor uit " + val_uit.ToString)
-                If valorAuto < (15 * val_uit) Then
-                    'MessageBox.Show("Menor a 15 UIT")
-                    'MessageBox.Show("Menor a 15 UIT " + (0.002 * valorAuto).ToString)
-                    impuesto_predial = (0.002 * valorAuto)
-                    'MessageBox.Show("Valor total impuesto 1: " + impuesto_predial.ToString)
-                ElseIf valorAuto > (15 * val_uit) Then
-                    'MessageBox.Show("Mayor a 15 UIT")
-                    restov1 = valorAuto - (15 * val_uit)
-                    impuesto_predial = (15 * val_uit) * 0.002
-                    'MessageBox.Show("Valor total impuesto 2.1: " + impuesto_predial.ToString)
-                    If restov1 < (60 * val_uit) Then
-                        impuesto_predial = impuesto_predial + (restov1 * 0.006)
-                        'MessageBox.Show("Valor total impuesto 2.2: " + impuesto_predial.ToString)
-                    ElseIf restov1 > (60 * val_uit) Then
-                        restov2 = restov1 - (60 * val_uit) ' problema con el signo
-                        impuesto_predial = impuesto_predial + (0.006 * valorAuto)
-                        ' MessageBox.Show("Valor total impuesto 2.3: " + impuesto_predial.ToString)
-                        If restov2 > 0 Then
-                            impuesto_predial = impuesto_predial + (restov2 * 0.01)
-                            'MessageBox.Show("Valor total impuesto 2.4: " + FormatNumber(impuesto_predial, 2).ToString)
-                        End If
-                    End If
-                    'MessageBox.Show("Valor total impuesto 2" + impuesto_predial.ToString)
-                End If
-
-            ElseIf valorAuto = 0 Then
-                impuesto_predial = 0.0
+            If _DatasetUit.Tables(0).Rows.Count = 0 Then
+                MessageBox.Show("No existe un valor de UIT para este año", "Valores de UIT", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                impuesto_predial = 30.0
+                If valorAuto > valor_m Then
+                    'MessageBox.Show("Valor autovaluo " + valorAuto.ToString)
+                    'MessageBox.Show("Valor uit " + val_uit.ToString)
+                    If valorAuto < (15 * val_uit) Then
+                        'MessageBox.Show("Menor a 15 UIT")
+                        'MessageBox.Show("Menor a 15 UIT " + (0.002 * valorAuto).ToString)
+                        impuesto_predial = (0.002 * valorAuto)
+                        'MessageBox.Show("Valor total impuesto 1: " + impuesto_predial.ToString)
+                    ElseIf valorAuto > (15 * val_uit) Then
+                        'MessageBox.Show("Mayor a 15 UIT")
+                        restov1 = valorAuto - (15 * val_uit)
+                        impuesto_predial = (15 * val_uit) * 0.002
+                        'MessageBox.Show("Valor total impuesto 2.1: " + impuesto_predial.ToString)
+                        If restov1 < (60 * val_uit) Then
+                            impuesto_predial = impuesto_predial + (restov1 * 0.006)
+                            'MessageBox.Show("Valor total impuesto 2.2: " + impuesto_predial.ToString)
+                        ElseIf restov1 > (60 * val_uit) Then
+                            restov2 = restov1 - (60 * val_uit) ' problema con el signo
+                            impuesto_predial = impuesto_predial + (0.006 * valorAuto)
+                            ' MessageBox.Show("Valor total impuesto 2.3: " + impuesto_predial.ToString)
+                            If restov2 > 0 Then
+                                impuesto_predial = impuesto_predial + (restov2 * 0.01)
+                                'MessageBox.Show("Valor total impuesto 2.4: " + FormatNumber(impuesto_predial, 2).ToString)
+                            End If
+                        End If
+                        'MessageBox.Show("Valor total impuesto 2" + impuesto_predial.ToString)
+                    End If
+
+                ElseIf valorAuto = 0 Then
+                    impuesto_predial = 0.0
+                Else
+                    impuesto_predial = 30.0
+                End If
+                txtImp.Text = FormatNumber(CDec(impuesto_predial).ToString("N1"), 2)
             End If
-            txtImp.Text = FormatNumber(CDec(impuesto_predial).ToString("N1"), 2)
+
             'txtImp.Text = impuesto_predial
         Catch ex As Exception
         End Try
@@ -109,7 +114,6 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim alta As Boolean = False
-
         Try
             Select Case ""
                 Case Trim(txtImp.Text)
@@ -141,6 +145,7 @@
                     datos.annio_autovaluo = cbxperiodo.Text
                     datos.estado_autovaluo = "pendiente"
                     datos.cod_ficaha_autovaluo = txtCodigo.Text
+                    datos.fecha_creacion_autovaluo = Date.Now.Date
                     If controller.insertarDatosAutovaluo(datos) Then
                         MessageBox.Show("Impuesto Predial Generado ....!!!", "Mensaje")
                         '-----------LOG AUTOVALUO---------------------------'

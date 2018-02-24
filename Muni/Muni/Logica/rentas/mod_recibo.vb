@@ -28,6 +28,7 @@ Module mod_recibo
             conex_Global()
             _conectorMysql.SelectCommand = New MySqlCommand("select * from recibo where cod_autovaluo=" + cod, _conexion)
             _conectorMysql.Fill(_DatasetRecibo)
+            _dtwRecibo.Table = _DatasetRecibo.Tables(0)
             _conexion.Open()
             _conectorMysql.SelectCommand.Connection = _conexion
             _conectorMysql.SelectCommand.ExecuteNonQuery()

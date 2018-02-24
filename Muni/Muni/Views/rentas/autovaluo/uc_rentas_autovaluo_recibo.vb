@@ -20,6 +20,14 @@
         Dim datoRecuperado As DialogResult
         Dim suma As Decimal
         Dim cod_autovaluo As String
+        Dim fecha_mora As New Date
+        Dim fecha_actual As New Date
+        Dim meses_mora As New Integer
+        Dim valor_mora As New Decimal
+        Dim fecha_final_campanias As New Date
+        Dim codCampania As New Integer
+        Dim nombre_campania As String
+        nombre_campania = "Camapaña"
         cod_autovaluo = "0"
         btnPrintFicha.Enabled = False
         estado_boton = False
@@ -28,6 +36,7 @@
             datoRecuperado = formulario2.ShowDialog()
             If datoRecuperado = DialogResult.OK Then
                 limpiarCampos()
+                '-----------------------------------------------
                 IdContibuyente = formulario2.valor_contribuyente
                 txtCodigo.Text = IdContibuyente
                 llamada_contribuyente(formulario2.valor_contribuyente)
@@ -50,7 +59,7 @@
                 consulta_recibo_canje(cod_autovaluo)
                 'MessageBox.Show("NUMERO DE FILAS : " + _DatasetRecibo.Tables(0).Rows.Count.ToString)
                 If _DatasetRecibo.Tables(0).Rows.Count <= 4 And _DatasetRecibo.Tables(0).Rows.Count > 0 Then
-                    MessageBox.Show("El contribuyente ya cuenta con un recibo")
+                    MessageBox.Show("El contribuyente ya cuenta con un recibo", "Modulo de Recibo")
                     lblInfo.Text = "El contribuyente ya cuenta con un recibo"
                     lblsubInfo.Text = "Dirigirse a ventanilla de tesoreria para realizar el cobro correspondiente"
                     pbFail.Visible = True
@@ -66,10 +75,13 @@
                         txtCodAutovaluo.Text = row("idautovaluo")
                         txtValorAutovaluo.Text = row("valor_autovaluo")
                         txtAnnioAutovaluo.Text = row("annio")
+                        fecha_mora = Date.Parse(row("fecha_creacion"))
+                        MsgBox(fecha_mora.ToString)
                     Next
-                    suma = Decimal.Parse(txtValorAutovaluo.Text) + Decimal.Parse(txtAut.Text)
-                    txtTotalAutovaluo.Text = suma
+                    'suma = Decimal.Parse(txtValorAutovaluo.Text) + Decimal.Parse(txtAut.Text)
+                    'txtDeudaTotal.Text = suma
                     txtAutomatizacion.Select()
+                    '---------------------------------------------------------------
                 End If
             End If
         Catch
@@ -81,7 +93,7 @@
     End Sub
 
     Sub limpiarCampos()
-        txtTotalAutovaluo.Text = ""
+        txtDeudaTotal.Text = ""
         txtCodAutovaluo.Text = ""
         txtValorAutovaluo.Text = ""
         txtAut.Text = ""
@@ -92,6 +104,8 @@
         txtDireccion.Text = ""
         txtAutomatizacion.Text = "0"
         txtMontoAnual.Text = ""
+        cbExonerar.Checked = False
+        cbDenegar.Checked = True
         dgwPredio.DataSource = vbEmpty
         dgwFraccionar.Rows.Clear()
     End Sub
@@ -130,7 +144,7 @@
             Try
 
                 Select Case ""
-                    Case Trim(txtTotalAutovaluo.Text)
+                    Case Trim(txtDeudaTotal.Text)
                         alta = True
                     Case Trim(txtCodAutovaluo.Text)
                         alta = True
@@ -152,43 +166,54 @@
                     Dim fecha_venc As String = ""
                     fecha_venc = fecha.ToString("yyy-MM-dd")
                     'MessageBox.Show(txtValorAutovaluo.Text + " " + cbxPago.Text + " " + txtAutomatizacion.Text + " " + txtCodAutovaluo.Text)
-                    datos.monto_autovaluo = Decimal.Parse(FormatNumber(txtTotalAutovaluo.Text, 2))
+                    datos.monto_autovaluo = Decimal.Parse(FormatNumber(txtDeudaTotal.Text, 2))
                     datos.forma_pago = cbxPago.Text
                     'datos.fecha_vencimiento = dtpVenc.Text
                     datos.fecha_vencimiento = fecha_venc
                     datos.estado_recibo = "pendiente"
                     datos.automatizacion_recibo = Decimal.Parse(txtAut.Text)
                     datos.cod_autovaluo = txtCodAutovaluo.Text
-                    If control.insertarDatosRecibo(datos) Then
-                        MessageBox.Show("Recibo Generado..!!!")
-                        '---------------LOG RECIBO-----------------'
-                        Dim datosLog As New class_datos_log_recibo
-                        Dim controlLog As New class_controller_log_recibo
-                        Dim namepc As String
-                        Dim fechaA As String
-                        Dim oIp As New Net.IPAddress(Net.Dns.Resolve(My.Computer.Name).AddressList(0).GetAddressBytes)
-                        'user =
-                        namepc = Environment.UserName.ToString
-                        fechaA = DateTime.Now.ToString
-                        datosLog.user = My.User.Name
-                        datosLog.namepc = namepc
-                        datosLog.fecha = fechaA
-                        datosLog.ip = oIp.ToString
-                        datosLog.monto = Decimal.Parse(txtTotalAutovaluo.Text)
-                        datosLog.cod_autovaluo = txtCodAutovaluo.Text
-                        controlLog.insertarDatosLogRecibos(datosLog)
-                        '------------------------------------------'
-                        limpiarCampos()
-                        _DatasetRecibo.Reset()
-                        consulta_ultimo_recibo()
-                        'For Each row In _DatasetRecibo.Tables(0).Rows
-                        '    recibo_view.cod_recibo_fraccion = row("idrecibo")
-                        'Next
-                        ''recibo_view.Show()
+                    datos.fecha_creacion = Date.Now.Date
+                    If cbExonerar.Checked Then
+                        datos.estado_moras = 0
                     Else
-                        MessageBox.Show("Datos no guardados")
+                        datos.estado_moras = 1
                     End If
-                End If
+                    If cbDenegar.Checked Then
+                        datos.estado_campania = 1
+                    Else
+                        datos.estado_campania = 0
+                    End If
+                    If control.insertarDatosRecibo(datos) Then
+                            MessageBox.Show("Recibo Generado..!!!")
+                            '---------------LOG RECIBO-----------------'
+                            Dim datosLog As New class_datos_log_recibo
+                            Dim controlLog As New class_controller_log_recibo
+                            Dim namepc As String
+                            Dim fechaA As String
+                            Dim oIp As New Net.IPAddress(Net.Dns.Resolve(My.Computer.Name).AddressList(0).GetAddressBytes)
+                            'user =
+                            namepc = Environment.UserName.ToString
+                            fechaA = DateTime.Now.ToString
+                            datosLog.user = My.User.Name
+                            datosLog.namepc = namepc
+                            datosLog.fecha = fechaA
+                            datosLog.ip = oIp.ToString
+                            datosLog.monto = Decimal.Parse(txtDeudaTotal.Text)
+                            datosLog.cod_autovaluo = txtCodAutovaluo.Text
+                            controlLog.insertarDatosLogRecibos(datosLog)
+                            '------------------------------------------'
+                            limpiarCampos()
+                            _DatasetRecibo.Reset()
+                            consulta_ultimo_recibo()
+                            'For Each row In _DatasetRecibo.Tables(0).Rows
+                            '    recibo_view.cod_recibo_fraccion = row("idrecibo")
+                            'Next
+                            ''recibo_view.Show()
+                        Else
+                            MessageBox.Show("Datos no guardados")
+                        End If
+                    End If
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -198,7 +223,7 @@
             Dim alta2 = False
             Try
                 Select Case ""
-                    Case Trim(txtTotalAutovaluo.Text)
+                    Case Trim(txtDeudaTotal.Text)
                         alta = True
                     Case Trim(txtCodAutovaluo.Text)
                         alta = True
@@ -252,6 +277,17 @@
                                 datos.estado_recibo = "pendiente"
                                 datos.automatizacion_recibo = dgwFraccionar.Rows(j).Cells(3).Value
                                 datos.cod_autovaluo = txtCodAutovaluo.Text
+                                datos.fecha_creacion = Date.Now.Date
+                                If cbExonerar.Checked Then
+                                    datos.estado_moras = 0
+                                Else
+                                    datos.estado_moras = 1
+                                End If
+                                If cbDenegar.Checked Then
+                                    datos.estado_campania = 1
+                                Else
+                                    datos.estado_campania = 0
+                                End If
                                 If control.insertarDatosRecibo(datos) Then
                                     'MessageBox.Show("Datos guardados")
                                     estado_f = estado_f + 1
@@ -284,7 +320,7 @@
             btnPrintFicha.Enabled = estado_boton
             dtpVenc.Enabled = True
         End If
-        txtTotalAutovaluo.Text = ""
+        txtDeudaTotal.Text = ""
         If cont_tipo > 0 Then
             If txtCodAutovaluo.Text = "" Then
                 MessageBox.Show("El Contribuyente no cuenta con autovaluo o ya se le ha fraccionado su deuda...!!!")
@@ -306,6 +342,7 @@
                         Dim contador_cuota As New Integer
                         Dim valor_automatizacion As New Decimal
                         Dim val_automatizacion As New Decimal
+                        Dim total_pagar As New Decimal
                         'SECCION PARA LA AGREGAR COLUMNA DE FECHA
                         'Dim col As New CalendarColumn() 'Crear columna de tipo CalendarColumn
                         'Me.dgwFraccionar.Columns.RemoveAt(1) 'Eliminar la columna especificada
@@ -319,7 +356,7 @@
 
                         Try
                             valor_autovaluo = Convert.ToDouble(txtValorAutovaluo.Text)
-                            txtTotalAutovaluo.Text = ""
+                            txtDeudaTotal.Text = ""
                             monto_anual = 0.00
                             contador_cuota = 0
                             annio_cod = txtAnnioAutovaluo.Text
@@ -338,15 +375,16 @@
                                 monto_anual = monto_anual + FormatNumber(CDec(monto_total_frac).ToString("N1"), 2)
                             Next
                             txtMontoAnual.Text = monto_anual
-                            txtTotalAutovaluo.Text = FormatNumber(monto_anual, 2)
+                            txtDeudaTotal.Text = FormatNumber(monto_anual, 2)
                         Catch
                         End Try
                     Else
                         Try
                             dgwFraccionar.Rows.Clear()
                             Dim sum As Decimal
+                            Dim total_pagar As New Decimal
                             sum = Decimal.Parse(txtValorAutovaluo.Text) + Decimal.Parse(txtAut.Text)
-                            txtTotalAutovaluo.Text = FormatNumber(sum, 2)
+                            txtDeudaTotal.Text = FormatNumber(sum, 2)
                         Catch
                         End Try
                     End If
@@ -358,14 +396,13 @@
 
     Private Sub txtAutomatizacion_TextChanged(sender As Object, e As EventArgs) Handles txtAutomatizacion.TextChanged
         Try
-            Dim deuda_suma As Double
+            Dim deuda_suma As New Decimal
+            Dim total_pagar As New Decimal
 
-            If cbxPago.Text = "Contado" Then
-                deuda_suma = Double.Parse(txtValorAutovaluo.Text) + Double.Parse(txtAutomatizacion.Text)
-                'Math.Round(deuda_suma, 2)
-                'MessageBox.Show("Redondeo " + deuda_suma.ToString)
-                txtTotalAutovaluo.Text = deuda_suma
-            End If
+            'If cbxPago.Text = "Contado" Then
+            deuda_suma = Decimal.Parse(txtValorAutovaluo.Text) + Decimal.Parse(txtAutomatizacion.Text)
+            txtDeudaTotal.Text = deuda_suma
+            'End If
         Catch
         End Try
         txtAut.Text = txtAutomatizacion.Text
@@ -376,7 +413,7 @@
         Dim alta2 = False
         Try
             Select Case ""
-                Case Trim(txtTotalAutovaluo.Text)
+                Case Trim(txtDeudaTotal.Text)
                     alta = True
                 Case Trim(txtCodAutovaluo.Text)
                     alta = True
@@ -406,7 +443,7 @@
                         MessageBox.Show("No se puede guardar, porque hay campos vacios")
                     Else
 
-                        MessageBox.Show("Fraccionado")
+                        'MessageBox.Show("Fraccionado")
                         Try
                             For i As Integer = 0 To 3
                                 'MessageBox.Show("datos: " + dgwFraccionar.Rows(i).Cells(0).Value.ToString + " " + dgwFraccionar.Rows(i).Cells(4).Value.ToString)
@@ -523,4 +560,5 @@
         '
         If (tb.SelectionLength > 0) Then e.Handled = False
     End Sub
+
 End Class

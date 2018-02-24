@@ -47,21 +47,21 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtValorAutovaluo = New System.Windows.Forms.TextBox()
+        Me.txtCodAutovaluo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtAnnioAutovaluo = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtAut = New System.Windows.Forms.TextBox()
         Me.pbLoad = New System.Windows.Forms.PictureBox()
         Me.lblsubInfo = New System.Windows.Forms.Label()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.pbFail = New System.Windows.Forms.PictureBox()
         Me.btnPrintFicha = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtTotalAutovaluo = New System.Windows.Forms.TextBox()
-        Me.txtCodAutovaluo = New System.Windows.Forms.TextBox()
-        Me.txtAnnioAutovaluo = New System.Windows.Forms.TextBox()
-        Me.txtAut = New System.Windows.Forms.TextBox()
-        Me.txtValorAutovaluo = New System.Windows.Forms.TextBox()
+        Me.txtDeudaTotal = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -75,6 +75,8 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.monto_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnShared = New System.Windows.Forms.Button()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.cbExonerar = New System.Windows.Forms.CheckBox()
+        Me.cbDenegar = New System.Windows.Forms.CheckBox()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgwPredio, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,7 +93,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(279, 699)
+        Me.Label15.Location = New System.Drawing.Point(278, 736)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(89, 34)
         Me.Label15.TabIndex = 592
@@ -99,8 +101,9 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         'txtMontoAnual
         '
+        Me.txtMontoAnual.Enabled = False
         Me.txtMontoAnual.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.txtMontoAnual.Location = New System.Drawing.Point(374, 702)
+        Me.txtMontoAnual.Location = New System.Drawing.Point(373, 739)
         Me.txtMontoAnual.Name = "txtMontoAnual"
         Me.txtMontoAnual.Size = New System.Drawing.Size(198, 26)
         Me.txtMontoAnual.TabIndex = 591
@@ -109,7 +112,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(188, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label14)
-        Me.Panel2.Location = New System.Drawing.Point(34, 483)
+        Me.Panel2.Location = New System.Drawing.Point(34, 509)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(538, 22)
         Me.Panel2.TabIndex = 589
@@ -127,6 +130,8 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cbDenegar)
+        Me.GroupBox1.Controls.Add(Me.cbExonerar)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label16)
@@ -134,9 +139,9 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.GroupBox1.Controls.Add(Me.cbxPago)
         Me.GroupBox1.Controls.Add(Me.txtAutomatizacion)
         Me.GroupBox1.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Italic)
-        Me.GroupBox1.Location = New System.Drawing.Point(578, 483)
+        Me.GroupBox1.Location = New System.Drawing.Point(578, 509)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(256, 213)
+        Me.GroupBox1.Size = New System.Drawing.Size(256, 261)
         Me.GroupBox1.TabIndex = 588
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Recibo"
@@ -205,7 +210,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.dgwPredio.AllowUserToAddRows = False
         Me.dgwPredio.AllowUserToDeleteRows = False
         Me.dgwPredio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgwPredio.Location = New System.Drawing.Point(34, 361)
+        Me.dgwPredio.Location = New System.Drawing.Point(37, 385)
         Me.dgwPredio.Name = "dgwPredio"
         Me.dgwPredio.Size = New System.Drawing.Size(800, 106)
         Me.dgwPredio.TabIndex = 587
@@ -214,7 +219,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(188, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Label36)
-        Me.Panel6.Location = New System.Drawing.Point(34, 333)
+        Me.Panel6.Location = New System.Drawing.Point(37, 357)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(800, 22)
         Me.Panel6.TabIndex = 586
@@ -236,7 +241,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtDireccion.Location = New System.Drawing.Point(543, 301)
+        Me.txtDireccion.Location = New System.Drawing.Point(546, 319)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(291, 26)
         Me.txtDireccion.TabIndex = 585
@@ -247,7 +252,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.txtIdentificacion.Enabled = False
         Me.txtIdentificacion.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIdentificacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtIdentificacion.Location = New System.Drawing.Point(426, 301)
+        Me.txtIdentificacion.Location = New System.Drawing.Point(429, 319)
         Me.txtIdentificacion.Name = "txtIdentificacion"
         Me.txtIdentificacion.Size = New System.Drawing.Size(110, 26)
         Me.txtIdentificacion.TabIndex = 584
@@ -258,7 +263,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(120, 301)
+        Me.txtNombre.Location = New System.Drawing.Point(123, 319)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(300, 26)
         Me.txtNombre.TabIndex = 583
@@ -269,7 +274,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.txtCodigo.Enabled = False
         Me.txtCodigo.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtCodigo.Location = New System.Drawing.Point(35, 301)
+        Me.txtCodigo.Location = New System.Drawing.Point(38, 319)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(79, 26)
         Me.txtCodigo.TabIndex = 582
@@ -278,7 +283,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(540, 281)
+        Me.Label10.Location = New System.Drawing.Point(543, 299)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(84, 17)
         Me.Label10.TabIndex = 581
@@ -288,7 +293,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(423, 281)
+        Me.Label8.Location = New System.Drawing.Point(426, 299)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 17)
         Me.Label8.TabIndex = 580
@@ -298,7 +303,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(117, 281)
+        Me.Label7.Location = New System.Drawing.Point(120, 299)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(151, 17)
         Me.Label7.TabIndex = 579
@@ -308,7 +313,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(34, 281)
+        Me.Label3.Location = New System.Drawing.Point(37, 299)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 17)
         Me.Label3.TabIndex = 578
@@ -318,7 +323,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(140, Byte), Integer))
         Me.Panel7.Controls.Add(Me.Label49)
-        Me.Panel7.Location = New System.Drawing.Point(34, 256)
+        Me.Panel7.Location = New System.Drawing.Point(37, 274)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(800, 22)
         Me.Panel7.TabIndex = 577
@@ -337,30 +342,122 @@ Partial Class uc_rentas_autovaluo_recibo
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.txtCodAutovaluo)
+        Me.Panel1.Controls.Add(Me.txtValorAutovaluo)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.pbLoad)
         Me.Panel1.Controls.Add(Me.lblsubInfo)
         Me.Panel1.Controls.Add(Me.lblInfo)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txtAnnioAutovaluo)
         Me.Panel1.Controls.Add(Me.pbFail)
         Me.Panel1.Controls.Add(Me.btnPrintFicha)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.txtTotalAutovaluo)
-        Me.Panel1.Controls.Add(Me.txtCodAutovaluo)
-        Me.Panel1.Controls.Add(Me.txtAnnioAutovaluo)
         Me.Panel1.Controls.Add(Me.txtAut)
-        Me.Panel1.Controls.Add(Me.txtValorAutovaluo)
-        Me.Panel1.Location = New System.Drawing.Point(34, 130)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.txtDeudaTotal)
+        Me.Panel1.Location = New System.Drawing.Point(34, 117)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 120)
+        Me.Panel1.Size = New System.Drawing.Size(800, 145)
         Me.Panel1.TabIndex = 572
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Location = New System.Drawing.Point(18, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(72, 19)
+        Me.Label5.TabIndex = 550
+        Me.Label5.Text = "Cod. Aut. ::"
+        '
+        'txtValorAutovaluo
+        '
+        Me.txtValorAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtValorAutovaluo.Enabled = False
+        Me.txtValorAutovaluo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtValorAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtValorAutovaluo.Location = New System.Drawing.Point(145, 44)
+        Me.txtValorAutovaluo.Name = "txtValorAutovaluo"
+        Me.txtValorAutovaluo.Size = New System.Drawing.Size(149, 26)
+        Me.txtValorAutovaluo.TabIndex = 534
+        '
+        'txtCodAutovaluo
+        '
+        Me.txtCodAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodAutovaluo.Enabled = False
+        Me.txtCodAutovaluo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtCodAutovaluo.Location = New System.Drawing.Point(18, 44)
+        Me.txtCodAutovaluo.Name = "txtCodAutovaluo"
+        Me.txtCodAutovaluo.Size = New System.Drawing.Size(121, 26)
+        Me.txtCodAutovaluo.TabIndex = 533
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label6.Location = New System.Drawing.Point(141, 22)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(136, 19)
+        Me.Label6.TabIndex = 551
+        Me.Label6.Text = "Valor de Autovaluo ::"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label2.Location = New System.Drawing.Point(434, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 19)
+        Me.Label2.TabIndex = 553
+        Me.Label2.Text = "Periodo ::"
+        '
+        'txtAnnioAutovaluo
+        '
+        Me.txtAnnioAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAnnioAutovaluo.Enabled = False
+        Me.txtAnnioAutovaluo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAnnioAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtAnnioAutovaluo.Location = New System.Drawing.Point(436, 44)
+        Me.txtAnnioAutovaluo.Name = "txtAnnioAutovaluo"
+        Me.txtAnnioAutovaluo.Size = New System.Drawing.Size(119, 26)
+        Me.txtAnnioAutovaluo.TabIndex = 535
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Location = New System.Drawing.Point(300, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 19)
+        Me.Label1.TabIndex = 552
+        Me.Label1.Text = "Autom.::"
+        '
+        'txtAut
+        '
+        Me.txtAut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAut.Enabled = False
+        Me.txtAut.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtAut.Location = New System.Drawing.Point(300, 44)
+        Me.txtAut.Name = "txtAut"
+        Me.txtAut.Size = New System.Drawing.Size(130, 26)
+        Me.txtAut.TabIndex = 537
         '
         'pbLoad
         '
         Me.pbLoad.Image = Global.Muni.My.Resources.Resources.Bars
-        Me.pbLoad.Location = New System.Drawing.Point(74, 83)
+        Me.pbLoad.Location = New System.Drawing.Point(74, 101)
         Me.pbLoad.Name = "pbLoad"
         Me.pbLoad.Size = New System.Drawing.Size(77, 30)
         Me.pbLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -374,7 +471,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.lblsubInfo.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblsubInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
         Me.lblsubInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblsubInfo.Location = New System.Drawing.Point(73, 88)
+        Me.lblsubInfo.Location = New System.Drawing.Point(73, 106)
         Me.lblsubInfo.Name = "lblsubInfo"
         Me.lblsubInfo.Size = New System.Drawing.Size(0, 19)
         Me.lblsubInfo.TabIndex = 614
@@ -383,7 +480,7 @@ Partial Class uc_rentas_autovaluo_recibo
         '
         Me.lblInfo.AutoSize = True
         Me.lblInfo.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.Location = New System.Drawing.Point(74, 66)
+        Me.lblInfo.Location = New System.Drawing.Point(74, 84)
         Me.lblInfo.Name = "lblInfo"
         Me.lblInfo.Size = New System.Drawing.Size(0, 21)
         Me.lblInfo.TabIndex = 613
@@ -391,7 +488,7 @@ Partial Class uc_rentas_autovaluo_recibo
         'pbFail
         '
         Me.pbFail.Image = Global.Muni.My.Resources.Resources.ticked_generado
-        Me.pbFail.Location = New System.Drawing.Point(18, 63)
+        Me.pbFail.Location = New System.Drawing.Point(18, 81)
         Me.pbFail.Name = "pbFail"
         Me.pbFail.Size = New System.Drawing.Size(50, 50)
         Me.pbFail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -410,7 +507,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.btnPrintFicha.ForeColor = System.Drawing.Color.White
         Me.btnPrintFicha.Image = Global.Muni.My.Resources.Resources.ticket
         Me.btnPrintFicha.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnPrintFicha.Location = New System.Drawing.Point(613, 62)
+        Me.btnPrintFicha.Location = New System.Drawing.Point(622, 81)
         Me.btnPrintFicha.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
         Me.btnPrintFicha.Name = "btnPrintFicha"
         Me.btnPrintFicha.Size = New System.Drawing.Size(169, 47)
@@ -419,118 +516,26 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.btnPrintFicha.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnPrintFicha.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(498, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 19)
-        Me.Label2.TabIndex = 553
-        Me.Label2.Text = "Periodo ::"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(333, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 19)
-        Me.Label1.TabIndex = 552
-        Me.Label1.Text = "Automatización ::"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(163, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 19)
-        Me.Label6.TabIndex = 551
-        Me.Label6.Text = "Valor de Autovaluo ::"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Ubuntu", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(610, 9)
+        Me.Label4.Location = New System.Drawing.Point(623, 7)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(172, 17)
+        Me.Label4.Size = New System.Drawing.Size(108, 34)
         Me.Label4.TabIndex = 549
-        Me.Label4.Text = "Pago Total de Autovaluo ::"
+        Me.Label4.Text = "Pago Normal de" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Autovaluo ::"
         '
-        'Label5
+        'txtDeudaTotal
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(18, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(111, 19)
-        Me.Label5.TabIndex = 550
-        Me.Label5.Text = "Cod. Autovaluo ::"
-        '
-        'txtTotalAutovaluo
-        '
-        Me.txtTotalAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTotalAutovaluo.Enabled = False
-        Me.txtTotalAutovaluo.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtTotalAutovaluo.Location = New System.Drawing.Point(613, 29)
-        Me.txtTotalAutovaluo.Name = "txtTotalAutovaluo"
-        Me.txtTotalAutovaluo.Size = New System.Drawing.Size(169, 26)
-        Me.txtTotalAutovaluo.TabIndex = 532
-        '
-        'txtCodAutovaluo
-        '
-        Me.txtCodAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodAutovaluo.Enabled = False
-        Me.txtCodAutovaluo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtCodAutovaluo.Location = New System.Drawing.Point(18, 31)
-        Me.txtCodAutovaluo.Name = "txtCodAutovaluo"
-        Me.txtCodAutovaluo.Size = New System.Drawing.Size(107, 26)
-        Me.txtCodAutovaluo.TabIndex = 533
-        '
-        'txtAnnioAutovaluo
-        '
-        Me.txtAnnioAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtAnnioAutovaluo.Enabled = False
-        Me.txtAnnioAutovaluo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAnnioAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtAnnioAutovaluo.Location = New System.Drawing.Point(498, 31)
-        Me.txtAnnioAutovaluo.Name = "txtAnnioAutovaluo"
-        Me.txtAnnioAutovaluo.Size = New System.Drawing.Size(71, 26)
-        Me.txtAnnioAutovaluo.TabIndex = 535
-        '
-        'txtAut
-        '
-        Me.txtAut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtAut.Enabled = False
-        Me.txtAut.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtAut.Location = New System.Drawing.Point(333, 31)
-        Me.txtAut.Name = "txtAut"
-        Me.txtAut.Size = New System.Drawing.Size(132, 26)
-        Me.txtAut.TabIndex = 537
-        '
-        'txtValorAutovaluo
-        '
-        Me.txtValorAutovaluo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtValorAutovaluo.Enabled = False
-        Me.txtValorAutovaluo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtValorAutovaluo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtValorAutovaluo.Location = New System.Drawing.Point(163, 31)
-        Me.txtValorAutovaluo.Name = "txtValorAutovaluo"
-        Me.txtValorAutovaluo.Size = New System.Drawing.Size(130, 26)
-        Me.txtValorAutovaluo.TabIndex = 534
+        Me.txtDeudaTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDeudaTotal.Enabled = False
+        Me.txtDeudaTotal.Font = New System.Drawing.Font("Ubuntu", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDeudaTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtDeudaTotal.Location = New System.Drawing.Point(622, 44)
+        Me.txtDeudaTotal.Name = "txtDeudaTotal"
+        Me.txtDeudaTotal.Size = New System.Drawing.Size(150, 26)
+        Me.txtDeudaTotal.TabIndex = 532
         '
         'Label26
         '
@@ -591,7 +596,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.dgwFraccionar.AllowUserToAddRows = False
         Me.dgwFraccionar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgwFraccionar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.periodo, Me.fecha_vencimiento, Me.monto_insoluto, Me.automatizacion, Me.monto_total})
-        Me.dgwFraccionar.Location = New System.Drawing.Point(34, 514)
+        Me.dgwFraccionar.Location = New System.Drawing.Point(34, 540)
         Me.dgwFraccionar.Name = "dgwFraccionar"
         Me.dgwFraccionar.Size = New System.Drawing.Size(538, 182)
         Me.dgwFraccionar.TabIndex = 611
@@ -650,10 +655,34 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.PictureBox23.TabIndex = 570
         Me.PictureBox23.TabStop = False
         '
+        'cbExonerar
+        '
+        Me.cbExonerar.AutoSize = True
+        Me.cbExonerar.Location = New System.Drawing.Point(9, 206)
+        Me.cbExonerar.Name = "cbExonerar"
+        Me.cbExonerar.Size = New System.Drawing.Size(116, 22)
+        Me.cbExonerar.TabIndex = 596
+        Me.cbExonerar.Text = "Exonerar moras"
+        Me.cbExonerar.UseVisualStyleBackColor = True
+        '
+        'cbDenegar
+        '
+        Me.cbDenegar.AutoSize = True
+        Me.cbDenegar.Checked = True
+        Me.cbDenegar.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbDenegar.Location = New System.Drawing.Point(9, 234)
+        Me.cbDenegar.Name = "cbDenegar"
+        Me.cbDenegar.Size = New System.Drawing.Size(142, 22)
+        Me.cbDenegar.TabIndex = 597
+        Me.cbDenegar.Text = "Accede a Campañas"
+        Me.cbDenegar.UseVisualStyleBackColor = True
+        '
         'uc_rentas_autovaluo_recibo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
+        Me.AutoScrollMinSize = New System.Drawing.Size(0, 1000)
         Me.Controls.Add(Me.dgwFraccionar)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.cbxperiodo)
@@ -679,7 +708,7 @@ Partial Class uc_rentas_autovaluo_recibo
         Me.Controls.Add(Me.PictureBox23)
         Me.Controls.Add(Me.Label12)
         Me.Name = "uc_rentas_autovaluo_recibo"
-        Me.Size = New System.Drawing.Size(870, 851)
+        Me.Size = New System.Drawing.Size(836, 834)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -728,7 +757,7 @@ Partial Class uc_rentas_autovaluo_recibo
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtTotalAutovaluo As TextBox
+    Friend WithEvents txtDeudaTotal As TextBox
     Friend WithEvents txtCodAutovaluo As TextBox
     Friend WithEvents txtAnnioAutovaluo As TextBox
     Friend WithEvents txtAut As TextBox
@@ -753,4 +782,6 @@ Partial Class uc_rentas_autovaluo_recibo
     Friend WithEvents Label13 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents pbLoad As PictureBox
+    Friend WithEvents cbDenegar As CheckBox
+    Friend WithEvents cbExonerar As CheckBox
 End Class

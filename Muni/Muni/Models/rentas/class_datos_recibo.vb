@@ -7,6 +7,9 @@
     Private _estado_recibo As String
     Private _automatizacion As Decimal
     Private _cod_autovaluo As Integer
+    Private _fecha_creacion As String
+    Private _estado_campania As Integer
+    Private _estado_moras As Integer
 
     Public Property id_recibo As Integer
         Get
@@ -72,5 +75,28 @@
             _cod_autovaluo = value
         End Set
     End Property
-
+    Public Property fecha_creacion As String
+        Get
+            Return _fecha_creacion
+        End Get
+        Set(value As String)
+            _fecha_creacion = value
+        End Set
+    End Property
+    Public Property estado_campania As Integer
+        Get
+            Return _estado_campania
+        End Get
+        Set(value As Integer)
+            _estado_campania = value
+        End Set
+    End Property
+    Public Property estado_moras As Integer
+        Get
+            Return _estado_moras
+        End Get
+        Set(value As Integer)
+            _estado_moras = value
+        End Set
+    End Property
 End Class

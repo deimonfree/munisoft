@@ -179,4 +179,19 @@
         slidePanel.Top = Button5.Top
         'slidePanel.Location = Button2.Location
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim desktopSize As Size
+        desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
+        Dim height As Integer = 0.9 * desktopSize.Height
+        Dim width As Integer = 900
+        Dim Myfrm As New uc_rentas_campania
+        Myfrm.Size = New System.Drawing.Size(width, height)
+        Myfrm.Visible = True
+        Myfrm.Show()
+        panel_body_almacen.Controls.Clear()
+        panel_body_almacen.Controls.Add(Myfrm)
+        slidePanel.Height = Button5.Height
+        slidePanel.Top = Button5.Top
+    End Sub
 End Class

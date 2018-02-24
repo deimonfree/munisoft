@@ -27,18 +27,36 @@ Partial Class principal
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblServer = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.pb_server = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblname = New System.Windows.Forms.Label()
         Me.lblcargo = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btn_close = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlContenedor = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlMenu = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnInicio = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -61,6 +79,7 @@ Partial Class principal
         Me.btnMessage = New System.Windows.Forms.Button()
         Me.txtMessage = New System.Windows.Forms.TextBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.pUser = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblEstado = New System.Windows.Forms.Label()
         Me.flpContenedor = New System.Windows.Forms.FlowLayoutPanel()
@@ -71,19 +90,15 @@ Partial Class principal
         Me.panelFooter = New System.Windows.Forms.Panel()
         Me.lblInfoFotter = New System.Windows.Forms.Label()
         Me.tmAnimacion = New System.Windows.Forms.Timer(Me.components)
-        Me.pUser = New System.Windows.Forms.PictureBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.btnInicio = New System.Windows.Forms.Button()
-        Me.pb_server = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btn_close = New System.Windows.Forms.PictureBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.variables = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlHeader.SuspendLayout()
+        CType(Me.pb_server, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlContenedor.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -93,13 +108,9 @@ Partial Class principal
         Me.TabPage1.SuspendLayout()
         Me.panelChat.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        Me.panelFooter.SuspendLayout()
         CType(Me.pUser, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pb_server, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelFooter.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlHeader
@@ -146,6 +157,16 @@ Partial Class principal
         Me.Label3.Text = "0.1"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'pb_server
+        '
+        Me.pb_server.Image = Global.Muni.My.Resources.Resources.server_1
+        Me.pb_server.Location = New System.Drawing.Point(161, 4)
+        Me.pb_server.Name = "pb_server"
+        Me.pb_server.Size = New System.Drawing.Size(25, 25)
+        Me.pb_server.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_server.TabIndex = 49
+        Me.pb_server.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -157,6 +178,30 @@ Partial Class principal
         Me.Label2.TabIndex = 45
         Me.Label2.Text = "Modulo de Rentas ::"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = Global.Muni.My.Resources.Resources.pencil
+        Me.PictureBox3.Location = New System.Drawing.Point(679, 16)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 44
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.Muni.My.Resources.Resources.settings
+        Me.PictureBox2.Location = New System.Drawing.Point(714, 16)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 43
+        Me.PictureBox2.TabStop = False
         '
         'lblname
         '
@@ -184,6 +229,30 @@ Partial Class principal
         Me.lblcargo.Text = "Soporte informatico"
         Me.lblcargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = Global.Muni.My.Resources.Resources.man
+        Me.PictureBox1.Location = New System.Drawing.Point(974, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
+        'btn_close
+        '
+        Me.btn_close.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_close.Image = Global.Muni.My.Resources.Resources.question
+        Me.btn_close.Location = New System.Drawing.Point(751, 16)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(20, 20)
+        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btn_close.TabIndex = 39
+        Me.btn_close.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -199,12 +268,73 @@ Partial Class principal
         '
         Me.pnlContenedor.AutoScroll = True
         Me.pnlContenedor.BackColor = System.Drawing.Color.White
+        Me.pnlContenedor.Controls.Add(Me.DataGridView1)
+        Me.pnlContenedor.Controls.Add(Me.Button7)
+        Me.pnlContenedor.Controls.Add(Me.TextBox5)
+        Me.pnlContenedor.Controls.Add(Me.TextBox4)
+        Me.pnlContenedor.Controls.Add(Me.TextBox3)
+        Me.pnlContenedor.Controls.Add(Me.TextBox2)
+        Me.pnlContenedor.Controls.Add(Me.TextBox1)
+        Me.pnlContenedor.Controls.Add(Me.Button1)
         Me.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContenedor.Location = New System.Drawing.Point(76, 50)
         Me.pnlContenedor.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlContenedor.Name = "pnlContenedor"
         Me.pnlContenedor.Size = New System.Drawing.Size(948, 561)
         Me.pnlContenedor.TabIndex = 20
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(201, 175)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 9
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(21, 190)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 5
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(21, 163)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 4
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(21, 137)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 3
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(21, 111)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 2
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(21, 65)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(268, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(308, 65)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'pnlMenu
         '
@@ -237,6 +367,26 @@ Partial Class principal
         Me.Panel7.Size = New System.Drawing.Size(76, 15)
         Me.Panel7.TabIndex = 42
         '
+        'Button6
+        '
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button6.Enabled = False
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.Button6.ForeColor = System.Drawing.Color.White
+        Me.Button6.Image = Global.Muni.My.Resources.Resources.coins
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button6.Location = New System.Drawing.Point(0, 427)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(76, 64)
+        Me.Button6.TabIndex = 41
+        Me.Button6.Text = "               Tesoreria"
+        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Panel5
         '
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
@@ -244,6 +394,26 @@ Partial Class principal
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(76, 15)
         Me.Panel5.TabIndex = 40
+        '
+        'Button5
+        '
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button5.Enabled = False
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.Muni.My.Resources.Resources.raindrops
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button5.Location = New System.Drawing.Point(0, 348)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(76, 64)
+        Me.Button5.TabIndex = 39
+        Me.Button5.Text = "               Semapac"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Panel4
         '
@@ -253,6 +423,25 @@ Partial Class principal
         Me.Panel4.Size = New System.Drawing.Size(76, 15)
         Me.Panel4.TabIndex = 38
         '
+        'Button4
+        '
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Image = Global.Muni.My.Resources.Resources.house
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button4.Location = New System.Drawing.Point(0, 269)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(76, 64)
+        Me.Button4.TabIndex = 37
+        Me.Button4.Text = "               Rentas"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Panel3
         '
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
@@ -260,6 +449,26 @@ Partial Class principal
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(76, 15)
         Me.Panel3.TabIndex = 36
+        '
+        'Button3
+        '
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button3.Enabled = False
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Image = Global.Muni.My.Resources.Resources.delivery_box_on_a_hand
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button3.Location = New System.Drawing.Point(0, 190)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(76, 64)
+        Me.Button3.TabIndex = 35
+        Me.Button3.Text = "               Abasteci .."
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -269,6 +478,26 @@ Partial Class principal
         Me.Panel2.Size = New System.Drawing.Size(76, 15)
         Me.Panel2.TabIndex = 34
         '
+        'Button2
+        '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button2.Enabled = False
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Image = Global.Muni.My.Resources.Resources.almacen
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.Location = New System.Drawing.Point(0, 111)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(76, 64)
+        Me.Button2.TabIndex = 33
+        Me.Button2.Text = "               Almacen"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Panel1
         '
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -276,6 +505,25 @@ Partial Class principal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(76, 15)
         Me.Panel1.TabIndex = 32
+        '
+        'btnInicio
+        '
+        Me.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnInicio.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnInicio.FlatAppearance.BorderSize = 0
+        Me.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInicio.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnInicio.ForeColor = System.Drawing.Color.White
+        Me.btnInicio.Image = Global.Muni.My.Resources.Resources.plus
+        Me.btnInicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnInicio.Location = New System.Drawing.Point(0, 32)
+        Me.btnInicio.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
+        Me.btnInicio.Name = "btnInicio"
+        Me.btnInicio.Size = New System.Drawing.Size(76, 64)
+        Me.btnInicio.TabIndex = 31
+        Me.btnInicio.Text = "               Nuevo"
+        Me.btnInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnInicio.UseVisualStyleBackColor = True
         '
         'Panel6
         '
@@ -489,6 +737,18 @@ Partial Class principal
         Me.Panel8.Size = New System.Drawing.Size(331, 53)
         Me.Panel8.TabIndex = 59
         '
+        'pUser
+        '
+        Me.pUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pUser.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pUser.Image = Global.Muni.My.Resources.Resources.grupoPersonas
+        Me.pUser.Location = New System.Drawing.Point(7, 9)
+        Me.pUser.Name = "pUser"
+        Me.pUser.Size = New System.Drawing.Size(35, 35)
+        Me.pUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pUser.TabIndex = 48
+        Me.pUser.TabStop = False
+        '
         'Label4
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -582,193 +842,20 @@ Partial Class principal
         'tmAnimacion
         '
         '
-        'pUser
+        'DataGridView1
         '
-        Me.pUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pUser.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pUser.Image = Global.Muni.My.Resources.Resources.grupoPersonas
-        Me.pUser.Location = New System.Drawing.Point(7, 9)
-        Me.pUser.Name = "pUser"
-        Me.pUser.Size = New System.Drawing.Size(35, 35)
-        Me.pUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pUser.TabIndex = 48
-        Me.pUser.TabStop = False
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.variables})
+        Me.DataGridView1.Location = New System.Drawing.Point(21, 230)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(143, 150)
+        Me.DataGridView1.TabIndex = 10
         '
-        'Button6
+        'variables
         '
-        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.Enabled = False
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Image = Global.Muni.My.Resources.Resources.coins
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button6.Location = New System.Drawing.Point(0, 427)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(76, 64)
-        Me.Button6.TabIndex = 41
-        Me.Button6.Text = "               Tesoreria"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.Enabled = False
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.Muni.My.Resources.Resources.raindrops
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button5.Location = New System.Drawing.Point(0, 348)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(76, 64)
-        Me.Button5.TabIndex = 39
-        Me.Button5.Text = "               Semapac"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Image = Global.Muni.My.Resources.Resources.house
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button4.Location = New System.Drawing.Point(0, 269)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(76, 64)
-        Me.Button4.TabIndex = 37
-        Me.Button4.Text = "               Rentas"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.Enabled = False
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Image = Global.Muni.My.Resources.Resources.delivery_box_on_a_hand
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button3.Location = New System.Drawing.Point(0, 190)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(76, 64)
-        Me.Button3.TabIndex = 35
-        Me.Button3.Text = "               Abasteci .."
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button2.Enabled = False
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Image = Global.Muni.My.Resources.Resources.almacen
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button2.Location = New System.Drawing.Point(0, 111)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(76, 64)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "               Almacen"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'btnInicio
-        '
-        Me.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnInicio.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnInicio.FlatAppearance.BorderSize = 0
-        Me.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInicio.Font = New System.Drawing.Font("Ubuntu Light", 9.749999!, System.Drawing.FontStyle.Bold)
-        Me.btnInicio.ForeColor = System.Drawing.Color.White
-        Me.btnInicio.Image = Global.Muni.My.Resources.Resources.plus
-        Me.btnInicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnInicio.Location = New System.Drawing.Point(0, 32)
-        Me.btnInicio.Margin = New System.Windows.Forms.Padding(0, 10, 0, 20)
-        Me.btnInicio.Name = "btnInicio"
-        Me.btnInicio.Size = New System.Drawing.Size(76, 64)
-        Me.btnInicio.TabIndex = 31
-        Me.btnInicio.Text = "               Nuevo"
-        Me.btnInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnInicio.UseVisualStyleBackColor = True
-        '
-        'pb_server
-        '
-        Me.pb_server.Image = Global.Muni.My.Resources.Resources.server_1
-        Me.pb_server.Location = New System.Drawing.Point(161, 4)
-        Me.pb_server.Name = "pb_server"
-        Me.pb_server.Size = New System.Drawing.Size(25, 25)
-        Me.pb_server.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pb_server.TabIndex = 49
-        Me.pb_server.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = Global.Muni.My.Resources.Resources.pencil
-        Me.PictureBox3.Location = New System.Drawing.Point(679, 16)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(20, 20)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 44
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.Muni.My.Resources.Resources.settings
-        Me.PictureBox2.Location = New System.Drawing.Point(714, 16)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(20, 20)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 43
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = Global.Muni.My.Resources.Resources.man
-        Me.PictureBox1.Location = New System.Drawing.Point(974, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 40
-        Me.PictureBox1.TabStop = False
-        '
-        'btn_close
-        '
-        Me.btn_close.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_close.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_close.Image = Global.Muni.My.Resources.Resources.question
-        Me.btn_close.Location = New System.Drawing.Point(751, 16)
-        Me.btn_close.Name = "btn_close"
-        Me.btn_close.Size = New System.Drawing.Size(20, 20)
-        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btn_close.TabIndex = 39
-        Me.btn_close.TabStop = False
+        Me.variables.HeaderText = "Variables"
+        Me.variables.Name = "variables"
         '
         'principal
         '
@@ -788,6 +875,13 @@ Partial Class principal
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
+        CType(Me.pb_server, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlContenedor.ResumeLayout(False)
+        Me.pnlContenedor.PerformLayout()
         Me.pnlMenu.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.ContextMenuStrip1.ResumeLayout(False)
@@ -799,14 +893,10 @@ Partial Class principal
         Me.panelChat.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        CType(Me.pUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelFooter.ResumeLayout(False)
         Me.panelFooter.PerformLayout()
-        CType(Me.pUser, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pb_server, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -870,4 +960,13 @@ Partial Class principal
     Friend WithEvents lblInfoFotter As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents tmAnimacion As Timer
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents variables As DataGridViewTextBoxColumn
 End Class
