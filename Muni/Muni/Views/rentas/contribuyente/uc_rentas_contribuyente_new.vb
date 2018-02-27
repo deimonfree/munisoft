@@ -715,13 +715,11 @@
                     If verificar_ruc() Then
                         verificado = True
                     End If
-
                 Else
                     If verificar_dni() Then
                         verificado = True
                     End If
                 End If
-
                 If verificado Then
                     'MsgBox("Ya existe un contribuyente asociado a este número DNI.")
                 Else

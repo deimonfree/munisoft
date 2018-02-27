@@ -146,6 +146,7 @@
     <Compile Include="Logica\registro_civil\mod_ciudadano.vb" />
     <Compile Include="Logica\registro_civil\mod_registrador.vb" />
     <Compile Include="Logica\registro_civil\mod_ubigeo.vb" />
+    <Compile Include="Logica\rentas\CalendarColumn.vb" />
     <Compile Include="Logica\rentas\class_controller_annio.vb" />
     <Compile Include="Logica\rentas\class_controller_autovaluo.vb" />
     <Compile Include="Logica\rentas\class_controller_campania.vb" />

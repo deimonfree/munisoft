@@ -630,7 +630,6 @@ Public Class uc_rentas_predio_new
                 Else
                     MessageBox.Show("No pudimos eliminar el Predio, Intente de nuevo", "Información de eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
-
             Else
             End If
 

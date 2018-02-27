@@ -45,14 +45,14 @@
         Dim impuesto_predial As Decimal = 0.00
         Dim annio As Integer
         Dim valor_m As Decimal = 0.00
-
-        _DatasetMinimo.Reset()
-        consulta_datos_valor_minimo(cbxperiodo.Text)
-        For Each row In _DatasetMinimo.Tables(0).Rows
-            valor_m = row("valor")
-            MsgBox(valor_m.ToString)
-        Next
         Try
+            _DatasetMinimo.Reset()
+            consulta_datos_valor_minimo(cbxperiodo.Text)
+            For Each row In _DatasetMinimo.Tables(0).Rows
+                valor_m = row("valor")
+                'MsgBox(valor_m.ToString)
+            Next
+
             annio = cbxperiodo.Text
             impuesto_predial = 0.00
             FormatNumber(impuesto_predial, 2)
@@ -105,7 +105,6 @@
                 End If
                 txtImp.Text = FormatNumber(CDec(impuesto_predial).ToString("N1"), 2)
             End If
-
             'txtImp.Text = impuesto_predial
         Catch ex As Exception
         End Try
@@ -129,56 +128,52 @@
                 Case Trim(txtCodigo.Text)
                     alta = True
             End Select
-
-            If alta = True Then
-                MessageBox.Show("No se puede guardar. Hay campos vacio---!!!")
-            Else
-                _DatasetAutovaluo3.Reset()
-                consulta_datos_contribuyente_anio(IdContibuyente, txtanio.Text)
-                If _DatasetAutovaluo3.Tables(0).Rows.Count > 0 Then
-                    MessageBox.Show("Ya se ha generado el impuesto predial para este contribuyente")
+            Dim result As Integer = MessageBox.Show("Desea guardar el autovaluo", "Impuesto Predial", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+            If result = DialogResult.Yes Then
+                If alta = True Then
+                    MessageBox.Show("No se puede guardar. Hay campos vacio---!!!", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
-                    Dim controller As New class_controller_autovaluo
-                    Dim datos As New class_datos_autovaluo
-                    ' MessageBox.Show("" + FormatNumber(impuesto, "#0.#0").ToString)
-                    datos.valor_autovaluo = Decimal.Parse(txtImp.Text)
-                    datos.annio_autovaluo = cbxperiodo.Text
-                    datos.estado_autovaluo = "pendiente"
-                    datos.cod_ficaha_autovaluo = txtCodigo.Text
-                    datos.fecha_creacion_autovaluo = Date.Now.Date
-                    If controller.insertarDatosAutovaluo(datos) Then
-                        MessageBox.Show("Impuesto Predial Generado ....!!!", "Mensaje")
-                        '-----------LOG AUTOVALUO---------------------------'
-                        Dim datosLog As New class_datos_log_autovaluo
-                        Dim controlLog As New class_controller_log_autovaluo
-                        Dim namepc As String
-                        Dim fechaA As String
-                        Dim oIp As New Net.IPAddress(Net.Dns.Resolve(My.Computer.Name).AddressList(0).GetAddressBytes)
-
-                        namepc = Environment.UserName.ToString
-                        fechaA = DateTime.Now.ToString
-                        datosLog.user = My.User.Name
-                        datosLog.namepc = namepc
-                        datosLog.fecha = fechaA
-                        datosLog.ip = oIp.ToString
-                        datosLog.base = txtImp.Text
-                        datosLog.annio = txtanio.Text
-                        datosLog.cod_contri = txtCodigo.Text
-                        controlLog.insertarDatosLogAutovaluo(datosLog)
-                        '---------------------------------------------------'
-                        limpiarCampos()
+                    _DatasetAutovaluo3.Reset()
+                    consulta_datos_contribuyente_anio(IdContibuyente, txtanio.Text)
+                    If _DatasetAutovaluo3.Tables(0).Rows.Count > 0 Then
+                        MessageBox.Show("Uds. ya ha generado el impuesto para este contribuyente", "Impuesto predial ya existe", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Else
-                        MessageBox.Show("No se ha podido generar")
+                        Dim controller As New class_controller_autovaluo
+                        Dim datos As New class_datos_autovaluo
+                        ' MessageBox.Show("" + FormatNumber(impuesto, "#0.#0").ToString)
+                        datos.valor_autovaluo = Decimal.Parse(txtImp.Text)
+                        datos.annio_autovaluo = cbxperiodo.Text
+                        datos.estado_autovaluo = "pendiente"
+                        datos.cod_ficaha_autovaluo = txtCodigo.Text
+                        datos.fecha_creacion_autovaluo = Date.Now.Date
+                        If controller.insertarDatosAutovaluo(datos) Then
+                            MessageBox.Show("Impuesto Predial Generado ....!!!", "Generado exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            '-----------LOG AUTOVALUO---------------------------'
+                            Dim datosLog As New class_datos_log_autovaluo
+                            Dim controlLog As New class_controller_log_autovaluo
+                            Dim namepc As String
+                            Dim fechaA As String
+                            Dim oIp As New Net.IPAddress(Net.Dns.Resolve(My.Computer.Name).AddressList(0).GetAddressBytes)
+                            namepc = Environment.UserName.ToString
+                            fechaA = DateTime.Now.ToString
+                            datosLog.user = My.User.Name
+                            datosLog.namepc = namepc
+                            datosLog.fecha = fechaA
+                            datosLog.ip = oIp.ToString
+                            datosLog.base = txtImp.Text
+                            datosLog.annio = txtanio.Text
+                            datosLog.cod_contri = txtCodigo.Text
+                            controlLog.insertarDatosLogAutovaluo(datosLog)
+                            '---------------------------------------------------'                        limpiarCampos()
+                        Else
+                            MessageBox.Show("No se ha podido generar", "Vuelva a intentar", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        End If
                     End If
                 End If
-
+            Else
             End If
         Catch ex As Exception
         End Try
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub dgwPredios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgwPredios.CellDoubleClick
@@ -244,7 +239,7 @@
                 _DatasetMinimo.Reset()
                 consulta_datos_valor_minimo(cbxperiodo.Text)
                 If _DatasetMinimo.Tables(0).Rows.Count = 0 Then
-                    MessageBox.Show("No existe un valor minimo para impuesto predial. Vaye al modulo de catalogos de valores minimos para impuesto predial y complete los datos.")
+                    MessageBox.Show("No existe un valor minimo para impuesto predial. Vaye al modulo de catalogos de valores minimos para impuesto predial y complete los datos.", "Valores Minimos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
                     'MsgBox(contador_predios.ToString + " " + contador_fichas.ToString)
                     If contador_predios = contador_fichas Then
@@ -252,14 +247,14 @@
                             dato_base_imponible()
                             impuesto()
                         Else
-                            MsgBox("No se puede generar el impuesto predial. Aun no ha cerrado algunas fichas.")
+                            MessageBox.Show("No se puede generar el impuesto predial. Aun no ha cerrado algunas fichas.", "Cerrar Fichas", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         End If
                     Else
-                        MessageBox.Show("Aun no ha generado algunas fichas para estos predios. Registre estas fichas y vuelva a intentar...")
+                        MessageBox.Show("Aun no ha generado algunas fichas para estos predios. Registre estas fichas y vuelva a intentar...", "Fichas faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
                 End If
             Else
-                MsgBox("El contribuyente no tiene asociado ningun predio.")
+                MessageBox.Show("El contribuyente no tiene asociado ningun predio.", "Sin Predios", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
     End Sub
@@ -306,5 +301,7 @@
 
     End Sub
 
-
+    Private Sub cbxperiodo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxperiodo.KeyPress
+        e.Handled = True
+    End Sub
 End Class

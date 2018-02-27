@@ -61,12 +61,14 @@
         Dim cod_autovaluo As String
         Try
             txtCodRecibo.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(0).Value
-            txtForma.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(1).Value
-            txtCobrar.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(2).Value
-            txtFeVenc.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(3).Value
-            txtEstado.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(4).Value
-            txtCautovaluo.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(7).Value
-            cod_autovaluo = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(7).Value
+            txtFechaPago.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(1).Value
+            txtDesCamp.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(3).Value
+            txtIMora.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(4).Value
+            txtDescMora.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(5).Value
+            txtCobrar.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(6).Value
+            txtCautovaluo.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(9).Value
+            txtFeVenc.Text = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(10).Value
+            cod_autovaluo = dgwPredio.Rows(dgwPredio.CurrentRow.Index).Cells(9).Value
             Dim id_contrib As String
             id_contrib = ""
             _DatasetRecibo2.Reset()
@@ -118,8 +120,8 @@
         txtCodRecibo.Text = ""
         txtCautovaluo.Text = ""
         txtFeVenc.Text = ""
-        txtForma.Text = ""
-        txtEstado.Text = ""
+        txtFechaPago.Text = ""
+        txtIMora.Text = ""
         txtCodigo.Text = ""
         txtNombre.Text = ""
         txtIdentificacion.Text = ""
@@ -148,9 +150,9 @@
             cod_autovaluo = row("idautovaluo")
             'MsgBox(cod_autovaluo)
         Next
-        _DatasetRecibo.Reset()
-        consulta_recibo_canje(cod_autovaluo)
-        dgwPredio.DataSource = _dtwRecibo
+        _DatasetReciboTesoreria.Reset()
+        consulta_recibo_tesoreria_autovaluo(cod_autovaluo)
+        dgwPredio.DataSource = _dtwReciboTesoreria
         persona(IdContibuyente)
     End Sub
 
@@ -165,5 +167,9 @@
         cbxperiodo.ValueMember = "idanno"
         sidePanel.Width = Button1.Width
         sidePanel.Location = Button1.Location
+    End Sub
+
+    Private Sub cbxperiodo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxperiodo.KeyPress
+        e.Handled = True
     End Sub
 End Class
